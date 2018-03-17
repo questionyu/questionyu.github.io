@@ -8,6 +8,8 @@ tags:
   - Shadowsocks
 ---
 
+{% note info %} 本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ {% endnote %}
+
 Shadowsocks 目前是众多梯子中非常出色的一款，本文记录一下 Shadowsocks-Libev 版在 Linux 系统下的安装步骤。
 
 {% blockquote Wikipedia https://zh.wikipedia.org/wiki/Shadowsocks "Shadowsocks" %}
