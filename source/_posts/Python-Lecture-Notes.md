@@ -27,3 +27,9 @@ tags:
 ## 第四周
 [Python程序设计-第四周.pdf](/uploads/2018/03/Python程序设计-第四周.pdf)
 {% endnote %}
+
+{% note info %}
+## 第五周
+[Python程序设计-第五周.pdf](/uploads/2018/04/Python程序设计-第五周.pdf)
+[三国演义.txt](/uploads/2018/04/三国演义.txt)
+{% endnote %}
