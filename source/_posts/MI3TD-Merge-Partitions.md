@@ -41,7 +41,7 @@ If you want to see English Version of this post, you can go here: {% exturl "Adj
 
 ## 准备工作/安装驱动
 {% note default %}
-所需工具包的下载：{% exturl MiFlash http://bigota.d.miui.com/tools/MiPhone20151028.exe MiFlash %}，{% exturl NvFlash https://pan.baidu.com/s/1nvyEcw5#list/path=/Xuefer%27sAndroid/MI3TD(小米3移动)/nvflash NvFlash %}。
+所需工具包的下载：{% exturl MiFlash http://bigota.d.miui.com/tools/MiPhone20151028.exe MiFlash %}，[NvFlash](/uploads/2018/05/nvflash-2017-03-03.zip)。
 NvFlash 是由 Xuefer 提供的提取自官方线刷包的工具包（米3TD的合并分区隐藏在线刷包里），修复了官方以前的BUG。
 {% endnote %}
 

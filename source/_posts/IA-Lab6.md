@@ -1,5 +1,5 @@
 ---
-title: IA-Lab6
+title: 互联网应用 Lab6
 date: 2017-04-28 12:00:00
 categories:
   - Code

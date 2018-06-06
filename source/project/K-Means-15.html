@@ -1,0 +1,154 @@
+---
+layout: false
+---
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>K-Means</title>
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container"></div>
+<script type="text/javascript" src='https://webapi.amap.com/maps?v=1.4.6&key=a22a3c883cea99b59d1654bf44ff6bba'></script>
+
+<script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    //Create map
+    var map = new AMap.Map('container', {
+        zoom: 4
+    });
+
+    AMap.plugin(['AMap.ToolBar', 'AMap.Scale', 'AMap.MapType'],
+        function () {
+            map.addControl(new AMap.ToolBar());
+
+            map.addControl(new AMap.Scale());
+
+            map.addControl(new AMap.MapType());
+        });
+
+    //just some colors
+    var colors = [
+        '#F44336',
+        '#E91E63',
+        '#9C27B0',
+        '#673AB7',
+        '#3F51B5',
+        '#2196F3',
+        '#03A9F4',
+        '#00BCD4',
+        '#009688',
+        '#4CAF50',
+        '#8BC34A',
+        '#CDDC39',
+        '#FF5722',
+        '#795548',
+        '#9E9E9E',
+        '#607D8B'
+    ];
+
+    AMapUI.load(['ui/misc/PointSimplifier', 'lib/$'], function (PointSimplifier, $) {
+
+        if (!PointSimplifier.supportCanvas) {
+            alert('Current environment doesn\'t support Canvas! Please use Chrome or Firefox.');
+            return;
+        }
+
+        initPage(PointSimplifier, $);
+    });
+
+    function initPage(PointSimplifier, $) {
+
+        var pointSimplifierIns = new PointSimplifier({
+            zIndex: 300,
+            autoSetFitView: true,
+            map: map, //Map instance
+
+            getPosition: function (item) {
+                if (!item) {
+                    return null;
+                }
+
+                var parts = item.split(',');
+
+                return [parseFloat(parts[1]), parseFloat(parts[0])];
+            },
+            getHoverTitle: function (item, idx) {
+                var parts = item.split(',');
+                return 'cluster:' + parts[3] + ' time:' + parts[2];
+            },
+            //Use GroupStyleRender
+            renderConstructor: PointSimplifier.Render.Canvas.GroupStyleRender,
+            renderOptions: {
+                //Points' style
+                pointStyle: {
+                    fillStyle: 'red',
+                    width: 5,
+                    height: 5
+                },
+                topNAreaStyle: {
+                    content: 'none'
+                },
+                getGroupId: function (item, idx) {
+
+                    var parts = item.split(',');
+
+                    return parseInt(parts[3]);
+                },
+                groupStyleOptions: function (gid) {
+
+                    var size = 4;
+
+                    return {
+                        pointStyle: {
+                            //content: gid % 2 ? 'circle' : 'rect',
+                            fillStyle: colors[gid % colors.length],
+                            width: size,
+                            height: size
+                        },
+                        pointHardcoreStyle: {
+                            width: size - 2,
+                            height: size - 2
+                        }
+                    };
+                }
+
+            }
+        });
+
+        $('<div id="loadingTip">Loading data...</div>').appendTo(document.body);
+        $.get('https://questionyu.com/project/k_means_result_15.txt', function (csv) {
+
+            var data = csv.split('\n');
+
+            pointSimplifierIns.setData(data);
+
+            $('#loadingTip').remove();
+        });
+    }
+</script>
+</body>
+
+</html>

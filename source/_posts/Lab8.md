@@ -1,5 +1,5 @@
 ---
-title: Lab8
+title: Java Lab8
 date: 2016-06-13 13:46:18
 categories:
   - Code

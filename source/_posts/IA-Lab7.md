@@ -1,5 +1,5 @@
 ---
-title: IA-Lab7
+title: 互联网应用 Lab7
 date: 2017-04-29 12:00:00
 categories:
   - Code

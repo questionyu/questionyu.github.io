@@ -1,5 +1,5 @@
 ---
-title: Lab9
+title: Java Lab9
 date: 2016-06-13 22:32:50
 categories:
   - Code

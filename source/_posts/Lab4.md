@@ -1,5 +1,5 @@
 ---
-title: Lab4
+title: Java Lab4
 date: 2016-04-29 18:22:29
 categories:
   - Code

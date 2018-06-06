@@ -1,0 +1,109 @@
+---
+layout: false
+---
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>Final Project</title>
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #loadingTip {
+            position: absolute;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            padding: 3px 10px;
+            background: red;
+            color: #fff;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container"></div>
+<script type="text/javascript" src='https://webapi.amap.com/maps?v=1.4.6&key=a22a3c883cea99b59d1654bf44ff6bba'></script>
+
+<script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    //Create map
+    var map = new AMap.Map('container', {
+        zoom: 4
+    });
+
+    AMap.plugin(['AMap.ToolBar', 'AMap.Scale', 'AMap.MapType'],
+        function () {
+            map.addControl(new AMap.ToolBar());
+
+            map.addControl(new AMap.Scale());
+
+            map.addControl(new AMap.MapType());
+        });
+
+    AMapUI.load(['ui/misc/PointSimplifier', 'lib/$'], function (PointSimplifier, $) {
+
+        if (!PointSimplifier.supportCanvas) {
+            alert('Current environment doesn\'t support Canvas! Please use Chrome or Firefox.');
+            return;
+        }
+
+        initPage(PointSimplifier, $);
+    });
+
+    function initPage(PointSimplifier, $) {
+
+        var pointSimplifierIns = new PointSimplifier({
+            zIndex: 300,
+            autoSetFitView: true,
+            map: map, //Map instance
+
+            getPosition: function (item) {
+                if (!item) {
+                    return null;
+                }
+
+                var parts = item.split(',');
+
+                return [parseFloat(parts[1]), parseFloat(parts[0])];
+            },
+			getHoverTitle: function (item, idx) {
+                var parts = item.split(',');
+                return 'time:' + parts[2];
+            },
+            renderOptions: {
+                //Points' style
+                pointStyle: {
+                    fillStyle: 'black',
+                    width: 5,
+                    height: 5
+                },
+                topNAreaStyle: {
+                    content: 'none'
+                }
+
+            }
+        });
+
+        $('<div id="loadingTip">Loading data...</div>').appendTo(document.body);
+        $.get('https://questionyu.com/project/origin_data.txt', function (csv) {
+
+            var data = csv.split('\n');
+
+            pointSimplifierIns.setData(data);
+
+            $('#loadingTip').remove();
+        });
+    }
+</script>
+</body>
+
+</html>

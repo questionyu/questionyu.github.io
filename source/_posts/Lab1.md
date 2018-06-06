@@ -1,5 +1,5 @@
 ---
-title: Lab1
+title: Java Lab1
 date: 2016-03-08 19:45:19
 categories:
   - Code

@@ -1,5 +1,5 @@
 ---
-title: Lab7
+title: Java Lab7
 date: 2016-06-05 13:39:33
 categories:
   - Code
