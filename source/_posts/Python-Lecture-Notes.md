@@ -90,3 +90,9 @@ tags:
 [Python程序设计-第十四周.pdf](/uploads/2018/06/Python程序设计-第十四周.pdf)
 [第十四周材料.rar](/uploads/2018/06/第十四周材料.rar)
 {% endnote %}
+
+{% note info %}
+## 第十五周
+[Python程序设计-第十五周.pdf](/uploads/2018/06/Python程序设计-第十五周.pdf)
+[第十五周材料.rar](/uploads/2018/06/第十五周材料.rar)
+{% endnote %}
