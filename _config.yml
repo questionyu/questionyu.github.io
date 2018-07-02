@@ -8,7 +8,7 @@ subtitle: Thoughts, stories and ideas.
 description: 一个问少写字的地方。
 author: 问少
 language: zh-CN
-timezone: Asia/Shanghai
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
