@@ -1,9 +1,11 @@
 ---
 title: COM6516-Week09
 categories:
-  - 生活随笔
+  - Code
 date: 2018-11-19 16:57:25
 tags:
+  - Java
+  - COM6516
 ---
 
 {% codeblock CornerString.java lang:java %}
