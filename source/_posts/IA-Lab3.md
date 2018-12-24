@@ -8,7 +8,7 @@ tags:
   - 互联网应用
 ---
 
-{% codeblock l3-exec1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-exec1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <unistd.h>
 #include <stdio.h>
 
@@ -28,7 +28,7 @@ int main() {
 }
 {% endcodeblock %}
 <!--more-->
-{% codeblock l3-fork1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-fork1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <unistd.h>
 #include <stdio.h>
 
@@ -40,7 +40,7 @@ int main() {
 	return 0;
 }
 {% endcodeblock %}
-{% codeblock l3-fork2.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-fork2.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <unistd.h>
 #include <stdio.h>
 
@@ -60,7 +60,7 @@ int main() {
 	return 0;
 }
 {% endcodeblock %}
-{% codeblock l3-lseek1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-lseek1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -94,7 +94,7 @@ int main(void) {
 	return 0;
 }
 {% endcodeblock %}
-{% codeblock l3-readwrite1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-readwrite1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -115,7 +115,7 @@ int main(void) {
 	return 0;
 }
 {% endcodeblock %}
-{% codeblock l3-signal1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l3-signal1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

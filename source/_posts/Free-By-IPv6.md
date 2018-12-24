@@ -86,7 +86,7 @@ Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务
 {% endblockquote %}
 虽然 Shadowsocks 的目的是为了翻墙，但是 Shadowsocks 功能强大方便易用，也可以拿来作为我们的免流上网中转工具。
 
-第一步，你需要有一个支持 IPv6 的 Shadowsocks 服务器节点，这一步很重要，没有可用的服务器怎么也玩不转。个人推荐 Bandwagon、Digital Ocean、Vultr 这些服务商，一般都比较便宜，如果你想使用 Vultr 的话，可以使用我的{% exturl 邀请链接 https://www.vultr.com/?ref=7071081 "Vultr.com" %}，这样的话你我都可以获得 $10 的优惠。注册之后，开一个最低配置的 VPS 就可以满足我们的需求了，一般选择美国的节点，系统推荐选择 Ubuntu 16.04，安装方法可以参考我的另一篇文章：{% exturl "Linux 安装配置 Shadowsocks-Libev" https://questionyu.com/Install-Shadowsocks-Libev.html "Linux 安装配置 Shadowsocks-Libev" %}
+第一步，你需要有一个支持 IPv6 的 Shadowsocks 服务器节点，这一步很重要，没有可用的服务器怎么也玩不转。个人推荐 Bandwagon、Digital Ocean、Vultr 这些服务商，一般都比较便宜，如果你想使用 Vultr 的话，可以使用我的{% exturl 邀请链接 https://www.vultr.com/?ref=7071081 "Vultr.com" %}，这样的话你我都可以获得 $10 的优惠。注册之后，开一个最低配置的 VPS 就可以满足我们的需求了，一般选择美国的节点，系统推荐选择 Ubuntu 16.04，安装方法可以参考我的另一篇文章：{% exturl "Linux 安装配置 Shadowsocks-Libev" https://real-neo.me/Install-Shadowsocks-Libev.html "Linux 安装配置 Shadowsocks-Libev" %}
 
 第二步，下载 Shadowsocks 客户端程序，打开软件，将 Shadowsocks 服务器信息对应填入其中。
 

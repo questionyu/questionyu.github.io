@@ -8,7 +8,7 @@ tags:
   - 互联网应用
 ---
 
-{% codeblock l4-1.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l4-1.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -38,7 +38,7 @@ int main() {
 }
 {% endcodeblock %}
 <!--more-->
-{% codeblock l4-2.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l4-2.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>

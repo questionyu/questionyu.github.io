@@ -8,7 +8,7 @@ tags:
   - 互联网应用
 ---
 
-{% codeblock l5.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l5.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <stdio.h>
 #include <netdb.h>
 #include <arpa/inet.h>

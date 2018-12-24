@@ -8,7 +8,7 @@ tags:
   - 互联网应用
 ---
 
-{% codeblock l6-EchoClient.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l6-EchoClient.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <stdio.h> /* for printf() and fprintf() */
 #include <sys/socket.h> /* for socket(), sendto() and recvfrom() */
 #include <arpa/inet.h> /* for sockaddr_in and inet_addr() */
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
 }
 {% endcodeblock %}
 <!--more-->
-{% codeblock l6-EchoServer.c lang:c https://github.com/questionyu/InternetApplications Github %}
+{% codeblock l6-EchoServer.c lang:c https://github.com/real-neo/InternetApplications Github %}
 #include <stdio.h> /* for printf() and fprintf() */
 //#include <sys/socket.h> /* for socket(), bind(), sendto() and recvfrom() */
 #include <arpa/inet.h> /* for sockaddr_in and inet_ntoa() */

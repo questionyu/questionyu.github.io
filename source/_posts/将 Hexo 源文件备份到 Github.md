@@ -32,7 +32,7 @@ git commit -m "First commit"
 ```
 设置远程仓库映射
 ``` bash
-git remote add origin git@github.com:questionyu/questionyu.github.io.git
+git remote add origin git@github.com:real-neo/real-neo.github.io.git
 ```
 提交
 ``` bash

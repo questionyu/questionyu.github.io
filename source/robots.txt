@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /images/
 Disallow: /uploads/
 
-Sitemap: https://questionyu.com/sitemap.xml
+Sitemap: https://real-neo.me/sitemap.xml

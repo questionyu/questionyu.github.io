@@ -9,14 +9,13 @@ comments: false
 <span id="num"></span>秒后自动跳转到主页**
 {% endcenterquote %}
 <script type="text/javascript">
-  var num=6;
+  var num=5;
   function redirect(){
-    num--;
     document.getElementById("num").innerHTML=num;
     if(num<1){
-      document.getElementById("num").innerHTML=0;
       location.href="/";
-      }
+    }
+	num--;
   }
   setInterval("redirect()", 1000);
 </script>
