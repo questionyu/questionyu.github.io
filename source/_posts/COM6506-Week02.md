@@ -8,7 +8,7 @@ tags:
   - COM6506
 ---
 
-{% codeblock Person.java lang:java %}
+``` java
 public class Person {
 	String name;
 	double weight;
@@ -39,9 +39,9 @@ public class Person {
 		System.out.println("Jim is " + jim.getHeight() + "m tall.");
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock BMICalculator.java lang:java %}
+``` java
 public class BMICalculator {
 	Person person;
 
@@ -60,8 +60,9 @@ public class BMICalculator {
 		System.out.println("Jeff's BMI is: " + calculator.calculateBMI());
 	}
 }
-{% endcodeblock %}
-{% codeblock BMICalculatorTest.java lang:java %}
+```
+
+``` java
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -102,4 +103,4 @@ class BMICalculatorTest {
 		assertTrue(Double.isInfinite(result));
 	}
 }
-{% endcodeblock %}
+```

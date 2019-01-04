@@ -15,9 +15,9 @@ Write a program that will help elementary school pupils practice math.
 Please input your four digit ID no: AB1234
 The program should have input validation.
 Then the program prompts three choices:
-* Start a test
-* Check scores
-* Exit
+* Start a test
+* Check scores
+* Exit
 
 ### b) Test: the program will give 10 math problems, e.g.:
 * 12 * 3 = 36
@@ -41,16 +41,15 @@ Your previous records are:
 * AB1234  90  98 seconds
 
 You will be marked based on your program's:
-* Correctiveness
-* Readability
-* Robustness
-* Conciseness
+* Correctiveness
+* Readability
+* Robustness
+* Conciseness
 
 ## Answer
 
 关于这个大作业，我写了一天后来又改动了一天半，这才有了下面第一个版本。不过这个版本并没有完成题目中的所有要求，尤其是最后输出所有的题目与正确答案和输入答案。
-
-{% codeblock 第一个版本 lang:c %}
+``` c
 #include <stdio.h>
 #include <stdlib.h> //随机函数相关的头文件
 #include <time.h> //时间函数相关的头文件
@@ -276,10 +275,10 @@ int cycle() //循环函数
 	}
 	return 0;
 }
-{% endcodeblock %}
-后来在看到室友的代码后由 *``goto``* 受到了启发，于是大幅精简，合并函数，完成了第二个版本，并加上了第一个版本缺失的功能。
+```
 
-{% codeblock 第二个版本 lang:c %}
+后来在看到室友的代码后由 `goto` 受到了启发，于是大幅精简，合并函数，完成了第二个版本，并加上了第一个版本缺失的功能。
+``` c
 #include <stdio.h>
 #include <stdlib.h> //随机函数相关的头文件
 #include <time.h> //时间函数相关的头文件
@@ -408,7 +407,8 @@ int main()
 			goto cycle;
 	}
 }
-{% endcodeblock %}
+```
+
 我这里将所有的输入部分都进行了正确性检测，所以代码稍微长了一点点，另外又多于要求多了一个循环的功能，目测仅按题目最小要求做可以控制在一百行以内。
 
 以上。
@@ -416,7 +416,7 @@ int main()
 -------更新：2016-3-1-------
 
 惭愧，假期里又看了看我这代码感觉写的好傻，目不忍视，遂又重写了一遍，改进一下。
-{% codeblock 第三个版本 lang:c %}
+``` c
 #include <stdio.h>
 #include <stdlib.h> //随机函数相关的头文件
 #include <time.h> //时间函数相关的头文件
@@ -523,4 +523,4 @@ int main(int argc, char const *argv[]) {
 			goto choice;
 	}
 }
-{% endcodeblock %}
+```

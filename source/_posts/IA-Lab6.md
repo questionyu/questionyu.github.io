@@ -8,7 +8,7 @@ tags:
   - 互联网应用
 ---
 
-{% codeblock l6-EchoClient.c lang:c https://github.com/real-neo/InternetApplications Github %}
+``` c
 #include <stdio.h> /* for printf() and fprintf() */
 #include <sys/socket.h> /* for socket(), sendto() and recvfrom() */
 #include <arpa/inet.h> /* for sockaddr_in and inet_addr() */
@@ -73,9 +73,9 @@ int main(int argc, char *argv[]) {
 
 	return 0;
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock l6-EchoServer.c lang:c https://github.com/real-neo/InternetApplications Github %}
+``` c
 #include <stdio.h> /* for printf() and fprintf() */
 //#include <sys/socket.h> /* for socket(), bind(), sendto() and recvfrom() */
 #include <arpa/inet.h> /* for sockaddr_in and inet_ntoa() */
@@ -120,4 +120,4 @@ void main(int argc, char *argv[]) {
 //			printf("sendto() sent a different number of bytes than expected.\n");
 	}
 }
-{% endcodeblock %}
+```

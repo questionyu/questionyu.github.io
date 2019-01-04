@@ -97,6 +97,7 @@ public class CatchButtonGameV1 extends JFrame {
 	}
 }
 ```
+
 ``` java
 /**
  * Title        CatchButtonGameV2.java

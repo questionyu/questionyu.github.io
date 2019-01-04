@@ -42,6 +42,7 @@ public class Pattern1 {
 	}
 }
 ```
+
 ``` java
 public class Pattern2 {
 	public static void main(String[] args) {
@@ -55,6 +56,7 @@ public class Pattern2 {
 	}
 }
 ```
+
 ``` java
 public class Patterns {
 
@@ -87,6 +89,7 @@ public class Patterns {
 	}
 }
 ```
+
 第五个题，是关于 Javadoc 的，其实有点不太懂，目前也不知道有没有软件可以辅助编写注释的，只能手打了，这个是题目中给的 java 范例：
 ``` java
 public class CountDownExample {
@@ -120,10 +123,12 @@ public class CountDownExample {
 	}
 }
 ```
+
 在创建了 docCD 文件夹之后，运行这样的命令就可以在 docCD 文件夹里看到 Javadoc 文档了：
-``` shell
+```shell
 javadoc –d docCD CountDownExample.java
 ```
+
 ``` java
 public class CountUpExample {
 	/**

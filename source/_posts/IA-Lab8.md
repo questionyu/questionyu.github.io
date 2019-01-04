@@ -86,7 +86,7 @@ The filter rule is **"udp port 67"** for capturing DHCP packets, **"udp port 53"
 
 ### Message Sequence Chart
 
-```sequence
+``` sequence
 Note over Client: Graceful shutdown
 Client->Server: DHCPRELEASE
 Note over Server: Discards lease

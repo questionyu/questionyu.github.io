@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock GenerateWalkingPlan.java lang:java %}
+``` java
 /*
  * Developed by Neo on 05/11/18 11:12.
  * Last modified 05/11/18 10:39.
@@ -40,9 +40,9 @@ public class GenerateWalkingPlan {
 		newPlan.toPrint();
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock WalkingPlan.java lang:java %}
+``` java
 /*
  * Developed by Neo on 05/11/18 11:10.
  * Last modified 05/11/18 10:45.
@@ -142,4 +142,4 @@ class WalkingPlan {
 		System.out.println("Average number of meters walked per day = " + average);
 	}
 }
-{% endcodeblock %}
+```

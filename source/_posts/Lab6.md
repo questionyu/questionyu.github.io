@@ -11,7 +11,7 @@ Java 的大作业在今天（2016-05-17）公布了，要求半个月时间写�
 
 这次的 Lab6 和上次的 Lab5 感觉在难度和水平上都比以前提升了一大截，有点让人招架不住，Lab6 建议还是好好写，自己写，毕竟又是一次要验收的实验。<!--more-->
 
-第一题写的很慢，我的渣英语，题都看不懂，实在是心累，找同学帮忙翻译才明白啥意思。首先是老师提供的 MonsterMash.java，添加了几个怪到 List 里，然后所有的怪都出来打一轮，直到某一轮打完，伤害累积超过 100 就结束，不用修改：
+第一题写的很慢，我的渣英语，题都看不懂，实在是心累，找同学帮忙翻译才明白啥意思。首先是老师提供的 `MonsterMash.java`，添加了几个怪到 List 里，然后所有的怪都出来打一轮，直到某一轮打完，伤害累积超过 100 就结束，不用修改：
 ``` java
 import java.util.*;
 
@@ -46,7 +46,8 @@ public class MonsterMash {
 	}
 }
 ```
-2016-05-18 更新：这里面最后一段代码，``for`` 函数与我们之前见到的都不一样，今天有同学问我我才注意到，这里的 ``for`` 函数括号中间有两部分，用冒号（colon）隔开，其实是 ``foreach`` 函数，用来遍历，在这里的作用就是将 monsters 里面所有的对象都调出来，并建立引用（reference），将所有的对象都 move 一下，attack 一下。
+
+2016-05-18 更新：这里面最后一段代码，`for` 函数与我们之前见到的都不一样，今天有同学问我我才注意到，这里的 `for` 函数括号中间有两部分，用冒号（colon）隔开，其实是 `foreach` 函数，用来遍历，在这里的作用就是将 monsters 里面所有的对象都调出来，并建立引用（reference），将所有的对象都 move 一下，attack 一下。
 
 定义一个 Monster 类，包括了怪的通用的方法（method），attack 和 move，如果你在这里也把 name 设置成 private，就需要像我一样多写一个 setter 和 getter 函数：
 ``` java
@@ -115,6 +116,7 @@ public class Monster {
 	}
 }
 ```
+
 接下来写龙这种怪（感觉怪怪的），题目写明：30% 的时间龙是用龙息（吐火）来攻击的，剩下的时间是普通攻击，在这里时间上的分割其实可以用随机数来代替实现，随机生成 1 到 10 的整数，小于等于 3 时使用龙息：
 ``` java
 /**
@@ -147,6 +149,7 @@ public class Dragon extends Monster {
 	}
 }
 ```
+
 然后是 Troll 这货，这是个啥我也不知道，英语渣：
 ``` java
 /**
@@ -166,6 +169,7 @@ public class Troll extends Monster {
 	}
 }
 ```
+
 都写好之后，运行 MonsterMash 就出来一大片各种怪的攻击记录。
 
 第二题在第一题的基础上有了更多的要求，将 Monster 变成抽象类，强制所有怪都要有特殊攻击方式，并定义了个特殊攻击的概率。Monster：
@@ -253,6 +257,7 @@ public abstract class Monster implements SpecialAttack {
 	}
 }
 ```
+
 因为题目要求所有的怪强制定义特殊攻击，所以就想到了就接口来实现：
 ``` java
 /**
@@ -265,7 +270,8 @@ public interface SpecialAttack {
 	public int specialAttack();
 }
 ```
-然后在 Dragon.java 和 Troll.java 里加上 specialAttack 函数就好了：
+
+然后在 `Dragon.java` 和 `Troll.java` 里加上 specialAttack 函数就好了：
 ``` java
 /**
  *  A class that defines dragon.
@@ -299,6 +305,7 @@ public class Dragon extends Monster {
 	}
 }
 ```
+
 ``` java
 /**
  *  A class that defines troll.
@@ -345,7 +352,8 @@ public class Troll extends Monster {
 	}
 }
 ```
-最后，原先的 MonsterMash.java 已经不能编译了，因为 Monster 已经变成了抽象类，不能实例化，需要修改一下：
+
+最后，原先的 `MonsterMash.java` 已经不能编译了，因为 Monster 已经变成了抽象类，不能实例化，需要修改一下：
 ``` java
 import java.util.*;
 

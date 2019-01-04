@@ -50,6 +50,7 @@ public class WeekDayConverter {
     }
 }
 ```
+
 ``` java
 public class BMICalculator {
     public static void main(String[] args) {
@@ -71,6 +72,7 @@ public class BMICalculator {
     }
 }
 ```
+
 ``` java
 public class DoublingNumbers1 {
     public static void main(String[] args) {
@@ -82,6 +84,7 @@ public class DoublingNumbers1 {
     }
 }
 ```
+
 ``` java
 public class DoublingNumbers2 {
     public static void main(String[] args) {

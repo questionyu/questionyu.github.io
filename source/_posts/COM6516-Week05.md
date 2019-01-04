@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock MultiplicationTable.java lang:java %}
+``` java
 /**
  * Multiplication table
  * Create a table to show 1 to 9 multiplication.
@@ -41,9 +41,9 @@ public class MultiplicationTable {
 		}
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock TestCircle.java lang:java %}
+``` java
 /**
  * Test Circle class
  */
@@ -65,8 +65,9 @@ public class TestCircle {
 		System.out.println(myCircle.equals(myCircle2));
 	}
 }
-{% endcodeblock %}
-{% codeblock Circle.java lang:java %}
+```
+
+``` java
 /*
  * Circle.java
  *
@@ -113,8 +114,9 @@ public class Circle {
 		return obj.getClass() == this.getClass() && obj == this;
 	}
 }
-{% endcodeblock %}
-{% codeblock PhDThesis.java lang:java %}
+```
+
+``` java
 class PhDThesis extends Publication {
 	private int numChapters;
 	private String university;
@@ -133,8 +135,9 @@ class PhDThesis extends Publication {
 				",university=\"" + university + "\",supervisor=\"" + supervisor + "\"]";
 	}
 }
-{% endcodeblock %}
-{% codeblock TestPublication.java lang:java %}
+```
+
+``` java
 public class TestPublication {
 	public static void main(String[] args) {
 		Publication publication = new Publication();
@@ -148,8 +151,9 @@ public class TestPublication {
 		System.out.println(phDThesis.toString());
 	}
 }
-{% endcodeblock %}
-{% codeblock RandomTable.java lang:java %}
+```
+
+``` java
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -202,4 +206,4 @@ public class RandomTable {
 		}
 	}
 }
-{% endcodeblock %}
+```

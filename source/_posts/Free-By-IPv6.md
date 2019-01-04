@@ -30,7 +30,7 @@ tags:
 
 ## 环境前提
 
-你必须得有访问 IPv6 网络的权限，如果你可以正常打开 {% exturl 北邮人BT https://bt.byr.cn/ "BYRBT" %} 并能正常 BT 下载做种等操作，说明你的网络是有 IPv6 环境的，具备免流量的条件。
+你必须得有访问 IPv6 网络的权限，如果你可以正常打开 [北邮人 BT](https://bt.byr.cn/ "BYRBT") 并能正常 BT 下载做种等操作，说明你的网络是有 IPv6 环境的，具备免流量的条件。
 
 ---
 
@@ -38,13 +38,13 @@ tags:
 
 维基百科是这样解释 DNS64 的：
 {% blockquote Wikipedia https://en.wikipedia.org/wiki/IPv6_transition_mechanism#DNS64 "DNS64" %}
-DNS64 describes a DNS server that when asked for a domain's AAAA records, but only finds A records, synthesizes the AAAA records from the A records. The first part of the synthesized IPv6 address points to an IPv6/IPv4 translator and the second part embeds the IPv4 address from the A record. The translator in question is usually a NAT64 server. The standard-track specification of DNS64 is in RFC 6147.[10]
+DNS64 describes a DNS server that when asked for a domain's AAAA records, but only finds A records, synthesizes the AAAA records from the A records. The first part of the synthesized IPv6 address points to an IPv6/IPv4 translator and the second part embeds the IPv4 address from the A record. The translator in question is usually a NAT64 server. The standard-track specification of DNS64 is in RFC 6147.
 There are two noticeable issues with this transition mechanism:
-It only works for cases where DNS is used to find the remote host address, if IPv4 literals are used the DNS64 server will never be involved.
-Because the DNS64 server needs to return records not specified by the domain owner, DNSSEC validation against the root will fail in cases where the DNS server doing the translation is not the domain owner's server.
+* It only works for cases where DNS is used to find the remote host address, if IPv4 literals are used the DNS64 server will never be involved.
+* Because the DNS64 server needs to return records not specified by the domain owner, DNSSEC validation against the root will fail in cases where the DNS server doing the translation is not the domain owner's server.
 {% endblockquote %}
 通过配置 IPv6 DNS，对内容服务商的域名进行 IPv4 → IPv6 解析结果转换，实现 IPv6 与 IPv4 资源互通。简单的说就是，我们使用了一个“不正常”的 DNS 服务器，在我们访问某个网址域名时，返回一个“错误”的地址，这个地址是 IPv6 地址，我访问这个错误的地址却也能得到正确的结果，这就是这个服务器在中间转换的结果了。
-比如正常情况下我访问凤凰网，连接的是 ``211.68.71.214`` 这个地址，在使用 DNS64 之后，我连接的地址就变为了 ``240c:f:1:6644:2:0:3ccf:f662``，但是同样能打开凤凰网。
+比如正常情况下我访问凤凰网，连接的是 `211.68.71.214` 这个地址，在使用 DNS64 之后，我连接的地址就变为了 `240c:f:1:6644:2:0:3ccf:f662`，但是同样能打开凤凰网。
 
 下面以 Windows 10 为例说明设置方法，各 Linux 发行版、macOS 设置方法请自行搜索“系统名称 + 修改 DNS”，方法大同小异。
 
@@ -62,7 +62,7 @@ Because the DNS64 server needs to return records not specified by the domain own
 
 ![以太网 属性](/uploads/2018/03/以太网-属性.png)
 
-选择“使用下面的 DNS 服务器地址”，并如图填入 ``240C::6644``
+选择“使用下面的 DNS 服务器地址”，并如图填入 `240C::6644`
 
 ![Internet 协议版本 6 (TCP/IPv6) 属性](/uploads/2018/03/Internet-协议版本-6-TCP-IPv6-属性.png)
 
@@ -72,7 +72,7 @@ Because the DNS64 server needs to return records not specified by the domain own
 
 手机连接 WiFi 也可以更改 DNS 服务器，具体每部手机修改方法请搜索解决。
 
-这种方法最简单，但同时也有缺点：不能播放视频，网页加载速度慢，不能使用 QQ（因为 QQ 客户端是通过 IPv4 地址直接连接的，不使用域名）。
+这种方法最简单，但同时也有缺点：不能播放视频，网页加载速度慢，不能使用 QQ。
 
 ## 二、使用代理服务器
 
@@ -80,13 +80,14 @@ Because the DNS64 server needs to return records not specified by the domain own
 
 维基百科上面对于 Shadowsocks 的解释：
 {% blockquote Wikipedia https://zh.wikipedia.org/wiki/Shadowsocks "Shadowsocks" %}
-Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用Socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。
-Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。
-2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，宣布停止维护此项目。不过Git仓库的日志显示该项目仍然在有人维护，并且代码实际上并未被真正删除。
+Shadowsocks 可以指：一种基于 Socks5 代理方式的加密传输协议，也可以指实现这个协议的各种开发包。当前包使用 Python、C、C++、C#、Go 语言等编程语言开发，大部分主要实现（iOS 平台的除外）采用 Apache 许可证、GPL、MIT 许可证等多种自由软件许可协议开放源代码。Shadowsocks 分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。
+
+在中国大陆，本工具也被广泛用于突破防火长城（GFW），以浏览被封锁、遮蔽或干扰的内容。2015 年 8 月 22 日，Shadowsocks 原作者 Clowwindy 称受到了中国政府的压力，宣布停止维护此计划（项目）并移除其个人页面所存储的源代码。
 {% endblockquote %}
+
 虽然 Shadowsocks 的目的是为了翻墙，但是 Shadowsocks 功能强大方便易用，也可以拿来作为我们的免流上网中转工具。
 
-第一步，你需要有一个支持 IPv6 的 Shadowsocks 服务器节点，这一步很重要，没有可用的服务器怎么也玩不转。个人推荐 Bandwagon、Digital Ocean、Vultr 这些服务商，一般都比较便宜，如果你想使用 Vultr 的话，可以使用我的{% exturl 邀请链接 https://www.vultr.com/?ref=7071081 "Vultr.com" %}，这样的话你我都可以获得 $10 的优惠。注册之后，开一个最低配置的 VPS 就可以满足我们的需求了，一般选择美国的节点，系统推荐选择 Ubuntu 16.04，安装方法可以参考我的另一篇文章：{% exturl "Linux 安装配置 Shadowsocks-Libev" https://real-neo.me/Install-Shadowsocks-Libev.html "Linux 安装配置 Shadowsocks-Libev" %}
+第一步，你需要有一个支持 IPv6 的 Shadowsocks 服务器节点，这一步很重要，没有可用的服务器怎么也玩不转。个人推荐 Bandwagon、Digital Ocean、Vultr 这些服务商，一般都比较便宜，如果你想使用 Vultr 的话，可以使用我的 [邀请链接](https://www.vultr.com/?ref=7071081 "Vultr")，这样的话你我都可以获得 $10 的优惠。注册之后，开一个最低配置的 VPS 就可以满足我们的需求了，一般选择美国的节点，系统推荐选择 Ubuntu 16.04，安装方法可以参考我的另一篇文章：[Linux 安装配置 Shadowsocks-Libev](https://real-neo.me/Install-Shadowsocks-Libev.html "Linux 安装配置 Shadowsocks-Libev")
 
 第二步，下载 Shadowsocks 客户端程序，打开软件，将 Shadowsocks 服务器信息对应填入其中。
 
@@ -138,7 +139,7 @@ Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务
 
 添加新配置，选择“手动配置”，将服务器的地址，远程端口，密码，加密方法填写正确，路由选项选择“绕过局域网地址”，其他选项无需修改。
 
-<img src="/uploads/2018/03/Screenshot_影梭_20180310-192509.png" alt="Screenshot_影梭_20180310-192509" width = 540px>
+{% img /uploads/2018/03/Screenshot_影梭_20180310-192509.png 540 %}
 
 填写完毕，点击保存，回到主界面，点一下纸飞机便可以免流上网了。
 

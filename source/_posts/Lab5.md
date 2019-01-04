@@ -17,9 +17,9 @@ tags:
 
 好了，不说了，各位同学以后要好好写代码哦～下面是这次的实验代码内容。
 
-第一题里，又用到了第三次实验的 Cat.java，我还是不放出来了，有需要的同学自己去看我的上一篇博客。
+第一题里，又用到了第三次实验的 `Cat.java`，我还是不放出来了，有需要的同学自己去看我的上一篇博客。
 
-这里我建议可以先看看第二题的 StudentList.java，看了之后会对第一题有一点帮助。
+这里我建议可以先看看第二题的 `StudentList.java`，看了之后会对第一题有一点帮助。
 ``` java
 /**
  * A class that test Cat class.
@@ -59,9 +59,10 @@ public class CatTest3 {
 	}
 }
 ```
+
 当写完 CatTest3，并且终于没有错误的时候，第二题写起来就非常的快了。
 
-首先是实验给的 Student.java，不需要有任何改动，只用下载下来就可以了，这里我贴出来方便看：
+首先是实验给的 `Student.java`，不需要有任何改动，只用下载下来就可以了，这里我贴出来方便看：
 ``` java
 /**
  *  A class that represents a student.
@@ -110,7 +111,8 @@ public class Student {
 	}
 }
 ```
-然后是很快写好的 StudentList.java：
+
+然后是很快写好的 `StudentList.java`：
 ``` java
 import java.util.ArrayList;
 

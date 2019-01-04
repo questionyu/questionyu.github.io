@@ -11,7 +11,7 @@ tags:
 {% note info %}
 ## Assessed Lab 1
 {% endnote %}
-{% codeblock GenerateWalkingPlan.java lang:java %}
+``` java
 /*
  * Developed by Neo on 05/11/18 11:12.
  * Last modified 05/11/18 10:39.
@@ -43,9 +43,9 @@ public class GenerateWalkingPlan {
 		newPlan.toPrint();
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock WalkingPlan.java lang:java %}
+``` java
 /*
  * Developed by Neo on 05/11/18 11:10.
  * Last modified 05/11/18 10:45.
@@ -145,11 +145,11 @@ class WalkingPlan {
 		System.out.println("Average number of meters walked per day = " + average);
 	}
 }
-{% endcodeblock %}
+```
 {% note info %}
 ## Assessed Lab 2
 {% endnote %}
-{% codeblock ScorerGUI.java lang:java %}
+``` java
 /*
  * Developed by Neo on 12/10/18 5:17 PM.
  * Last modified 12/10/18 11:24 AM.
@@ -173,8 +173,9 @@ public class ScorerGUI {
 		f.setVisible(true);
 	}
 }
-{% endcodeblock %}
-{% codeblock Scorer.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/10/18 5:17 PM.
  * Last modified 12/10/18 11:24 AM.
@@ -223,8 +224,9 @@ class Scorer {
 		return score;
 	}
 }
-{% endcodeblock %}
-{% codeblock ScoreComparator.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/10/18 5:17 PM.
  * Last modified 12/10/18 11:38 AM.
@@ -249,8 +251,9 @@ public class ScoreComparator implements Comparator<Scorer> {
 		return b.getScore() - a.getScore();
 	}
 }
-{% endcodeblock %}
-{% codeblock ScoringFrame.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/10/18 5:17 PM.
  * Last modified 12/10/18 11:47 AM.
@@ -384,4 +387,4 @@ class ScoringFrame extends JFrame implements ActionListener {
 		}
 	}
 }
-{% endcodeblock %}
+```

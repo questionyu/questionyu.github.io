@@ -11,36 +11,36 @@ tags:
 
 ## 首次备份
 在 Hexo 根目录下，初始化 git 仓库
-``` bash
+```bash
 git init
 ```
 创建并切换到分支 "hexo"
-``` bash
+```bash
 git checkout -b hexo
 ```
 添加 README.md 文件，可忽略
-``` bash
+```bash
 git add README.md
 ```
 添加文件列表
-``` bash
+```bash
 git add -A
 ```
 添加提交说明
-``` bash
+```bash
 git commit -m "First commit"
 ```
 设置远程仓库映射
-``` bash
+```bash
 git remote add origin git@github.com:real-neo/real-neo.github.io.git
 ```
 提交
-``` bash
+```bash
 git push -u origin hexo
 ```
 
 ## 之后备份
-``` bash
+```bash
 git add -A
 git commit -m "Update message"
 git push origin hexo # 或 git push

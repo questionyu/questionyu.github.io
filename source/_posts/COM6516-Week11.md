@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock JCalculator.java lang:java %}
+``` java
 /*
  * Developed by Neo on 12/8/18 7:39 PM.
  * Last modified 11/24/17 2:18 PM.
@@ -48,9 +48,9 @@ public class JCalculator extends JFrame {
 		frm.setVisible(true);
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock CalculatorButtons.java lang:java %}
+``` java
 /*
  * Developed by Neo on 12/8/18 7:48 PM.
  * Last modified 11/24/17 2:18 PM.
@@ -182,8 +182,9 @@ class CalculatorButtons extends JPanel {
 		}
 	}
 }
-{% endcodeblock %}
-{% codeblock CalculatorButtons.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/8/18 7:48 PM.
  * Last modified 11/24/17 2:18 PM.
@@ -321,4 +322,4 @@ class CalculatorButtons extends JPanel {
 		}
 	}
 }
-{% endcodeblock %}
+```

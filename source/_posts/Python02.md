@@ -11,7 +11,7 @@ tags:
 * 有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
 * 输出 9*9 乘法口诀表。
 
-{% codeblock lang:python %}
+``` python
 # 输出2-100之间的素数
 for i in range(2, 101):
     for j in range(2, i):
@@ -19,9 +19,9 @@ for i in range(2, 101):
             break                   # 跳出循环
     else:
         print(i, "是素数")
-{% endcodeblock %}
+```
 
-{% codeblock lang:python %}
+``` python
 # 有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
 # num = 0
 # for i in range(1, 5):
@@ -43,12 +43,12 @@ for x in permutations([1, 2, 3, 4], 3):
     num = num + 1
     print()
 print("共有", num, "个")
-{% endcodeblock %}
+```
 
-{% codeblock lang:python %}
+``` python
 # 输出 9*9 乘法口诀表
 for i in range(1, 10):
     for j in range(1, i + 1):
         print("%d*%d=%2d" % (i, j, i * j), end=" ")
     print()
-{% endcodeblock %}
+```

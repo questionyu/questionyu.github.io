@@ -101,6 +101,7 @@ public class ParityBitAdder_v2 {
 	}
 }
 ```
+
 需要抛出的俩异常要自己写出来：
 ``` java
 /**
@@ -119,6 +120,7 @@ public class NonBinaryValue extends RuntimeException {
 	}
 }
 ```
+
 ``` java
 /**
  * Title        IllegalParityValue.java
@@ -136,7 +138,8 @@ public class IllegalParityValue extends RuntimeException {
 	}
 }
 ```
-第二题小改一下，不再是带着参数运行程序了，而是运行中要求用户在控制台输入，就是加个 ``System.in``，最多也就是再来个友好的提示：
+
+第二题小改一下，不再是带着参数运行程序了，而是运行中要求用户在控制台输入，就是加个 `System.in`，最多也就是再来个友好的提示：
 ``` java
 /**
  * Title        ParityBitAdder_v3.java
@@ -229,6 +232,7 @@ public class ParityBitAdder_v3 {
 	}
 }
 ```
+
 和上一题一样，也用到那俩异常了，直接复制粘贴过来用就行了。
 
 第三题瞎 BB 一堆，又是扯遗传算法又是扯染色体什么玩意儿的，都不用看，直接看小标号的要求就可以了。
@@ -310,6 +314,7 @@ public class Chromosome {
 	}
 }
 ```
+
 最后扯一句，有时间最好自己看看题，只看我的代码恐怕会在一定程度上影响你们的想法，不是太好~
 
 祝各位，Java 都高分考过！

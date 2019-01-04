@@ -11,7 +11,7 @@ tags:
 
 ![sb](/uploads/2016/03/sb.png)
 <!--more-->
-这些全是这个域名:[https://gatosabido.com.br](https://gatosabido.com.br/)，不知道到底是什么仇什么怨，竟然有人专门镜像我的网站，目前猜想可能是想嗅探我的 SS 站点的用户名和密码吧~
+这些全是这个域名:[https://gatosabido.com.br](https://gatosabido.com.br)，不知道到底是什么仇什么怨，竟然有人专门镜像我的网站，目前猜想可能是想嗅探我的 SS 站点的用户名和密码吧~
 
 2016-3-25 更新：
 

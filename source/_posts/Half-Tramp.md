@@ -5,6 +5,8 @@ categories:
   - 生活随笔
 tags:
   - 谁叫特斯拉
+author: 谁叫特斯拉
+url: https://mp.weixin.qq.com/s/ClcUHuSpk9ZMaOIsfdyn2A
 ---
 
 {% centerquote %}
@@ -40,9 +42,3 @@ tags:
 我站起身，感觉应该跟老人家打声招呼，转身对老爷爷说我走了啊。老爷爷没抬头，也没说话，闭起眼点了点头，抬起右手来轻轻摇晃了两下，然后放下手继续写东西了。
 
 我不知道我该做什么，我没再看那个男子，但我也没有倒我的盘子。
-
-{% blockquote 谁叫特斯拉 http://mp.weixin.qq.com/s/ClcUHuSpk9ZMaOIsfdyn2A 半流浪汉 %}
-原文转载自微信公众号 [谁叫特斯拉](http://weixin.qq.com/r/sDkJDEfEPY9BKANvb2w0)
-![谁叫特斯拉](/uploads/maomao.jpg)
-已获作者授权转载
-{% endblockquote %}

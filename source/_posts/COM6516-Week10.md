@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock MyFrame.java lang:java %}
+``` java
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -94,9 +94,9 @@ public class MyFrame extends JFrame implements ActionListener {
 	}
 
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock MyPanel.java lang:java %}
+``` java
 /*
  * Developed by Neo on 26/11/18 15:37.
  * Last modified 17/11/17 14:21.
@@ -143,4 +143,4 @@ public class MyPanel extends JPanel {
 		g2.draw(shape);
 	}
 }
-{% endcodeblock %}
+```

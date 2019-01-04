@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock ListStringConvert.java lang:java %}
+``` java
 /*
  * Developed by Neo on 12/11/18 10:21.
  * Last modified 12/11/18 10:21.
@@ -34,9 +34,9 @@ public class ListStringConvert {
 		System.out.println(newList);
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock HashSetTest.java lang:java %}
+``` java
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -117,8 +117,9 @@ public class HashSetTest {
 			System.out.println(firstPerson + " compared to " + p + " returns " + comparator.compare(firstPerson, p));
 	}
 }
-{% endcodeblock %}
-{% codeblock AgeComparator.java lang:java %}
+```
+
+``` java
 import java.util.*;
 
 public class AgeComparator implements Comparator<Person> {
@@ -127,8 +128,9 @@ public class AgeComparator implements Comparator<Person> {
 		return b.getAge() - a.getAge();
 	}
 }
-{% endcodeblock %}
-{% codeblock Shakespeare.java lang:java %}
+```
+
+``` java
 /*
 	Shakespeare.java
 
@@ -196,8 +198,9 @@ public class Shakespeare {
 			System.out.println(word + ": " + Collections.frequency(lowerWords, word));
 	}
 }
-{% endcodeblock %}
-{% codeblock StringComparator.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/11/18 11:40.
  * Last modified 12/11/18 11:40.
@@ -212,8 +215,9 @@ public class StringComparator implements Comparator<String> {
 		return o1.compareTo(o2);
 	}
 }
-{% endcodeblock %}
-{% codeblock ListAgain.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/11/18 14:40.
  * Last modified 12/11/18 14:40.
@@ -251,8 +255,9 @@ public class ListAgain {
 		System.out.println(listA);
 	}
 }
-{% endcodeblock %}
-{% codeblock MoreList.java lang:java %}
+```
+
+``` java
 /*
  * Developed by Neo on 12/11/18 15:26.
  * Last modified 12/11/18 15:26.
@@ -323,4 +328,4 @@ public class MoreList {
 		System.out.println("List B=" + listB);
 	}
 }
-{% endcodeblock %}
+```

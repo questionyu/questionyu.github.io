@@ -10,7 +10,7 @@ tags:
 * 绘画如图所示分形树。
 ![分形树](/uploads/2018/03/分形树.png)
 
-{% codeblock lang:python %}
+``` python
 # 绘画分形树。
 import turtle
 
@@ -43,4 +43,4 @@ turtle.pendown()
 level = 5
 turtle.fd(150)
 draw_y(100, level)
-{% endcodeblock %}
+```

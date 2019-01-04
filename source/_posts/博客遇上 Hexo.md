@@ -21,10 +21,11 @@ tags:
 ## 说整就整
 昨天下午在 Google 上找了许多 Hexo 部署在 Github 上的资料，Chrome 里的标签页开了无数个，一个又一个的参考，自己动手！
 其实整个过程都很顺利，在本地的测试环境中看了预览效果，非常的好，速度非常快，内心无比的激动，等到我准备部署到 Github 上的时候，问题来了。
+
 ### 一个有点让人崩溃的小问题
-当我打了 ``hexo d`` 之后，走一堆代码，然后挂在了这里： **No supported authentication methods available (server sent: publickey)**
-无论用网上找到的哪个方法都解决不了，简直想让人放弃，看了一晚上也没能解决。今天继续看，我甚至怀疑是安装过程中哪里出错了。尝试删干净重装也无能为力。最后忘了在哪个页面看到一句重装 Git 选择使用 OpenSSH，又令我看到了希望。随即重装了一遍 Git，在选择 SSH那步，因为我电脑安装了有 PuTTY，所以上次安装选择了 PuTTY 的 plink，这次不用它了，选择 OpenSSH，果然问题解决了。
-其实这里还有个小点，``hexo d`` 在 Git Bash 中是没有问题的，在 CMD 中就会出错，所以能用 Git Bash 就不用 CMD。
+当我打了 `hexo d` 之后，走一堆代码，然后挂在了这里： **No supported authentication methods available (server sent: publickey)**
+无论用网上找到的哪个方法都解决不了，简直想让人放弃，看了一晚上也没能解决。今天继续看，我甚至怀疑是安装过程中哪里出错了。尝试删干净重装也无能为力。最后忘了在哪个页面看到一句“重装 Git 选择使用 OpenSSH“，又令我看到了希望。随即重装了一遍 Git，在选择 SSH那步，因为我电脑安装了有 PuTTY，所以上次安装选择了 PuTTY 的 plink，这次不用它了，选择 OpenSSH，果然问题解决了。
+其实这里还有个小点，`hexo d` 在 Git Bash 中是没有问题的，在 CMD 中就会出错，所以能用 Git Bash 就不用 CMD。
 
 ## Hexo+Github 不能与 SSL 共存？
 其实 Github Pages 使用自定义域名不能使用 SSL 很让我头疼，因为我以前的网站是开了 HSTS 的，也就是说，如果你原来访问过我的网站，一个月内再次访问我的网站都会强制使用 SSL。起初我设置这个是为了安全着想的，可是现在不能用 SSL就意味着，一个月曾经打开我网站的人都无法访问我的新站点。气。

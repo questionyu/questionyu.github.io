@@ -11,7 +11,7 @@ tags:
 
 ## 这是什么
 {% note info %}
-If you want to see English Version of this post, you can go here: {% exturl "Adjust the system partition & Merge partitions of Mi3TD-Support offical OTA" http://en.miui.com/thread-256334-1-1.html "Xiaomi MIUI Official Forum" %}
+If you want to see English Version of this post, you can go here: [Adjust the system partition & Merge partitions of Mi3TD-Support offical OTA](https://en.miui.com/thread-256334-1-1.html "Xiaomi MIUI Official Forum")
 {% endnote %}
 这是一篇可以指导你将你的小米 3 TD 调整系统分区/合并分区的教程，支持 16G 和 64G 的 TD。
 
@@ -41,8 +41,8 @@ If you want to see English Version of this post, you can go here: {% exturl "Adj
 
 ## 准备工作/安装驱动
 {% note default %}
-所需工具包的下载：{% exturl MiFlash http://bigota.d.miui.com/tools/MiPhone20151028.exe MiFlash %}，[NvFlash](/uploads/2018/05/nvflash-2017-03-03.zip)。
-NvFlash 是由 Xuefer 提供的提取自官方线刷包的工具包（米3TD的合并分区隐藏在线刷包里），修复了官方以前的BUG。
+所需工具包的下载：[MiFlash](http://bigota.d.miui.com/tools/MiPhone20151028.exe "MiFlash")，[NvFlash](/uploads/2018/05/nvflash-2017-03-03.zip)。
+NvFlash 是由 Xuefer 提供的提取自官方线刷包的工具包（米 3 TD 的合并分区隐藏在线刷包里），修复了官方以前的BUG。
 {% endnote %}
 
 我所用的电脑系统是 Windows 10 Pro，默认是开启了驱动程序强制签名验证的，然而英伟达（小米）提供的驱动却不包含签名。这就造成了一个很蛋疼的事情，系统默认不允许安装驱动。但是不建议使用比较老的系统，比如 XP，不会自动安装 MTP 驱动，而 MTP 驱动在 XP 上面的安装比较麻烦，建议用 Windows 7 及以上的系统操作。
@@ -62,7 +62,7 @@ Windows 10 的关闭驱动程序强制签名验证的方法如下：
 {% note danger %}
 本教程正常情况下是不会丢失系统、应用这些数据，只丢失照片音乐等数据（即电脑上看到的内容），但刷机有风险，建议备份。
 {% endnote %}
-首先手机进入 Recovery 模式，注意这里手机要使用第三方的 Recovery（如果你没有使用第三方 Recovery，强烈建议使用 Xuefer 的 TWRP），手机连接电脑，然后电脑双击打开 ``1.双击我进入APX模式.bat`` ，会有以下提示：
+首先手机进入 Recovery 模式，注意这里手机要使用第三方的 Recovery（如果你没有使用第三方 Recovery，强烈建议使用 Xuefer 的 TWRP），手机连接电脑，然后电脑双击打开 `1.双击我进入APX模式.bat` ，会有以下提示：
 ![双击我进入 APX 模式](/uploads/2018/04/4.png)
 如果你的提示不是这样的，而是类似这样的：
 ```
@@ -71,7 +71,7 @@ ADB server didn't ACK
 * failed to start daemon *
 error: unknown host service
 ```
-说明你的电脑里已经在运行 ``adb.exe``，请进入任务管理器，把所有的 ``adb.exe`` 结束，再打开 ``1.双击我进入APX模式.bat`` ，基本就会正常了。
+说明你的电脑里已经在运行 `adb.exe`，请进入任务管理器，把所有的 `adb.exe` 结束，再打开 `1.双击我进入APX模式.bat` ，基本就会正常了。
 
 此时在设备管理器中可以看到有这么个设备：
 ![设备管理器](/uploads/2018/04/5.png)
@@ -84,11 +84,12 @@ error: unknown host service
 到这里，APX 的驱动安装完成。
 
 更新：根据 @安399042134 的反馈：
-{% quote %}有些人不知道为什么已经有驱动了(我也遇到了，不知道哪来的驱动，接上去就有)，所以进去深度刷机时，没有显示APX，而是出现在nvidia boot recovery里{% endquote %}
-所以，如果你找不到 APX 设备请不要慌张，可能不知道那个软件已经帮你安装好了。直接确认最后一个图就好了。
+> 有些人不知道为什么已经有驱动了(我也遇到了，不知道哪来的驱动，接上去就有)，所以进去深度刷机时，没有显示APX，而是出现在nvidia boot recovery里
+
+所以，如果你找不到 APX 设备请不要慌张，可能不知道哪个软件已经帮你安装好了。直接确认最后一个图就好了。
 
 ## 开始分区
-接下来，电脑上双击打开 ``2.双击我选择分区方案.bat`` ，这里提供了多种方案（以你下载的文件为准）：
+接下来，电脑上双击打开 `2.双击我选择分区方案.bat` ，这里提供了多种方案（以你下载的文件为准）：
 {% note default %}
 1. 旧版 MIUI 方案: 双系统, 应用/存储分离
 2. 新版 MIUI 方案: 双系统, 应用/存储合并 (已修正官方 bug 不丢 1GB)
@@ -119,7 +120,7 @@ error: unknown host service
 
 如果原来没有自己调整过分区，使用方案二或方案三分区一般是不丢失数据的。
 
-如果运气不好，发生了一些异常情况：比如无法正常开机、软件闪退、剩余存储空间不对，那么，请看下面的步骤进行格式化分区。（正常情况下 MIUI 稳定版/开发版中显示为 13.46G，电脑/CM/MIUI 体验版显示为 12.5G，MIUI 体验版调整了计量单位为 GiB 但是仍显示为 GB，对这些有疑问的可以去看看知乎：{% exturl "KB / KiB，MB / MiB，GB / GiB，… 的区别是什么？" https://www.zhihu.com/question/24601215 "知乎" %}）
+如果运气不好，发生了一些异常情况：比如无法正常开机、软件闪退、剩余存储空间不对，那么，请看下面的步骤进行格式化分区。（正常情况下 MIUI 稳定版/开发版中显示为 13.46G，电脑/CM/MIUI 体验版显示为 12.5G，MIUI 体验版调整了计量单位为 GiB 但是仍显示为 GB，对这些有疑问的可以去看看知乎：[KB / KiB，MB / MiB，GB / GiB，… 的区别是什么？](https://www.zhihu.com/question/24601215 "知乎")）
 
 ## 格式化分区
 这时手机是在 Recovery 的状态：

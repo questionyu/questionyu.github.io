@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock Person.java lang:java %}
+``` java
 class Person {
 	String name;
 	String birth;
@@ -24,9 +24,9 @@ class Person {
 				"Birth: " + birth;
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock Student.java lang:java %}
+``` java
 class Student extends Person {
 	private String course;
 
@@ -42,8 +42,9 @@ class Student extends Person {
 				"Course: " + course;
 	}
 }
-{% endcodeblock %}
-{% codeblock Tutor.java lang:java %}
+```
+
+``` java
 class Tutor extends Person {
 	private String office;
 
@@ -59,8 +60,9 @@ class Tutor extends Person {
 				"Office: " + office;
 	}
 }
-{% endcodeblock %}
-{% codeblock TestPerson.java lang:java %}
+```
+
+``` java
 public class TestPerson {
 	public static void main(String[] args) {
 		Person testPerson = new Person("Walker", "1996/06/16");
@@ -76,15 +78,17 @@ public class TestPerson {
 		System.out.println(testTutor);
 	}
 }
-{% endcodeblock %}
-{% codeblock Sheep.java lang:java %}
+```
+
+``` java
 public class Sheep extends Animal {
 	public void talk() {
 		System.out.println("Baaa!");
 	}
 }
-{% endcodeblock %}
-{% codeblock NewAnimalTest.java lang:java %}
+```
+
+``` java
 public class NewAnimalTest {
 	public static void main(String[] args) {
 		Animal cow = new Cow();
@@ -101,16 +105,17 @@ public class NewAnimalTest {
 		}
 	}
 }
+```
 
-{% endcodeblock %}
-{% codeblock Animal.java lang:java %}
+``` java
 public abstract class Animal {
 	public void talk() {
 		System.out.println("Animals can't talk");
 	}
 }
-{% endcodeblock %}
-{% codeblock AnimalTest.java lang:java %}
+```
+
+``` java
 /*
  * AnimalTest.java  	1.0 01/10/2010
  *
@@ -143,13 +148,15 @@ public class AnimalTest {
 		} // for
 	} // main
 }
-{% endcodeblock %}
-{% codeblock Drawable.java lang:java %}
+```
+
+``` java
 public interface Drawable {
 	public void draw(sheffield.EasyGraphics g);
 }
-{% endcodeblock %}
-{% codeblock Shape.java lang:java %}
+```
+
+``` java
 /**
  * Shape.java
  * <p>
@@ -195,4 +202,4 @@ public abstract class Shape implements Drawable {
 	public abstract void draw(EasyGraphics g);
 
 }
-{% endcodeblock %}
+```

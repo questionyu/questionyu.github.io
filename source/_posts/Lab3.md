@@ -104,6 +104,7 @@ public class Cat {
 	}
 }
 ```
+
 然后是 CatTest.java，这里有一个需要注意的地方就是，这里开头也要写 import，不写报错，QMUL 的老师也是挺坑的。Color 的输出搞了几天仍然没有搞很明白，网上许多的写法是写个 Enum，但我有点懒，不想整那个了，随便写写拉倒吧，辣鸡 Cat。
 ``` java
 import java.awt.*;
@@ -145,6 +146,7 @@ public class CatTest {
 	}
 }
 ```
+
 第二题就是写个计算矩形面积，没有什么好说的，很快就写出来了。
 ``` java
 /**
@@ -184,6 +186,7 @@ public class Rectangle {
 	}
 }
 ```
+
 最后一题，好像……没什么吐槽的地方……但是这个 Javadoc 注释真是写着让人蛋疼啊……
 ``` java
 /**
@@ -312,6 +315,7 @@ public class Counter {
 	}
 }
 ```
+
 然后是 CounterTest.java
 ``` java
 /**
@@ -372,4 +376,5 @@ public class CounterTest {
 	}
 }
 ```
+
 这次的实验题目就是酱了，有问题可以留言。

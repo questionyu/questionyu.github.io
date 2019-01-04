@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock FoodStore.java lang:java %}
+``` java
 /*
  * FoodStore.java  	1.0 26/08/2011
  *
@@ -76,9 +76,9 @@ public class FoodStore {
 		return withdrawAmount;
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock TestFoodStore.java lang:java %}
+``` java
 public class TestFoodStore {
 	public static void main(String[] args) {
 		// create a new FoodStore object called MyFoodStore
@@ -102,8 +102,9 @@ public class TestFoodStore {
 		System.out.println("Contains " + MyFoodStore.getAmountStored());
 	}
 }
-{% endcodeblock %}
-{% codeblock FoodManage.java lang:java %}
+```
+
+``` java
 import sheffield.*;
 
 class FoodManage {
@@ -144,8 +145,9 @@ class FoodManage {
 		}
 	}
 }
-{% endcodeblock %}
-{% codeblock TestBasket.java lang:java %}
+```
+
+``` java
 class TestBasket {
 	public static void main(String[] args) {
 		Item[] shopping = {new Item("baked beans", 0.3), new Item("tomato soup", 0.4)};
@@ -158,8 +160,9 @@ class TestBasket {
 		System.out.println("Total price: " + myBasket.total());
 	}
 }
-{% endcodeblock %}
-{% codeblock Basket.java lang:java %}
+```
+
+``` java
 /**
  * Basket.java
  * <p>
@@ -189,9 +192,9 @@ public class Basket {
 	// item collections
 	private Item[] items;
 }
+```
 
-{% endcodeblock %}
-{% codeblock Item.java lang:java %}
+``` java
 /**
  * Item.java
  * <p>
@@ -257,9 +260,9 @@ public class Item {
 		System.out.println("Expected " + TESTPRICE);
 	}
 }
+```
 
-{% endcodeblock %}
-{% codeblock TestItemEquals.java lang:java %}
+``` java
 class TestItemEquals {
 	public static void main(String[] args) {
 		Item tomato = new Item("Tomato", 0.2);
@@ -269,4 +272,4 @@ class TestItemEquals {
 		System.out.println(tomato.equals(tomatoCopy));
 	}
 }
-{% endcodeblock %}
+```

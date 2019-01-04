@@ -8,7 +8,7 @@ tags:
   - COM6516
 ---
 
-{% codeblock CornerString.java lang:java %}
+``` java
 /*
  * Developed by Neo on 19/11/18 11:54.
  * Last modified 19/11/18 11:54.
@@ -80,9 +80,9 @@ public class CornerString extends JFrame {
 		}
 	}
 }
-{% endcodeblock %}
+```
 <!--more-->
-{% codeblock GIFFrame.java lang:java %}
+``` java
 /*
  * Developed by Neo on 19/11/18 15:44.
  * Last modified 19/11/18 15:44.
@@ -114,4 +114,4 @@ public class GIFFrame extends JFrame {
 		new GIFFrame();
 	}
 }
-{% endcodeblock %}
+```
