@@ -16,8 +16,7 @@ Shadowsocks 目前是众多梯子中非常出色的一款，本文记录一下 S
 
 {% blockquote Wikipedia https://zh.wikipedia.org/wiki/Shadowsocks "Shadowsocks" %}
 Shadowsocks 可以指：一种基于 Socks5 代理方式的加密传输协议，也可以指实现这个协议的各种开发包。当前包使用 Python、C、C++、C#、Go 语言等编程语言开发，大部分主要实现（iOS 平台的除外）采用 Apache 许可证、GPL、MIT 许可证等多种自由软件许可协议开放源代码。Shadowsocks 分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。
-{% endblockquote %}
-<!--more-->
+{% endblockquote %}<!--more-->
 
 {% centerquote %}
 **以下操作均在终端中执行**
@@ -26,18 +25,19 @@ Shadowsocks 可以指：一种基于 Socks5 代理方式的加密传输协议，
 ## 首先安装必要组件
 
 如果是 Debian/Ubuntu
-```bash
+``` bash
 sudo apt-get install --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libc-ares-dev automake
 ```
+
 如果是 CentOS/Fedora/RHEL
-```bash
+``` bash
 sudo yum install gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel
 ```
 
 ## 然后安装加密组件安装
 
 一行一行的复制粘贴执行就可以了。
-```bash
+``` bash
 export LIBSODIUM_VER=1.0.16
 wget https://download.libsodium.org/libsodium/releases/libsodium-$LIBSODIUM_VER.tar.gz
 tar xvf libsodium-$LIBSODIUM_VER.tar.gz
@@ -60,23 +60,25 @@ sudo ldconfig
 ## 接下来编译安装
 
 同样是一行一行地执行。
-```bash
+``` bash
 git clone https://github.com/shadowsocks/shadowsocks-libev.git
 cd shadowsocks-libev
 git submodule update --init --recursive
 ./autogen.sh && ./configure && make
 sudo make install
 ```
+
 至此，Shadowsocks-Libev 的安装已经结束。
 
 ## 接下来设置端口密码加密方式
 
 首先创建配置文件
-```bash
+``` bash
 mkdir /etc/shadowsocks-libev
 touch /etc/shadowsocks-libev/config.json
 nano /etc/shadowsocks-libev/config.json
 ```
+
 如果提示 `command not found`，那就执行一下 `sudo apt-get install nano`，安装 `nano` 之后再次执行上面的最后一行代码。
 
 然后将下列内容复制粘贴进去
@@ -107,22 +109,24 @@ aes-128-gcm, aes-192-gcm, aes-256-gcm, aes-128-cfb, aes-192-cfb, aes-256-cfb, ae
 ## 最后添加开机启动
 
 打开 `rc.local` 文件
-```bash
+``` bash
 nano /etc/rc.local
 ```
+
 将下列代码添加在 `exit 0` 之前的空行内
-```bash
+``` bash
 nohup ss-server -c /etc/shadowsocks-libev/config.json > /dev/null 2>&1 &
 ```
 
 ## 别忘了防火墙
 
 如果是 Ubuntu(>=16)
-```bash
+``` bash
 sudo ufw allow 端口
 ```
+
 如果是 CentOS(>=7)
-```bash
+``` bash
 sudo firewall-cmd --add-port=端口/tcp --permanent
 sudo firewall-cmd --add-port=端口/udp --permanent
 sudo firewall-cmd --reload

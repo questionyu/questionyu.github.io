@@ -18,7 +18,6 @@ tags:
 **这里请注意，不同 Windows 版本配置略有差别，请选择你的系统对应的方法。**
 {% endcenterquote %}
 <!--more-->
-
 ### Win7
 
 首先去 [下载 Dev-C++](http://prdownloads.sourceforge.net/dev-cpp/devcpp-4.9.9.2_setup.exe "SourceForge.net")，确保你可以用它正常编译一个 C 语言程序出来。

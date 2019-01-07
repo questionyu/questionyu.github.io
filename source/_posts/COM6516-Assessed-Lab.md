@@ -11,6 +11,7 @@ tags:
 {% note info %}
 ## Assessed Lab 1
 {% endnote %}
+
 ``` java
 /*
  * Developed by Neo on 05/11/18 11:12.
@@ -146,9 +147,11 @@ class WalkingPlan {
 	}
 }
 ```
+
 {% note info %}
 ## Assessed Lab 2
 {% endnote %}
+
 ``` java
 /*
  * Developed by Neo on 12/10/18 5:17 PM.

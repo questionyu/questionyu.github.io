@@ -15,9 +15,8 @@ DBSCAN，英文全写为 Density-based spatial clustering of applications with n
 ## DBSCAN 的数据分类
 * 核心点。在半径 Eps 内含有超过 MinPts 数目的点。
 * 边界点。在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内。
-* 噪音点。既不是核心点也不是边界点的点。
+* 噪音点。既不是核心点也不是边界点的点。<!-- more -->
 
-<!-- more -->
 ## DBSCAN 的一些定义
 * ε-邻域：对于样本集中的 xj, 它的 ε-邻域为样本集中与它距离小于 ε 的样本所构成的集合。
 * 核心对象：若 xj 的 ε-邻域中至少包含MinPts个样本，则xj为一个核心对象。

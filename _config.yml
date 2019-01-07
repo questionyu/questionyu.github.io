@@ -263,11 +263,11 @@ theme_config:
   # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
   social:
     GitHub: https://github.com/real-neo || github
-    E-Mail: mailto:i@real-neo.me || envelope
+    E-Mail: mailto:questionyugood@gmail.com || envelope
     Weibo: https://weibo.com/realneobro || weibo
     #Google: https://plus.google.com/yourname || google
-    Twitter: https://twitter.com/QuestionYuGod || twitter
-    FB Page: https://www.facebook.com/QuestionYu || facebook
+    Twitter: https://twitter.com/realneobro || twitter
+    FB Page: https://www.facebook.com/realneobro || facebook
     #VK Group: https://vk.com/yourname || vk
     #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
     #YouTube: https://youtube.com/yourname || youtube
