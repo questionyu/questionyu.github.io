@@ -41,7 +41,7 @@ If you want to see English Version of this post, you can go here: [Adjust the sy
 
 ## 准备工作/安装驱动
 {% note default %}
-所需工具包的下载：[MiFlash](http://bigota.d.miui.com/tools/MiPhone20151028.exe "MiFlash")，[NvFlash](/uploads/2018/05/nvflash-2017-03-03.zip)。
+所需工具包的下载：[MiFlash](http://bigota.d.miui.com/tools/MiPhone20151028.exe "MiFlash")，[NvFlash](https://drive.real-neo.me/s/LPCxbsCTbWiqEEj)。
 NvFlash 是由 Xuefer 提供的提取自官方线刷包的工具包（米 3 TD 的合并分区隐藏在线刷包里），修复了官方以前的BUG。
 {% endnote %}
 
