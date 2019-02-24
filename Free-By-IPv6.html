@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            自从挖煤的校长来了之后，校园网就不再是免费使用了，变成了现在这个样子：每个月 20G 免费流量，超出需要付费。对于大部分人来说，寝室的 WiFi 好像突然就变得鸡肋了，连上了 WiFi 也不敢放肆了，真是让人憋屈。 在我搬回本部之前就已经在研究这个如何免流量">
+<meta name="keywords" content="Shadowsocks,免流,校园网,DNS64,IPv6,SSTap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="校园网使用 IPv6 免流量上网">
+<meta property="og:url" content="https://real-neo.me/Free-By-IPv6.html">
+<meta property="og:site_name" content="问少的小站">
+<meta property="og:description" content="本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            自从挖煤的校长来了之后，校园网就不再是免费使用了，变成了现在这个样子：每个月 20G 免费流量，超出需要付费。对于大部分人来说，寝室的 WiFi 好像突然就变得鸡肋了，连上了 WiFi 也不敢放肆了，真是让人憋屈。 在我搬回本部之前就已经在研究这个如何免流量">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/打开网络和%20Internet%20设置.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/更改适配器选项.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/以太网-属性.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/Internet-协议版本-6-TCP-IPv6-属性.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/编辑服务器.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/编辑服务器%20local-1080.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/SSTap%20添加代理.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/SSTap%20选择修改代理.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/SSTap%20添加新规则.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/SSTap%20成功连接.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2018/03/Screenshot_影梭_20180310-192509.png">
+<meta property="og:updated_time" content="2019-02-22T18:17:43.582Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="校园网使用 IPv6 免流量上网">
+<meta name="twitter:description" content="本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            自从挖煤的校长来了之后，校园网就不再是免费使用了，变成了现在这个样子：每个月 20G 免费流量，超出需要付费。对于大部分人来说，寝室的 WiFi 好像突然就变得鸡肋了，连上了 WiFi 也不敢放肆了，真是让人憋屈。 在我搬回本部之前就已经在研究这个如何免流量">
+<meta name="twitter:image" content="https://real-neo.me/uploads/2018/03/打开网络和%20Internet%20设置.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="问少的小站" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://real-neo.me/Free-By-IPv6.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>校园网使用 IPv6 免流量上网 | 问少的小站</title>
+  
+
+
+
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-59619298-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-59619298-2');
+  </script>
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">问少的小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Thoughts, stories and ideas.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlYWwtbmVv" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Free-By-IPv6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">校园网使用 IPv6 免流量上网
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2016-08-01 16:57:35" itemprop="dateCreated datePublished" datetime="2016-08-01T16:57:35Z">2016-08-01</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note info">
+            <p>本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
+          </div>
+<p>自从挖煤的校长来了之后，校园网就不再是免费使用了，变成了现在这个样子：每个月 20G 免费流量，超出需要付费。对于大部分人来说，寝室的 WiFi 好像突然就变得鸡肋了，连上了 WiFi 也不敢放肆了，真是让人憋屈。</p>
+<p>在我搬回本部之前就已经在研究这个如何免流量上网的事情了，在宏福那里研究不是很顺利，毕竟宏福的 IPv6 不是很好折腾，好在电信还算有点良心，分配了 240E 开头的原生 IPv6 地址，各种关于 IPv6 的实验得以进行。7 月刚从宏福搬回本部，室友不到两天就用了 12G 的流量，一个月 20G 的免费流量完全不够用。免流，势在必行。我稍微研究总结了一下，目前主要有两种免流方式，下面我一个一个慢慢说。<a id="more"></a></p>
+<h2 id="免流原理"><a href="#免流原理" class="headerlink" title="免流原理"></a>免流原理</h2><p>中国的校园网网络一般都是双栈网络，IPv4+IPv6，而一般的学校是对 IPv4 流量收费的，对 IPv6 流量免费，我们只要把所有系统软件产生的需要收费的 IPv4 流量转换为 IPv6 流量走出校园就可以做到免费上网了。对 IPv6 流量免费并不是不能对 IPv6 流量计费，而是现在校园网作为推广试验 IPv6 的环境，国家政策鼓励的结果。现在的移动 4G 已经启用了 IPv6，不可能放你免费用的。</p>
+<p>但是，中国的大部分网站（其实世界上多数网站也这样）没有配置 IPv6 地址，只能通过 IPv4 流量访问，所以我们的 IPv6 流量从校园网出去之后还要转换回 IPv4 流量才能正常使用网络服务。一般来说我们需要一台这样服务器：同时有 IPv4+IPv6 环境，与我们的电脑使用 IPv6 通信，与各大网站使用 IPv4 通信，服务器在中间中转转换。</p>
+<p>接下来我们关注的重点就是这个可以转换我们流量的服务器了。</p>
+<h2 id="环境前提"><a href="#环境前提" class="headerlink" title="环境前提"></a>环境前提</h2><p>你必须得有访问 IPv6 网络的权限，如果你可以正常打开 <span class="exturl" data-url="aHR0cHM6Ly9idC5ieXIuY24v" title="BYRBT">北邮人 BT<i class="fa fa-external-link"></i></span> 并能正常 BT 下载做种等操作，说明你的网络是有 IPv6 环境的，具备免流量的条件。</p>
+<hr>
+<h2 id="一、DNS64"><a href="#一、DNS64" class="headerlink" title="一、DNS64"></a>一、DNS64</h2><p>维基百科是这样解释 DNS64 的：<br><blockquote><p>DNS64 describes a DNS server that when asked for a domain’s AAAA records, but only finds A records, synthesizes the AAAA records from the A records. The first part of the synthesized IPv6 address points to an IPv6/IPv4 translator and the second part embeds the IPv4 address from the A record. The translator in question is usually a NAT64 server. The standard-track specification of DNS64 is in RFC 6147.<br>There are two noticeable issues with this transition mechanism:</p>
+<ul>
+<li>It only works for cases where DNS is used to find the remote host address, if IPv4 literals are used the DNS64 server will never be involved.</li>
+<li>Because the DNS64 server needs to return records not specified by the domain owner, DNSSEC validation against the root will fail in cases where the DNS server doing the translation is not the domain owner’s server.</li>
+</ul>
+<footer><strong>Wikipedia</strong><cite><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSVB2Nl90cmFuc2l0aW9uX21lY2hhbmlzbSNETlM2NA==" title="https://en.wikipedia.org/wiki/IPv6_transition_mechanism#DNS64">DNS64<i class="fa fa-external-link"></i></span></cite></footer></blockquote><br>通过配置 IPv6 DNS，对内容服务商的域名进行 IPv4 → IPv6 解析结果转换，实现 IPv6 与 IPv4 资源互通。简单的说就是，我们使用了一个“不正常”的 DNS 服务器，在我们访问某个网址域名时，返回一个“错误”的地址，这个地址是 IPv6 地址，我访问这个错误的地址却也能得到正确的结果，这就是这个服务器在中间转换的结果了。<br>比如正常情况下我访问凤凰网，连接的是 <code>211.68.71.214</code> 这个地址，在使用 DNS64 之后，我连接的地址就变为了 <code>240c:f:1:6644:2:0:3ccf:f662</code>，但是同样能打开凤凰网。</p>
+<p>下面以 Windows 10 为例说明设置方法，各 Linux 发行版、macOS 设置方法请自行搜索“系统名称 + 修改 DNS”，方法大同小异。</p>
+<p>首先“打开网络和 Internet 设置”</p>
+<p><img src="/uploads/2018/03/打开网络和 Internet 设置.png" alt="打开网络和 Internet 设置"></p>
+<p>然后选择“更改适配器选项”</p>
+<p><img src="/uploads/2018/03/更改适配器选项.png" alt="更改适配器选项"></p>
+<p>如果你使用网线接入校园网，则选择“本地连接/以太网”，如果你使用 WiFi 接入校园网，则选择“无线网络连接”。在相应的连接上面右键，选择“属性”。</p>
+<p>选中“Internet 协议版本 6 (TCP/IPv6)”，然后点击“属性”</p>
+<p><img src="/uploads/2018/03/以太网-属性.png" alt="以太网 属性"></p>
+<p>选择“使用下面的 DNS 服务器地址”，并如图填入 <code>240C::6644</code></p>
+<p><img src="/uploads/2018/03/Internet-协议版本-6-TCP-IPv6-属性.png" alt="Internet 协议版本 6 (TCP/IPv6) 属性"></p>
+<p>之后逐次点击确定保存更改。</p>
+<p>此时退出校园网登陆，试一试现在能否打开百度新浪等页面？</p>
+<p>手机连接 WiFi 也可以更改 DNS 服务器，具体每部手机修改方法请搜索解决。</p>
+<p>这种方法最简单，但同时也有缺点：不能播放视频，网页加载速度慢，不能使用 QQ。</p>
+<h2 id="二、使用代理服务器"><a href="#二、使用代理服务器" class="headerlink" title="二、使用代理服务器"></a>二、使用代理服务器</h2><p>这一种方法就没有了上一个方法的缺点了，可以正常播放视频，实测优酷土豆爱奇艺流畅播放，同时还可以观看 YouTube 视频。原理很简单：使用支持 IPv6 的主机作为代理服务器。架设代理的方法有很多，Shadowsocks、OpenVPN 等支持 IPv6 的软件是不错的选择，我们这里介绍使用 Shadowsocks。</p>
+<p>维基百科上面对于 Shadowsocks 的解释：<br><blockquote><p>Shadowsocks 可以指：一种基于 Socks5 代理方式的加密传输协议，也可以指实现这个协议的各种开发包。当前包使用 Python、C、C++、C#、Go 语言等编程语言开发，大部分主要实现（iOS 平台的除外）采用 Apache 许可证、GPL、MIT 许可证等多种自由软件许可协议开放源代码。Shadowsocks 分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。</p>
+<p>在中国大陆，本工具也被广泛用于突破防火长城（GFW），以浏览被封锁、遮蔽或干扰的内容。2015 年 8 月 22 日，Shadowsocks 原作者 Clowwindy 称受到了中国政府的压力，宣布停止维护此计划（项目）并移除其个人页面所存储的源代码。</p>
+<footer><strong>Wikipedia</strong><cite><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvU2hhZG93c29ja3M=" title="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks<i class="fa fa-external-link"></i></span></cite></footer></blockquote></p>
+<p>虽然 Shadowsocks 的目的是为了翻墙，但是 Shadowsocks 功能强大方便易用，也可以拿来作为我们的免流上网中转工具。</p>
+<p>第一步，你需要有一个支持 IPv6 的 Shadowsocks 服务器节点，这一步很重要，没有可用的服务器怎么也玩不转。个人推荐 Bandwagon、Digital Ocean、Vultr 这些服务商，一般都比较便宜，如果你想使用 Vultr 的话，可以使用我的 <span class="exturl" data-url="aHR0cHM6Ly93d3cudnVsdHIuY29tLz9yZWY9NzA3MTA4MQ==" title="Vultr">邀请链接<i class="fa fa-external-link"></i></span>，这样的话你我都可以获得 $10 的优惠。注册之后，开一个最低配置的 VPS 就可以满足我们的需求了，一般选择美国的节点，系统推荐选择 Ubuntu 16.04，安装方法可以参考我的另一篇文章：<a href="https://real-neo.me/Install-Shadowsocks-Libev.html" title="Linux 安装配置 Shadowsocks-Libev">Linux 安装配置 Shadowsocks-Libev</a></p>
+<p>第二步，下载 Shadowsocks 客户端程序，打开软件，将 Shadowsocks 服务器信息对应填入其中。</p>
+<p><img src="/uploads/2018/03/编辑服务器.png" alt="编辑服务器"></p>
+<p><img src="/uploads/2018/03/编辑服务器 local-1080.png" alt="编辑服务器"></p>
+<p>第三步，服务器信息填写完毕后，下载安装 SSTap。</p>
+<p>安装过程中会提示“您想安装这个设备软件吗？，”勾选始终信任来自…的软件，并点击安装。</p>
+<p>打开 SSTap，点击添加新代理，选择“添加一个 SOCKS5 代理”，这里不能选择添加 SS 代理，因为 SSTap 不支持使用 IPv6 连接。然后按照下图设置。</p>
+<p><img src="/uploads/2018/03/SSTap 添加代理.png" alt="SSTap 添加代理"></p>
+<p>添加完成回到主界面，点击“创建或者修改代理模式”</p>
+<p><img src="/uploads/2018/03/SSTap 选择修改代理.png" alt="SSTap 选择修改代理"></p>
+<p>在弹出的“代理模式管理”窗口中，点击“添加”，按照下图填写。</p>
+<p><img src="/uploads/2018/03/SSTap 添加新规则.png" alt="SSTap 添加新规则"></p>
+<p>规则列表如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0/8</span><br><span class="line">10.0.0.0/8</span><br><span class="line">100.64.0.0/10</span><br><span class="line">127.0.0.0/8</span><br><span class="line">169.254.0.0/16</span><br><span class="line">172.16.0.0/12</span><br><span class="line">192.0.0.0/29</span><br><span class="line">192.0.2.0/24</span><br><span class="line">192.88.99.0/24</span><br><span class="line">192.168.0.0/16</span><br><span class="line">198.18.0.0/15</span><br><span class="line">198.51.100.0/24</span><br><span class="line">203.0.113.0/24</span><br><span class="line">224.0.0.0/3</span><br></pre></td></tr></table></figure></p>
+<p>至此，全部设置已经完成，点击保存，返回主界面，点击连接，稍等片刻即可完成。</p>
+<p><img src="/uploads/2018/03/SSTap 成功连接.png" alt="SSTap 成功连接"></p>
+<p>现在打开浏览器，任意打开网站看一看，是不是可以免登陆校园网就可以打开了？</p>
+<p>手机上的设置相对简单，前提也是必须可以正常访问 IPv6 网络。Android 手机下载安装“影梭”，iPhone 下载安装“Shadowrocket”。</p>
+<p>添加新配置，选择“手动配置”，将服务器的地址，远程端口，密码，加密方法填写正确，路由选项选择“绕过局域网地址”，其他选项无需修改。</p>
+<img src="/uploads/2018/03/Screenshot_影梭_20180310-192509.png" width="540">
+<p>填写完毕，点击保存，回到主界面，点一下纸飞机便可以免流上网了。</p>
+<p>iOS 系统的设置方法类似，这里不再演示。</p>
+<p>由于是使用代理服务器进行网络浏览，所以正常情况下会比直接访问速度稍慢，但还是可以接受的。</p>
+<p>各种各样的免流方法并没有一个是完美无缺的，在免流情况下，玩游戏的延迟很可怕，几乎是不可能的事情，所以玩游戏还是用流量吧。20G 的专属游戏流量，对我来说，足矣。</p>
+<hr>
+<p>末尾贴上各平台客户端下载地址：</p>
+<blockquote>
+<ul>
+<li>Windows: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NoYWRvd3NvY2tzL3NoYWRvd3NvY2tzLXdpbmRvd3MvcmVsZWFzZXM=" title="https://github.com/shadowsocks/shadowsocks-windows/releases">shadowsocks-windows<i class="fa fa-external-link"></i></span> <span class="exturl" data-url="aHR0cHM6Ly93d3cuc29ja3NjYXA2NC5jb20vc3N0YXAv" title="https://www.sockscap64.com/sstap/">SSTap<i class="fa fa-external-link"></i></span></li>
+<li>macOS: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NoYWRvd3NvY2tzL1NoYWRvd3NvY2tzWC1ORy9yZWxlYXNlcw==" title="https://github.com/shadowsocks/ShadowsocksX-NG/releases">ShadowsocksX-NG<i class="fa fa-external-link"></i></span></li>
+<li>Android: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NoYWRvd3NvY2tzL3NoYWRvd3NvY2tzLWFuZHJvaWQvcmVsZWFzZXM=" title="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android<i class="fa fa-external-link"></i></span></li>
+<li>iOS: <span class="exturl" data-url="aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL3VzL2FwcC9zaGFkb3dyb2NrZXQvaWQ5MzI3NDcxMTg/bXQ9OA==" title="https://itunes.apple.com/us/app/shadowrocket/id932747118?mt=8">Shadowrocket<i class="fa fa-external-link"></i></span></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>问少</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="https://real-neo.me/Free-By-IPv6.html" title="校园网使用 IPv6 免流量上网">https://real-neo.me/Free-By-IPv6.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Shadowsocks/" rel="tag"># Shadowsocks</a>
+          
+            <a href="/tags/免流/" rel="tag"># 免流</a>
+          
+            <a href="/tags/校园网/" rel="tag"># 校园网</a>
+          
+            <a href="/tags/DNS64/" rel="tag"># DNS64</a>
+          
+            <a href="/tags/IPv6/" rel="tag"># IPv6</a>
+          
+            <a href="/tags/SSTap/" rel="tag"># SSTap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/假日随笔.html" rel="next" title="假日随笔">
+                <i class="fa fa-chevron-left"></i> 假日随笔
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Hello-World.html" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="问少">
+            
+              <p class="site-author-name" itemprop="name">问少</p>
+              <p class="site-description motion-element" itemprop="description">一个问少写字的地方。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">60</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlYWwtbmVv" title="GitHub &rarr; https://github.com/real-neo"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnF1ZXN0aW9ueXVnb29kQGdtYWlsLmNvbQ==" title="E-Mail &rarr; mailto:questionyugood@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vcmVhbG5lb2Jybw==" title="Weibo &rarr; https://weibo.com/realneobro"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9yZWFsbmVvYnJv" title="Twitter &rarr; https://twitter.com/realneobro"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3JlYWxuZW9icm8=" title="FB Page &rarr; https://www.facebook.com/realneobro"><i class="fa fa-fw fa-facebook"></i>FB Page</span>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9haXNha2FraS5jb20v" title="https://aisakaki.com/">Aisaka</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnlpemhpbGVlLmNvbS8=" title="https://blog.yizhilee.com/">荔枝的博客</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9mZmlzLm1lLw==" title="https://ffis.me/">饭饭's Blog</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cDovL3d3dy5oYW54dWV5aW5nLmNvbS8=" title="http://www.hanxueying.com/">Santanico's Blog</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cDovL21pc3R5Lm1vZS8=" title="http://misty.moe/">Misty的小窝~</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnBocGdhby5jb20v" title="https://blog.phpgao.com/">老高的技术博客</span>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#免流原理"><span class="nav-number">1.</span> <span class="nav-text">免流原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境前提"><span class="nav-number">2.</span> <span class="nav-text">环境前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、DNS64"><span class="nav-number">3.</span> <span class="nav-text">一、DNS64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、使用代理服务器"><span class="nav-number">4.</span> <span class="nav-text">二、使用代理服务器</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">问少</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'd757825157181a21c3f0',
+    clientSecret: '5128dd1e75825f2d630152344b5b924275143db5',
+    repo: 'real-neo.github.io',
+    owner: 'real-neo',
+    admin: ['real-neo'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/exturl.js?v=7.0.0"></script>
+
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('Copied');
+          else $(this).text('Copy failed');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('Copy');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+</body>
+</html>
