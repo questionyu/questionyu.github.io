@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[创建 Localhost 证书]]></title>
+    <url>%2FCreate-Localhost-Certificate.html</url>
+    <content type="text"><![CDATA[本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ 有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。 Xcode Command Line Tools基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。1xcode-select --install 生成证书在终端里运行以下命令即可在用户目录里生成证书和秘钥。1234openssl req -x509 -days 3650 -out localhost.crt -keyout localhost.key \ -newkey rsa:2048 -nodes -sha256 \ -subj '/CN=localhost' -extensions EXT -config &lt;( \ printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth") 其中 -days 3650 参数是指定证书的有效时间为 3650 天。 设置信任最后，需要在系统中设置信任，否则直接使用仍会提示不信任。 直接搜索打开“钥匙串访问”，“文件” - “导入项目” - 选择刚生成的 crt 文件。 双击打开刚导入的证书，设置“使用此证书时：始终信任”。 效果如下图。]]></content>
+      <categories>
+        <category>Tips</category>
+      </categories>
+      <tags>
+        <tag>证书</tag>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[修复 Ubuntu 下拼音输入法崩溃问题]]></title>
     <url>%2FFix-Ubuntu-Input-Method-Crash.html</url>
     <content type="text"><![CDATA[最近在使用 Ubuntu 18.04 的过程中，遇到了一个拼音输入法总是在选字的时候崩溃的问题。 崩溃表现crashed with SIGABRT in __assert_fail_base() 具体表现为：在打字时，无法使用数字键选择字词，鼠标点选也无效，只能按空格打出第一个字词。当按数字键选择字词时，输入法会崩溃，并输出字母和数字，例如我想打出“谷歌”，“谷歌”在候选列表第二个位置，按下 2，输入法崩溃，输出 guge2。 我搜索了一下，并没有找到解决办法，只好退而求其次，使用 fcitx 代替了 ibus，就这么过了半个月。然而我今天再次搜索的时候竟然找到了解决办法：Selecting a number does not always return a Chinese character with ibus pinyin。 解决办法直接删除输入法的缓存就好：rm ~/.cache/ibus/libpinyin/*]]></content>

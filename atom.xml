@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://real-neo.me/"/>
-  <updated>2019-02-22T18:17:43.582Z</updated>
+  <updated>2019-03-05T20:25:29.143Z</updated>
   <id>https://real-neo.me/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>创建 Localhost 证书</title>
+    <link href="https://real-neo.me/Create-Localhost-Certificate.html"/>
+    <id>https://real-neo.me/Create-Localhost-Certificate.html</id>
+    <published>2019-03-05T19:53:15.000Z</published>
+    <updated>2019-03-05T20:25:29.143Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note info">            <p>本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>          </div><p>有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。</p><h2 id="Xcode-Command-Line-Tools"><a href="#Xcode-Command-Line-Tools" class="headerlink" title="Xcode Command Line Tools"></a>Xcode Command Line Tools</h2><p>基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></p><a id="more"></a><h2 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h2><p>在终端里运行以下命令即可在用户目录里生成证书和秘钥。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -days 3650 -out localhost.crt -keyout localhost.key \</span><br><span class="line">  -newkey rsa:2048 -nodes -sha256 \</span><br><span class="line">  -subj <span class="string">'/CN=localhost'</span> -extensions EXT -config &lt;( \</span><br><span class="line">   <span class="built_in">printf</span> <span class="string">"[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth"</span>)</span><br></pre></td></tr></table></figure></p><p>其中 <code>-days 3650</code> 参数是指定证书的有效时间为 3650 天。<br><img src="/uploads/2019/03/屏幕快照 2019-03-05 20.03.20.png" alt></p><h2 id="设置信任"><a href="#设置信任" class="headerlink" title="设置信任"></a>设置信任</h2><p>最后，需要在系统中设置信任，否则直接使用仍会提示不信任。</p><p>直接搜索打开“钥匙串访问”，“文件” - “导入项目” - 选择刚生成的 crt 文件。</p><p>双击打开刚导入的证书，设置“使用此证书时：始终信任”。<br><img src="/uploads/2019/03/屏幕快照 2019-03-05 20.17.10.png" alt></p><p>效果如下图。<br><img src="/uploads/2019/03/屏幕快照 2019-03-05 20.19.24.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。&lt;/p&gt;
+&lt;h2 id=&quot;Xcode-Command-Line-Tools&quot;&gt;&lt;a href=&quot;#Xcode-Command-Line-Tools&quot; class=&quot;headerlink&quot; title=&quot;Xcode Command Line Tools&quot;&gt;&lt;/a&gt;Xcode Command Line Tools&lt;/h2&gt;&lt;p&gt;基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;xcode-select --install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tips" scheme="https://real-neo.me/categories/Tips/"/>
+    
+    
+      <category term="证书" scheme="https://real-neo.me/tags/%E8%AF%81%E4%B9%A6/"/>
+    
+      <category term="macOS" scheme="https://real-neo.me/tags/macOS/"/>
+    
+  </entry>
   
   <entry>
     <title>修复 Ubuntu 下拼音输入法崩溃问题</title>
@@ -514,30 +542,6 @@
     
     
       <category term="Python" scheme="https://real-neo.me/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BIRCH 的初步了解</title>
-    <link href="https://real-neo.me/BIRCH%20%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3.html"/>
-    <id>https://real-neo.me/BIRCH 的初步了解.html</id>
-    <published>2018-01-13T13:13:08.000Z</published>
-    <updated>2019-02-22T18:17:43.575Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="BIRCH-概述"><a href="#BIRCH-概述" class="headerlink" title="BIRCH 概述"></a>BIRCH 概述</h2><p>BIRCH 算法属于层次聚类算法的一种，全称是利用层次方法的平衡迭代规约和聚类 (Balanced Iterative Reducing and Clustering Using Hierarchies)。<br>BIRCH 算法利用了一个树结构进行快速的聚类，这个数结构类似于平衡 B+ 树，一般将它称之为聚类特征树 (Clustering Feature Tree，简称 CF Tree)。这颗树的每一个节点是由若干个聚类特征 (Clustering Feature，简称 CF)组成。聚类特征树的样子：每个节点包括叶子节点都有若干个 CF，而内部节点的 CF 有指向孩子节点的指针，所有的叶子节点用一个双向链表链接起来。<br><img src="/uploads/2018/01/1.png" alt="聚类特征树"><a id="more"></a></p><h2 id="聚类特征-CF-与聚类特征树-CF-Tree"><a href="#聚类特征-CF-与聚类特征树-CF-Tree" class="headerlink" title="聚类特征 CF 与聚类特征树 CF Tree"></a>聚类特征 CF 与聚类特征树 CF Tree</h2><p>在聚类特征树中，一个聚类特征 CF 是这样定义的：每一个 CF 是一个三元组，可以用（N，LS，SS）表示。其中 N 代表了这个 CF 中拥有的样本点的数量，这个好理解；LS 代表了这个 CF 中拥有的样本点各特征维度的和向量，SS 代表了这个 CF 中拥有的样本点各特征维度的平方和。举个例子如下图，在 CF Tree 中的某一个节点的某一个 CF 中，有下面 5 个样本 (3,4), (2,6), (4,5), (4,7), (3,8)。则它对应的 N=5, LS=(3+2+4+4+3,4+6+5+7+8)=(16,30), SS=(3<em>3+2</em>2+4<em>4+4</em>4+3<em>3+4</em>4+6<em>6+5</em>5+7<em>7+8</em>8)=(54+190)=244<br><img src="/uploads/2018/01/2.png" alt="举个例子"><br>CF 有一个很好的性质，就是满足线性关系，即 CF1+CF2=(N1+N2,LS1+LS2,SS1+SS2)。如果把这个性质放在 CF Tree 上，对于每个父节点中的 CF 节点，它的 (N,LS,SS) 三元组的值等于这个 CF 节点所指向的所有子节点的三元组之和。<br><img src="/uploads/2018/01/3.png" alt="CF Tree 的线性关系"><br>对于 CF Tree，一般有几个重要参数，第一个参数是每个内部节点的最大 CF 数 B，第二个参数是每个叶子节点的最大 CF 数 L，第三个参数是针对叶子节点中某个 CF 中的样本点来说的，它是叶节点每个 CF 的最大样本半径阈值 T，也就是说，在这个 CF 中的所有样本点一定要在半径小于 T 的一个超球体内。对于上图中的 CF Tree，限定了 B=7， L=5，也就是说内部节点最多有 7 个 CF，而叶子节点最多有 5 个 CF。</p><h2 id="聚类特征树-CF-Tree-的生成"><a href="#聚类特征树-CF-Tree-的生成" class="headerlink" title="聚类特征树 CF Tree 的生成"></a>聚类特征树 CF Tree 的生成</h2><p>先定义好 CF Tree 的参数： 即内部节点的最大 CF 数 B， 叶子节点的最大 CF 数 L， 叶节点每个 CF 的最大样本半径阈值 T。<br>在最开始的时候，CF Tree 是空的，没有任何样本，从训练集读入第一个样本点，将它放入一个新的 CF 三元组 A，这个三元组的 N=1，将这个新的 CF 放入根节点，此时的 CF Tree 如下图：<br><img src="/uploads/2018/01/4.png" alt="CF Tree 的生成1"><br>继续读入第二个样本点，发现这个样本点和第一个样本点 A，在半径为T的超球体范围内，也就是说，他们属于一个 CF，将第二个点也加入 CF A,此时需要更新 A 的三元组的值。此时 A 的三元组中 N=2。此时的 CF Tree 如下图：<br><img src="/uploads/2018/01/5.png" alt="CF Tree 的生成2"><br>此时来了第三个节点，发现这个节点不能融入刚才前面的节点形成的超球体内，也就是说，需要一个新的 CF 三元组 B，来容纳这个新的值。此时根节点有两个 CF 三元组 A 和 B，此时的 CF Tree 如下图：<br><img src="/uploads/2018/01/6.png" alt="CF Tree 的生成3"><br>当来到第四个样本点的时候，发现和 B 在半径小于 T 的超球体，这样更新后的 CF Tree 如下图：<br><img src="/uploads/2018/01/7.png" alt="CF Tree 的生成4"><br>那什么时候 CF Tree 的节点需要分裂呢？假设现在的 CF Tree 如下图， 叶子节点 LN1 有三个 CF， LN2 和  LN3 各有两个 CF。叶子节点的最大 CF 数 L=3。此时一个新的样本点来了，发现它离 LN1 节点最近，因此开始判断它是否在 sc1,sc2,sc3 这 3 个 CF 对应的超球体之内，但是很不幸，它不在，因此它需要建立一个新的 CF，即 sc8 来容纳它。问题是 L=3，也就是说 LN1 的 CF 个数已经达到最大值了，不能再创建新的 CF 了，所以要将 LN1 叶子节点一分为二。<br><img src="/uploads/2018/01/8.png" alt="CF Tree 的生成5"><br>将 LN1 里所有 CF 元组中，找到两个最远的 CF 做这两个新叶子节点的种子 CF，然后将 LN1 节点里所有 CF sc1, sc2, sc3，以及新样本点的新元组 sc8 划分到两个新的叶子节点上。将 LN1 节点划分后的 CF Tree 如下图：<br><img src="/uploads/2018/01/9.png" alt="CF Tree 的生成6"><br>如果内部节点的最大 CF 数 B=3，则此时叶子节点一分为二会导致根节点的最大 CF 数超了，也就是说，根节点现在也要分裂，分裂的方法和叶子节点分裂一样，分裂后的 CF Tree 如下图：<br><img src="/uploads/2018/01/10.png" alt="CF Tree 的生成7"></p><h2 id="BIRCH-算法"><a href="#BIRCH-算法" class="headerlink" title="BIRCH 算法"></a>BIRCH 算法</h2><p>将所有的训练集样本建立了 CF Tree，一个基本的 BIRCH 算法就完成了，对应的输出就是若干个 CF 节点，每个节点里的样本点就是一个聚类的簇。也就是说 BIRCH 算法的主要过程，就是建立 CF Tree 的过程。<br>BIRCH 算法的流程：</p><ol><li>将所有的样本依次读入，在内存中建立一颗 CF Tree, 建立的方法参考上一节。</li><li>（可选）将第一步建立的 CF Tree 进行筛选，去除一些异常 CF 节点，这些节点一般里面的样本点很少。对于一些超球体距离非常近的元组进行合并。</li><li>（可选）利用其它的一些聚类算法比如 K-Means 对所有的 CF 元组进行聚类，得到一颗比较好的 CF Tree。这一步的主要目的是消除由于样本读入顺序导致的不合理的树结构，以及一些由于节点 CF 个数限制导致的树结构分裂。</li><li>（可选）利用第三步生成的 CF Tree 的所有 CF 节点的质心，作为初始质心点，对所有的样本点按距离远近进行聚类。这样进一步减少了由于 CF Tree 的一些限制导致的聚类不合理的情况。</li></ol><h2 id="Pros-and-Cons"><a href="#Pros-and-Cons" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h2><p>优点：</p><ol><li>节约内存，所有的样本都在磁盘上，CF Tree 仅仅存了 CF 节点和对应的指针。</li><li>聚类速度快，只需要一遍扫描训练集就可以建立 CF Tree，CF Tree 的增删改都很快。</li><li>可以识别噪音点，还可以对数据集进行初步分类的预处理。<br>缺点：</li><li>由于 CF Tree 对每个节点的 CF 个数有限制，导致聚类的结果可能和真实的类别分布不同。</li><li>对高维特征的数据聚类效果不好。此时可以选择 Mini Batch K-Means。</li><li>如果数据集的分布簇不是类似于超球体，或者说不是凸的，则聚类效果不好。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;BIRCH-概述&quot;&gt;&lt;a href=&quot;#BIRCH-概述&quot; class=&quot;headerlink&quot; title=&quot;BIRCH 概述&quot;&gt;&lt;/a&gt;BIRCH 概述&lt;/h2&gt;&lt;p&gt;BIRCH 算法属于层次聚类算法的一种，全称是利用层次方法的平衡迭代规约和聚类 (Balanced Iterative Reducing and Clustering Using Hierarchies)。&lt;br&gt;BIRCH 算法利用了一个树结构进行快速的聚类，这个数结构类似于平衡 B+ 树，一般将它称之为聚类特征树 (Clustering Feature Tree，简称 CF Tree)。这颗树的每一个节点是由若干个聚类特征 (Clustering Feature，简称 CF)组成。聚类特征树的样子：每个节点包括叶子节点都有若干个 CF，而内部节点的 CF 有指向孩子节点的指针，所有的叶子节点用一个双向链表链接起来。&lt;br&gt;&lt;img src=&quot;/uploads/2018/01/1.png&quot; alt=&quot;聚类特征树&quot;&gt;
-    
-    </summary>
-    
-      <category term="聚类分析" scheme="https://real-neo.me/categories/%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/"/>
-    
-    
-      <category term="聚类算法" scheme="https://real-neo.me/tags/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="BIRCH" scheme="https://real-neo.me/tags/BIRCH/"/>
     
   </entry>
   

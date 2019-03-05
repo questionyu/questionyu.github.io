@@ -415,6 +415,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/4 种序列模式挖掘算法的比较分析.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/4 种序列模式挖掘算法的比较分析.html" class="post-title-link" itemprop="url">4 种序列模式挖掘算法的比较分析</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-08-12 22:28:52" itemprop="dateCreated datePublished" datetime="2017-08-12T22:28:52Z">2017-08-12</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>AprioriAll 算法属于 Apriori 类算法，其基本思想为首先遍历序列数据库生成候选序列并利用 Apriori 性质进行剪枝得到频繁序列。每次遍历都是通过连接上次得到的频繁序列生成新的长度加1的候选序列，然后扫描每个候选序列验证其是否为频繁序列。</li>
+<li>GSP（generalized sequential pattern）算法是 AprioriAll 算法的扩展算法，其算法的执行过程和 AprioriAll 类似，最大的不同在于 GSP 引入了时间约束、滑动时间窗和分类层次技术，增加了扫描的约束条件，有效地减少了需要扫描的候选序列的数量。此外 GSP 利用哈希树来存储候选序列，减少了需要扫描的序列数量。</li>
+<li>FreeSpan 算法是基于模式投影的序列挖掘算法，其基本思想：利用当前挖掘的频繁序列集将序列数据库递归地投影到一组更小的投影数据库上，分别在每个投影数据库上增长子序列。这一过程对数据和待检验的频繁模式集都进行了分割，并且每一次检验限制在与其相符合的更小投影数据库中。</li>
+<li>PrefixSpan 是 FreeSpan 的改进算法，即通过前缀投影挖掘序列模式。其基本思想：投影时不考虑所有可能出现的频繁子序列，只检查前缀序列，然后把相应的后缀投影成投影数据库。每个投影数据库中，只检查局部频繁模式，在整个过程中不需要生成候选序列。</li>
+</ul>
+<p>AprioriAll GSP 这两种算法都属于 Apriori 类算法，都要产生大量的候选序列，需要有足够的存贮空间。同时还需要反复扫描数据库，需要占用很多运行时间。该类算法的执行效率比较低，特别是在支持度比较低的情况下，其执行效率将会大大下降。和 AprioriAll 相比，GSP 的执行效率比较高，总体来说要比 AprioriAll 高 2~20 倍。</p>
+<p>FreeSpan PrefixSpan 这两种算法都属于模式增长算法，它们的查找更加集中和有效。由于该类算法不生成大量的候选序列以及不需要反复扫描原数据库，和 Apriori 类算法相比该类算法要快且更有效，特别是在支持度比较低的情况下更明显。此外，在时空的执行效率上，PrefixSpan 比 FreeSpan 更优。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1060,169 +1224,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab6.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab6.html" class="post-title-link" itemprop="url">互联网应用 Lab6</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-28 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-28T12:00:00Z">2017-04-28</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_addr() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; /* for atoi() and exit() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ECHOMAX 255 <span class="comment">/* Longest string to echo */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sock; <span class="comment">/* Socket descriptor */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoServAddr</span>;</span> <span class="comment">/* Echo server address */</span></span><br><span class="line"><span class="comment">//	struct sockaddr_in fromAddr; /* Source address of echo */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span> echoServPort; <span class="comment">/* Echo server port */</span></span><br><span class="line"><span class="comment">//	unsigned int fromSize; /* In-out of address size for recvfrom() */</span></span><br><span class="line">	<span class="keyword">char</span> *servIP; <span class="comment">/* IP address of server */</span></span><br><span class="line">	<span class="keyword">char</span> *echoString; <span class="comment">/* String to send to echo server */</span></span><br><span class="line"><span class="comment">//	char echoBuffer[ECHOMAX + 1]; /* Buffer for receiving echoed string */</span></span><br><span class="line">	<span class="keyword">size_t</span> echoStringLen; <span class="comment">/* Length of string to echo */</span></span><br><span class="line"><span class="comment">//	int respStringLen; /* Length of received response */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">3</span>) &#123; <span class="comment">/* Test for correct number of arguments */</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;Server IP&gt; &lt;Echo Word&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	servIP = argv[<span class="number">1</span>]; <span class="comment">/* First arg: server IP address (dotted quad) */</span></span><br><span class="line">	echoServPort = <span class="number">56325</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Create a datagram/UDP socket */</span></span><br><span class="line">	<span class="keyword">if</span> ((sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line">	<span class="comment">/* Construct the server address structure */</span></span><br><span class="line">	<span class="built_in">memset</span>(&amp;echoServAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(echoServAddr));<span class="comment">/*Zero out structure*/</span></span><br><span class="line">	echoServAddr.sin_family = AF_INET; <span class="comment">/* Internet addr family */</span></span><br><span class="line">	echoServAddr.sin_addr.s_addr = inet_addr(servIP);<span class="comment">/*Server IP address*/</span></span><br><span class="line">	echoServAddr.sin_port = htons(echoServPort); <span class="comment">/* Server port */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; argc; i++) &#123;</span><br><span class="line">		echoString = argv[i]; <span class="comment">/* Second arg: string to echo */</span></span><br><span class="line">		<span class="keyword">if</span> ((echoStringLen = <span class="built_in">strlen</span>(echoString)) &gt; ECHOMAX) <span class="comment">/* Check input length */</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Echo word too long.\n"</span>);</span><br><span class="line">		<span class="comment">/* Send the string to the server */</span></span><br><span class="line">		<span class="keyword">if</span> (sendto(sock, echoString, echoStringLen, <span class="number">0</span>, (struct sockaddr *) &amp;echoServAddr, <span class="keyword">sizeof</span>(echoServAddr)) != echoStringLen)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"sendto() sent a different number of bytes than expected.\n"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"sending data to '%s'\n"</span>, servIP);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//	/* Recv a response */</span></span><br><span class="line"><span class="comment">//	fromSize = sizeof(fromAddr);</span></span><br><span class="line"><span class="comment">//	if ((respStringLen = recvfrom(sock, echoBuffer, ECHOMAX, 0, (struct sockaddr *) &amp;fromAddr, &amp;fromSize)) != echoStringLen)</span></span><br><span class="line"><span class="comment">//		printf("recvfrom() failed\n");</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr) &#123;</span></span><br><span class="line"><span class="comment">//		printf("Error: received a packet from unknown source.\n");</span></span><br><span class="line"><span class="comment">//		exit(1);</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	/* null-terminate the received data */</span></span><br><span class="line"><span class="comment">//	echoBuffer[respStringLen] = '\0';</span></span><br><span class="line"><span class="comment">//	printf("Received: %s\n", echoBuffer);/*Print the echoed message*/</span></span><br><span class="line">	close(sock);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab6.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1272,7 +1273,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-count">75</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1430,7 +1431,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">60</span>
+                      
+                    
+                    <span class="site-state-item-count">61</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
