@@ -1490,7 +1490,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: 0 auto 25px;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: none;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -2014,7 +2014,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e4ffe8;
+  background: #d03363;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2275,9 +2275,6 @@ pre .javascript .function {
     -o-transform: scale(1.1);
     transform: scale(1.1);
   }
-}
-i.fa {
-  font-family: FontAwesome !important;
 }
 .local-search-pop-overlay {
   position: fixed;
