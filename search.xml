@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[去除 Next 主题图片的灰色边框]]></title>
+    <url>%2FRemove-Next-Gray-Border.html</url>
+    <content type="text"><![CDATA[本文最后更新于 2019年3月6日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ 最近发了篇文章，带了些截图，发现对于 macOS 处理过的截图，Next 主题在图片周围加一圈灰色边框并不美观。 于是便想办法去掉它。打开浏览器检查图片样式，发现图片周围加了一圈一个像素宽度的灰色边框。 打开 Hexo 博客目录，直接搜索整个目录，果然在 themes/next/source/css/_common/components/post/post-expand.styl 这个文件里找到了配置。 只需将以下代码123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: 1px solid $gray-lighter;&#125; 改为123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: none;&#125; 即可去除边框。 去除边框之后的效果，看起来舒服多了。]]></content>
+      <categories>
+        <category>Tips</category>
+      </categories>
+      <tags>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[创建 Localhost 证书]]></title>
     <url>%2FCreate-Localhost-Certificate.html</url>
     <content type="text"><![CDATA[本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ 有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。 Xcode Command Line Tools基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。1xcode-select --install 生成证书在终端里运行以下命令即可在用户目录里生成证书和秘钥。1234openssl req -x509 -days 3650 -out localhost.crt -keyout localhost.key \ -newkey rsa:2048 -nodes -sha256 \ -subj '/CN=localhost' -extensions EXT -config &lt;( \ printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth") 其中 -days 3650 参数是指定证书的有效时间为 3650 天。 设置信任最后，需要在系统中设置信任，否则直接使用仍会提示不信任。 直接搜索打开“钥匙串访问”，“文件” - “导入项目” - 选择刚生成的 crt 文件。 双击打开刚导入的证书，设置“使用此证书时：始终信任”。 效果如下图。]]></content>
