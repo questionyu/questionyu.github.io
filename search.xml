@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[去除 Next 主题图片的灰色边框]]></title>
     <url>%2FRemove-Next-Gray-Border.html</url>
-    <content type="text"><![CDATA[本文最后更新于 2019年3月6日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ 最近发了篇文章，带了些截图，发现对于 macOS 处理过的截图，Next 主题在图片周围加一圈灰色边框并不美观。 于是便想办法去掉它。打开浏览器检查图片样式，发现图片周围加了一圈一个像素宽度的灰色边框。 打开 Hexo 博客目录，直接搜索整个目录，果然在 themes/next/source/css/_common/components/post/post-expand.styl 这个文件里找到了配置。 只需将以下代码123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: 1px solid $gray-lighter;&#125; 改为123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: none;&#125; 即可去除边框。 去除边框之后的效果，看起来舒服多了。]]></content>
+    <content type="text"><![CDATA[本文最后更新于 2019年3月6日 可能会因为没有更新而失效。如已失效或需要修正，请留言！ 最近发了篇文章，带了些截图，发现对于 macOS 处理过的截图，Next 主题在图片周围加一圈灰色边框并不美观。 于是便想办法去掉它。打开浏览器检查图片样式，发现图片周围加了一圈一个像素宽度的灰色边框。 打开 Hexo 博客目录，直接搜索整个目录，果然在 themes/next/source/css/_common/components/post/post-expand.styl 这个文件里找到了配置。 只需将以下代码123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: 1px solid $gray-lighter;&#125; 改为123456img &#123; box-sizing: border-box; margin: 0 auto 25px; padding: 3px; border: none;&#125; 即可去除边框。 去除边框之后的效果，看起来舒服多了。 最后记得一点，一定要先执行 hexo clean 再部署，否则样式表文件并不会更新导致修改不生效。]]></content>
       <categories>
         <category>Tips</category>
       </categories>
