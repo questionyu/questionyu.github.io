@@ -415,6 +415,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/IA-Lab4.html" class="post-title-link" itemprop="url">互联网应用 Lab4</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-04-21 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-21T12:00:00Z">2017-04-21</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> fd1, fd2;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd1 = open(<span class="string">"test1"</span>, O_RDWR | O_APPEND)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd2 = open(<span class="string">"test2"</span>, O_RDONLY)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-2\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((read(fd2, buf, <span class="number">1</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(fd1, buf, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	close(fd1);</span><br><span class="line">	close(fd2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/IA-Lab4.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1064,175 +1227,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/博客遇上 Hexo.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/博客遇上 Hexo.html" class="post-title-link" itemprop="url">博客遇上 Hexo</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-11-11 22:59:44" itemprop="dateCreated datePublished" datetime="2016-11-11T22:59:44Z">2016-11-11</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随笔/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="我为什么又换博客框架了？"><a href="#我为什么又换博客框架了？" class="headerlink" title="我为什么又换博客框架了？"></a>我为什么又换博客框架了？</h2><p>我的小站 2015 年初上线，还有三个月就满两年了，从一开始的 WordPress 到 Typecho 再到 WordPress，我每一次更换都是代表着我对博客看法的变化。</p>
-<ul>
-<li>最早用 WordPress 是因为它相对其他博客来说简单省心，而且插件多，可以满足我各种需要。</li>
-<li>后来一个月不到就换了 Typecho，是因为，我发现 WordPress 的访问缓慢，对服务器配置要求较高，我为了省些钱，就换了对配置要求低的 Typecho。</li>
-<li>直到 2016 年夏，终于觉得博客一成不变很久了，Github 送的 Digital Ocean 主机的优惠券还剩很多余额，干脆就搞点厉害的吧，就这样换了 WordPress。</li>
-</ul>
-<p>可能是到了现在优惠券的余额终于用完了吧，没有钱再买主机了，看到了免费的 Hexo + Github Pages，静态博客速度又快，除了部署麻烦点，其他都是优点啊，那就<strong>换吧</strong>！
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/博客遇上 Hexo.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1282,7 +1276,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">77</span>
+                    <span class="site-state-item-count">78</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1444,7 +1438,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">62</span>
+                      
+                    
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

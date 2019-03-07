@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://real-neo.me/macOS-Package-Manager-Homebrew.html</loc>
+    
+    <lastmod>2019-03-07T18:51:34.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/macOS-Android-Platform-Tools.html</loc>
     
     <lastmod>2019-03-07T12:49:52.932Z</lastmod>
@@ -51,6 +58,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/project/ST-DBSCAN-with-noise.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.590Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/project/K-Means-5.html</loc>
     
     <lastmod>2019-02-22T18:17:43.590Z</lastmod>
@@ -59,13 +73,6 @@
   
   <url>
     <loc>https://real-neo.me/project/ST-DBSCAN-without-noise.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.590Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/project/ST-DBSCAN-with-noise.html</loc>
     
     <lastmod>2019-02-22T18:17:43.590Z</lastmod>
     
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Typecho-Excerpt.html</loc>
+    <loc>https://real-neo.me/The-Truth-About-Mirror.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/The-Truth-About-Mirror.html</loc>
+    <loc>https://real-neo.me/Typecho-Excerpt.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
     
@@ -156,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/%E5%81%87%E6%97%A5%E9%9A%8F%E7%AC%94.html</loc>
+    <loc>https://real-neo.me/%E5%8D%9A%E5%AE%A2%E9%81%87%E4%B8%8A%20Hexo.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/%E5%8D%9A%E5%AE%A2%E9%81%87%E4%B8%8A%20Hexo.html</loc>
+    <loc>https://real-neo.me/%E5%81%87%E6%97%A5%E9%9A%8F%E7%AC%94.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
     
@@ -177,13 +184,6 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Lab8.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.586Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://real-neo.me/Linux-Change-SSH-Port.html</loc>
     
     <lastmod>2019-02-22T18:17:43.586Z</lastmod>
@@ -191,7 +191,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/OxygenOS-Bus-Card.html</loc>
+    <loc>https://real-neo.me/Lab8.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.586Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://real-neo.me/Python-Lecture-Notes.html</loc>
     
     <lastmod>2019-02-22T18:17:43.586Z</lastmod>
     
@@ -205,7 +212,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Python-Lecture-Notes.html</loc>
+    <loc>https://real-neo.me/OxygenOS-Bus-Card.html</loc>
     
     <lastmod>2019-02-22T18:17:43.586Z</lastmod>
     
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Install-Shadowsocks-Libev.html</loc>
+    <loc>https://real-neo.me/K-means%20%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3.html</loc>
     
     <lastmod>2019-02-22T18:17:43.584Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/K-means%20%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3.html</loc>
+    <loc>https://real-neo.me/Install-Shadowsocks-Libev.html</loc>
     
     <lastmod>2019-02-22T18:17:43.584Z</lastmod>
     
@@ -310,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/IA-Lab5.html</loc>
+    <loc>https://real-neo.me/IA-Lab4.html</loc>
     
     <lastmod>2019-02-22T18:17:43.583Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/IA-Lab4.html</loc>
+    <loc>https://real-neo.me/IA-Lab5.html</loc>
     
     <lastmod>2019-02-22T18:17:43.583Z</lastmod>
     
@@ -373,13 +380,6 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX09.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://real-neo.me/EX08.html</loc>
     
     <lastmod>2019-02-22T18:17:43.581Z</lastmod>
@@ -387,14 +387,21 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX11.html</loc>
+    <loc>https://real-neo.me/EX10.html</loc>
     
     <lastmod>2019-02-22T18:17:43.581Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX10.html</loc>
+    <loc>https://real-neo.me/EX09.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://real-neo.me/EX11.html</loc>
     
     <lastmod>2019-02-22T18:17:43.581Z</lastmod>
     
@@ -422,14 +429,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX07.html</loc>
+    <loc>https://real-neo.me/EX05.html</loc>
     
     <lastmod>2019-02-22T18:17:43.580Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX05.html</loc>
+    <loc>https://real-neo.me/EX07.html</loc>
     
     <lastmod>2019-02-22T18:17:43.580Z</lastmod>
     
@@ -464,6 +471,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/Computer-Internship.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.578Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/Change-Comment-System.html</loc>
     
     <lastmod>2019-02-22T18:17:43.578Z</lastmod>
@@ -472,13 +486,6 @@
   
   <url>
     <loc>https://real-neo.me/Changed-A-New-Domain.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.578Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/Computer-Internship.html</loc>
     
     <lastmod>2019-02-22T18:17:43.578Z</lastmod>
     
@@ -527,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/COM6516-Week04.html</loc>
+    <loc>https://real-neo.me/COM6516-Week03.html</loc>
     
     <lastmod>2019-02-22T18:17:43.576Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/COM6516-Week03.html</loc>
+    <loc>https://real-neo.me/COM6516-Week04.html</loc>
     
     <lastmod>2019-02-22T18:17:43.576Z</lastmod>
     
@@ -611,14 +618,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Apriori%20%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3.html</loc>
+    <loc>https://real-neo.me/4%20%E7%A7%8D%E5%BA%8F%E5%88%97%E6%A8%A1%E5%BC%8F%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90.html</loc>
     
     <lastmod>2019-02-22T18:17:43.574Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/4%20%E7%A7%8D%E5%BA%8F%E5%88%97%E6%A8%A1%E5%BC%8F%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90.html</loc>
+    <loc>https://real-neo.me/Apriori%20%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BA%86%E8%A7%A3.html</loc>
     
     <lastmod>2019-02-22T18:17:43.574Z</lastmod>
     
@@ -632,14 +639,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/404.html</loc>
+    <loc>https://real-neo.me/233.html</loc>
     
     <lastmod>2019-02-22T18:17:43.573Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/233.html</loc>
+    <loc>https://real-neo.me/404.html</loc>
     
     <lastmod>2019-02-22T18:17:43.573Z</lastmod>
     

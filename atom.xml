@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://real-neo.me/"/>
-  <updated>2019-03-07T12:49:52.932Z</updated>
+  <updated>2019-03-07T18:51:34.972Z</updated>
   <id>https://real-neo.me/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS 下的包管理器 Homebrew</title>
+    <link href="https://real-neo.me/macOS-Package-Manager-Homebrew.html"/>
+    <id>https://real-neo.me/macOS-Package-Manager-Homebrew.html</id>
+    <published>2019-03-08T17:46:23.000Z</published>
+    <updated>2019-03-07T18:51:34.972Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note info">            <p>本文最后更新于 2019年3月8日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>          </div><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>之前使用 Ubuntu 和 CentOS 的时候，它们都各自拥有便捷的包管理器 <code>APT</code> 和 <code>YUM</code>，使用它们安装卸载软件，自动解决依赖问题，非常方便。最近在换用 macOS 系统之后，却没有了类似的管理器，安装软件又回到了和 Windows 一样的体验。虽说 App Store 拥有一些很优秀的软件，但是作为一个未来的码农，需要的很多软件并没有 App Store 版，如果手动下载安装，以后软件更新了还需要再下载安装一次，这些无意义的重复劳动需要解决掉。</p><p>早在换 Mac 之前就听说过了 <code>Homebrew</code> 的名字，它自己的介绍就是 <code>The missing package manager for macOS (or Linux)</code>，很厉害的一个项目，方便实用。它的野心不小，不满足于 macOS 系统，还将支持扩展到了 Linux 发行版系统上，甚至还支持在 WSL 中使用。<a id="more"></a></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装非常简单，终端中一行命令即可完成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="搜索软件"><a href="#搜索软件" class="headerlink" title="搜索软件"></a>搜索软件</h3><p>在 <code>Homebrew</code> 中搜索软件很很简单。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search chrome</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.14.24.png" alt><br>如上图可以看到，我搜索 <code>Chrome</code> 的结果。搜索结果有两部分，<code>Formulae</code> 和 <code>Casks</code>，前者指命令行工具，后者指图形化程序。</p><p>如果想查询相关程序的信息，可以使用以下命令，对于 <code>Formulae</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info chrome-cli</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.19.07.png" alt><br>对于 <code>Casks</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask info google-chrome</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.19.31.png" alt></p><h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><p>在知道程序准确名称之后，可以使用以下命令安装，对于 <code>Formulae</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install chrome-cli</span><br></pre></td></tr></table></figure></p><p>对于 <code>Casks</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install google-chrome</span><br></pre></td></tr></table></figure></p><h3 id="卸载软件"><a href="#卸载软件" class="headerlink" title="卸载软件"></a>卸载软件</h3><p>卸载软件同样很简单，对于 <code>Formulae</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall chrome-cli</span><br></pre></td></tr></table></figure></p><p>对于 <code>Casks</code> 程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask uninstall google-chrome</span><br></pre></td></tr></table></figure></p><h3 id="升级软件"><a href="#升级软件" class="headerlink" title="升级软件"></a>升级软件</h3><p>更新软件源和 <code>Homebrew</code> 本身。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure></p><p>列出没有更新到最新版本的 <code>Formulae</code> 程序。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew outdated</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.29.24.png" alt></p><p>更新所有 <code>Formulae</code> 程序，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.33.04.png" alt><br>或者更新特定 <code>Formulae</code> 程序。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade node</span><br></pre></td></tr></table></figure></p><p>对于 <code>Casks</code> 程序来说，更新并没有如此简单，不过可以使用一个小插件来使之简化。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew tap buo/cask-upgrade</span><br></pre></td></tr></table></figure></p><p>之后，只需运行以下命令即可检查 <code>Casks</code> 程序的更新。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cu</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.36.24.png" alt></p><p>默认不会检查带有自动更新功能的程序，不过我想要的是让它检查，帮我更新，只需添加一个参数即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cu -a</span><br></pre></td></tr></table></figure></p><p><img src="/uploads/2019/03/屏幕快照 2019-03-07 18.38.50.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;本文最后更新于 2019年3月8日 可能会因为没有更新而失效。如已失效或需要修正，请留言！&lt;/p&gt;
+          &lt;/div&gt;
+&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;之前使用 Ubuntu 和 CentOS 的时候，它们都各自拥有便捷的包管理器 &lt;code&gt;APT&lt;/code&gt; 和 &lt;code&gt;YUM&lt;/code&gt;，使用它们安装卸载软件，自动解决依赖问题，非常方便。最近在换用 macOS 系统之后，却没有了类似的管理器，安装软件又回到了和 Windows 一样的体验。虽说 App Store 拥有一些很优秀的软件，但是作为一个未来的码农，需要的很多软件并没有 App Store 版，如果手动下载安装，以后软件更新了还需要再下载安装一次，这些无意义的重复劳动需要解决掉。&lt;/p&gt;
+&lt;p&gt;早在换 Mac 之前就听说过了 &lt;code&gt;Homebrew&lt;/code&gt; 的名字，它自己的介绍就是 &lt;code&gt;The missing package manager for macOS (or Linux)&lt;/code&gt;，很厉害的一个项目，方便实用。它的野心不小，不满足于 macOS 系统，还将支持扩展到了 Linux 发行版系统上，甚至还支持在 WSL 中使用。
+    
+    </summary>
+    
+      <category term="Tips" scheme="https://real-neo.me/categories/Tips/"/>
+    
+    
+      <category term="macOS" scheme="https://real-neo.me/tags/macOS/"/>
+    
+      <category term="Homebrew" scheme="https://real-neo.me/tags/Homebrew/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS 下 Android 平台工具的 PATH 配置</title>
@@ -510,31 +538,6 @@
       <category term="小米" scheme="https://real-neo.me/tags/%E5%B0%8F%E7%B1%B3/"/>
     
       <category term="pisces" scheme="https://real-neo.me/tags/pisces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python程序设计 第三周</title>
-    <link href="https://real-neo.me/Python03.html"/>
-    <id>https://real-neo.me/Python03.html</id>
-    <published>2018-03-31T21:39:52.000Z</published>
-    <updated>2019-02-22T18:17:43.587Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>绘画如图所示分形树。</li></ul><p><img src="/uploads/2018/03/分形树.png" alt="分形树"><a id="more"></a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘画分形树。</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_y</span><span class="params">(size, n)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">30</span>, <span class="number">120</span>]:</span><br><span class="line">        turtle.left(angle)</span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">2</span>:</span><br><span class="line">            turtle.pencolor(<span class="string">"green"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            turtle.pencolor(<span class="string">"red"</span>)</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">        <span class="keyword">if</span> n != <span class="number">0</span>:</span><br><span class="line">            draw_y(size / <span class="number">1.5</span>, n - <span class="number">1</span>)</span><br><span class="line">            turtle.left(<span class="number">30</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            turtle.left(<span class="number">180</span>)</span><br><span class="line">        turtle.penup()</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">        turtle.pendown()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">turtle.setup(<span class="number">600</span>, <span class="number">600</span>)</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.goto(<span class="number">0</span>, <span class="number">-200</span>)</span><br><span class="line">turtle.pensize(<span class="number">1</span>)</span><br><span class="line">turtle.left(<span class="number">90</span>)</span><br><span class="line">turtle.pencolor(<span class="string">"red"</span>)</span><br><span class="line">turtle.pendown()</span><br><span class="line">level = <span class="number">5</span></span><br><span class="line">turtle.fd(<span class="number">150</span>)</span><br><span class="line">draw_y(<span class="number">100</span>, level)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;绘画如图所示分形树。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/uploads/2018/03/分形树.png&quot; alt=&quot;分形树&quot;&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="https://real-neo.me/categories/Code/"/>
-    
-    
-      <category term="Python" scheme="https://real-neo.me/tags/Python/"/>
     
   </entry>
   

@@ -415,6 +415,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/聚类算法的初步了解.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/聚类算法的初步了解.html" class="post-title-link" itemprop="url">聚类算法的初步了解</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-07-31 17:28:06" itemprop="dateCreated datePublished" datetime="2017-07-31T17:28:06Z">2017-07-31</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>聚类算法主要是用在聚类分析中的算法，而聚类分析（群集分析）是对于统计数据分析的一门技术把相似的对象通过静态分类的方法分成不同的组别或者更多的子集，这样让在同一个子集中的成员对象都有相似的一些属性，常见的包括在坐标系中更加短的空间距离等。</p>
+<p>移动对象常访问位置点的挖掘（聚类算法）：</p>
+<ul>
+<li>基于划分的算法的输入是包含n个对象的数据库和簇的数目 k；输出是 k 个簇，使平方误差准则最小。优点：简单，易于理解和实现；时间复杂度低。缺点：K-means 要手工输入类数目，对初始值的设置很敏感；对噪声和离群值非常敏感；只用于 numerical 类型数据，不适用于 categorical 类型数据；不能解决非凸 (non-convex) 数据；主要发现圆形或者球形簇，不能识别非球形的簇。</li>
+<li>基于密度的算法的输入是包含n个对象的数据库，输出是多个簇。优点：与 K-means 方法相比，DBSCAN 不需要事先知道要形成的簇类的数量；与 K-means 方法相比，DBSCAN 可以发现任意形状的簇类；同时，DBSCAN 能够识别出噪声点；DBSCAN 对于数据库中样本的顺序不敏感。缺点：DBSCAN 不能很好反映高尺寸数据；DBSCAN 不能很好反映数据集变化的密度；对于高维数据，点之间极为稀疏，密度很难定义。</li>
+<li>基于层次的算法的输入是包含 n 个对象的数据库，输出是一类簇。优点：距离和规则的相似度容易定义，限制少；不需要预先制定聚类数；可以发现类的层次关系；可以聚类成其它形状。缺点：计算复杂度太高；奇异值也能产生很大影响；算法很可能聚类成链状。</li>
+<li>基于网络的算法的输入是高维的输入向量，输出是聚类网络。优点：可以实现从输入空间（n 维）到输出平面（2 维）的降维映射。缺点：时间复杂度高，处理时间较长。</li>
+</ul>
+<p>K-means 是划分方法中较经典的聚类算法之一。由于该算法的效率高，所以在对大规模数据进行聚类时被广泛应用。目前，许多算法均围绕着该算法进行扩展和改进。<br>K-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似度，而簇间的相似度较低。K-means 算法的处理过程如下：首先，随机地选择 k 个对象，每个对象初始地代表了一个簇的平均值或中心；对剩余的每个对象，根据其与各簇中心的距离，将它赋给最近的簇；然后重新计算每个簇的平均值。这个过程不断重复，直到准则函数收敛。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1047,169 +1212,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab4.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab4.html" class="post-title-link" itemprop="url">互联网应用 Lab4</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-21 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-21T12:00:00Z">2017-04-21</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> fd1, fd2;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd1 = open(<span class="string">"test1"</span>, O_RDWR | O_APPEND)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd2 = open(<span class="string">"test2"</span>, O_RDONLY)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-2\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((read(fd2, buf, <span class="number">1</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(fd1, buf, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	close(fd1);</span><br><span class="line">	close(fd2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab4.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1259,7 +1261,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">77</span>
+                    <span class="site-state-item-count">78</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1421,7 +1423,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">62</span>
+                      
+                    
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
