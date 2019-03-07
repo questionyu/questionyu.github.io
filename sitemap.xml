@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://real-neo.me/macOS-Android-Platform-Tools.html</loc>
+    
+    <lastmod>2019-03-07T12:49:52.932Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/Remove-Next-Gray-Border.html</loc>
     
     <lastmod>2019-03-06T23:48:16.885Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/project/ST-DBSCAN-without-noise.html</loc>
+    <loc>https://real-neo.me/project/K-Means-5.html</loc>
     
     <lastmod>2019-02-22T18:17:43.590Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/project/K-Means-5.html</loc>
+    <loc>https://real-neo.me/project/ST-DBSCAN-without-noise.html</loc>
     
     <lastmod>2019-02-22T18:17:43.590Z</lastmod>
     
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/project/K-Means-15.html</loc>
+    <loc>https://real-neo.me/project/K-Means-10.html</loc>
     
     <lastmod>2019-02-22T18:17:43.589Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/project/K-Means-10.html</loc>
+    <loc>https://real-neo.me/project/K-Means-15.html</loc>
     
     <lastmod>2019-02-22T18:17:43.589Z</lastmod>
     
@@ -128,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/Typecho-Excerpt.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.587Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/The-Truth-About-Mirror.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
@@ -136,13 +150,6 @@
   
   <url>
     <loc>https://real-neo.me/XX.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.587Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/Typecho-Excerpt.html</loc>
     
     <lastmod>2019-02-22T18:17:43.587Z</lastmod>
     
@@ -170,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Linux-Change-SSH-Port.html</loc>
+    <loc>https://real-neo.me/Lab8.html</loc>
     
     <lastmod>2019-02-22T18:17:43.586Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/Lab8.html</loc>
+    <loc>https://real-neo.me/Linux-Change-SSH-Port.html</loc>
     
     <lastmod>2019-02-22T18:17:43.586Z</lastmod>
     
@@ -219,6 +226,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/Lab4.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/Lab5.html</loc>
     
     <lastmod>2019-02-22T18:17:43.585Z</lastmod>
@@ -227,13 +241,6 @@
   
   <url>
     <loc>https://real-neo.me/Lab7.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/Lab4.html</loc>
     
     <lastmod>2019-02-22T18:17:43.585Z</lastmod>
     
@@ -268,7 +275,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/Lab1.html</loc>
+    <loc>https://real-neo.me/K-means%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B.html</loc>
     
     <lastmod>2019-02-22T18:17:43.584Z</lastmod>
     
@@ -282,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/K-means%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B.html</loc>
+    <loc>https://real-neo.me/Lab1.html</loc>
     
     <lastmod>2019-02-22T18:17:43.584Z</lastmod>
     
@@ -317,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/IA-Lab7.html</loc>
+    <loc>https://real-neo.me/IA-Lab6.html</loc>
     
     <lastmod>2019-02-22T18:17:43.583Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/IA-Lab6.html</loc>
+    <loc>https://real-neo.me/IA-Lab7.html</loc>
     
     <lastmod>2019-02-22T18:17:43.583Z</lastmod>
     
@@ -366,21 +373,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX10.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://real-neo.me/EX09.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/EX11.html</loc>
     
     <lastmod>2019-02-22T18:17:43.581Z</lastmod>
     
@@ -394,14 +387,21 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX03.html</loc>
+    <loc>https://real-neo.me/EX11.html</loc>
     
-    <lastmod>2019-02-22T18:17:43.580Z</lastmod>
+    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX05.html</loc>
+    <loc>https://real-neo.me/EX10.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://real-neo.me/EX03.html</loc>
     
     <lastmod>2019-02-22T18:17:43.580Z</lastmod>
     
@@ -415,6 +415,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/EX06.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.580Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/EX07.html</loc>
     
     <lastmod>2019-02-22T18:17:43.580Z</lastmod>
@@ -422,7 +429,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/EX06.html</loc>
+    <loc>https://real-neo.me/EX05.html</loc>
     
     <lastmod>2019-02-22T18:17:43.580Z</lastmod>
     
@@ -520,13 +527,6 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/COM6516-Week03.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.576Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://real-neo.me/COM6516-Week04.html</loc>
     
     <lastmod>2019-02-22T18:17:43.576Z</lastmod>
@@ -534,7 +534,7 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/COM6516-Week05.html</loc>
+    <loc>https://real-neo.me/COM6516-Week03.html</loc>
     
     <lastmod>2019-02-22T18:17:43.576Z</lastmod>
     
@@ -548,9 +548,23 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/COM6516-Week05.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.576Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/COM6516-Week08.html</loc>
     
     <lastmod>2019-02-22T18:17:43.576Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://real-neo.me/BUPTIS-Office-365.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.575Z</lastmod>
     
   </url>
   
@@ -563,13 +577,6 @@
   
   <url>
     <loc>https://real-neo.me/CNNIC-Forged-CA-Certificates.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.575Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://real-neo.me/BUPTIS-Office-365.html</loc>
     
     <lastmod>2019-02-22T18:17:43.575Z</lastmod>
     
@@ -597,13 +604,6 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/4%20%E7%A7%8D%E5%BA%8F%E5%88%97%E6%A8%A1%E5%BC%8F%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90.html</loc>
-    
-    <lastmod>2019-02-22T18:17:43.574Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://real-neo.me/360SB.html</loc>
     
     <lastmod>2019-02-22T18:17:43.574Z</lastmod>
@@ -618,6 +618,13 @@
   </url>
   
   <url>
+    <loc>https://real-neo.me/4%20%E7%A7%8D%E5%BA%8F%E5%88%97%E6%A8%A1%E5%BC%8F%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90.html</loc>
+    
+    <lastmod>2019-02-22T18:17:43.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://real-neo.me/JetBrains.html</loc>
     
     <lastmod>2019-02-22T18:17:43.574Z</lastmod>
@@ -625,14 +632,14 @@
   </url>
   
   <url>
-    <loc>https://real-neo.me/233.html</loc>
+    <loc>https://real-neo.me/404.html</loc>
     
     <lastmod>2019-02-22T18:17:43.573Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://real-neo.me/404.html</loc>
+    <loc>https://real-neo.me/233.html</loc>
     
     <lastmod>2019-02-22T18:17:43.573Z</lastmod>
     
