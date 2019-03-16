@@ -1,8 +1,8 @@
 ---
-title: COM6516-Week05
+title: COM6516 Week05
+date: 2018-10-22 23:10:11
 categories:
   - Code
-date: 2018-10-22 23:10:11
 tags:
   - Java
   - COM6516

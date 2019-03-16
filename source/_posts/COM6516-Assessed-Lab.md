@@ -1,5 +1,5 @@
 ---
-title: COM6516-Assessed-Lab
+title: COM6516 Assessed Lab
 date: 2018-12-10 17:14:55
 categories:
   - Code

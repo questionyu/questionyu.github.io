@@ -125,7 +125,7 @@ public class CountDownExample {
 ```
 
 在创建了 docCD 文件夹之后，运行这样的命令就可以在 docCD 文件夹里看到 Javadoc 文档了：
-```shell
+``` bash
 javadoc –d docCD CountDownExample.java
 ```
 

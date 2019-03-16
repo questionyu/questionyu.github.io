@@ -1,9 +1,11 @@
 ---
 title: 修复 Ubuntu 下拼音输入法崩溃问题
 categories:
-  - 生活随笔
 date: 2019-01-03 21:36:03
+  - Tips
 tags:
+  - Ubuntu
+  - ibus
 ---
 
 最近在使用 Ubuntu 18.04 的过程中，遇到了一个拼音输入法总是在选字的时候崩溃的问题。

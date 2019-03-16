@@ -16,14 +16,14 @@ tags:
 
 ## Xcode Command Line Tools
 基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。
-```bash
-xcode-select --install
+``` bash
+$ xcode-select --install
 ```
 <!--more-->
 ## 生成证书
 在终端里运行以下命令即可在用户目录里生成证书和秘钥。
-```bash
-openssl req -x509 -days 3650 -out localhost.crt -keyout localhost.key \
+``` bash
+$ openssl req -x509 -days 3650 -out localhost.crt -keyout localhost.key \
   -newkey rsa:2048 -nodes -sha256 \
   -subj '/CN=localhost' -extensions EXT -config <( \
    printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")

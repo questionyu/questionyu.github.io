@@ -5,7 +5,6 @@ categories:
   - Tips
 tags:
   - OpenGL
-  -
 ---
 
 最近3D图形程序设计的课需要用 C 写一些 OpenGL 代码，Windows 下的开发环境配置起来还稍稍有些麻烦，写个文章记录一下步骤。

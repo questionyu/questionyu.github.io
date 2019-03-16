@@ -26,5 +26,5 @@ Port 2333
 
 最后重启一下 SSH 服务
 ``` bash
-service sshd restart
+$ service sshd restart
 ```

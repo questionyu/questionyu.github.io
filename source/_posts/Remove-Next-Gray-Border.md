@@ -20,7 +20,7 @@ tags:
 打开 Hexo 博客目录，直接搜索整个目录，果然在 `themes/next/source/css/_common/components/post/post-expand.styl` 这个文件里找到了配置。
 
 只需将以下代码
-```css
+``` css
 img {
   box-sizing: border-box;
   margin: 0 auto 25px;
@@ -29,7 +29,7 @@ img {
 }
 ```
 改为
-```css
+``` css
 img {
   box-sizing: border-box;
   margin: 0 auto 25px;

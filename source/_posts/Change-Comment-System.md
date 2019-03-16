@@ -2,7 +2,7 @@
 title: 更换评论系统
 date: 2018-07-02 16:40:14
 categories:
-  - 生活随笔
+  - 糟心
 tags:
   - HyperComments
   - Disqus

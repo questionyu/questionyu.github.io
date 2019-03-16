@@ -1,5 +1,5 @@
 ---
-title: COM6506-Week02
+title: COM6506 Week02
 categories:
   - Code
 date: 2018-10-08 15:35:30

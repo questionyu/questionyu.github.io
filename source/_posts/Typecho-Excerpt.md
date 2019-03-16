@@ -15,11 +15,11 @@ tags:
 方法：
 
 编辑模板的 `index.php` 文件，找到这一行代码：
-```php
+``` php
 <?php $this->content('阅读剩余部分...'); ?>
 ```
 将其替换为：
-```php
+``` php
 <?php $this->summary(); ?><p class="more"><a href="<?php $this->permalink() ?>">展开阅读</a></p>
 ```
 保存，刷新你的首页看看效果吧！
