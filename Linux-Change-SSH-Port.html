@@ -103,18 +103,18 @@
 
 
 
-  <meta name="description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1service sshd restart">
+  <meta name="description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1$ service sshd restart">
 <meta name="keywords" content="Linux,SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 修改 SSH 端口号">
 <meta property="og:url" content="https://real-neo.me/Linux-Change-SSH-Port.html">
 <meta property="og:site_name" content="问少的小站">
-<meta property="og:description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1service sshd restart">
+<meta property="og:description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1$ service sshd restart">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-22T18:17:43.586Z">
+<meta property="og:updated_time" content="2019-03-14T17:29:11.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 修改 SSH 端口号">
-<meta name="twitter:description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1service sshd restart">
+<meta name="twitter:description" content="管理自己的主机，一般都是用 SSH 的方式，默认使用 22 端口。为了安全着想，最好修改默认端口。 找到 /etc/ssh/sshd_config，打开修改，将1#Port 22 修改为1Port 2333 在这里 2333 设置为自己想要的端口。 不要忘记把 2333 端口加入防火墙规则里面，否则就无法管理主机了。 最后重启一下 SSH 服务1$ service sshd restart">
 
 
 
@@ -517,7 +517,7 @@
 <p>修改为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Port 2333</span><br></pre></td></tr></table></figure></p>
 <p>在这里 <code>2333</code> 设置为自己想要的端口。</p>
 <p>不要忘记把 <code>2333</code> 端口加入防火墙规则里面，否则就无法管理主机了。</p>
-<p>最后重启一下 SSH 服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd restart</span><br></pre></td></tr></table></figure></p>
+<p>最后重启一下 SSH 服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service sshd restart</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -658,7 +658,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -822,7 +822,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

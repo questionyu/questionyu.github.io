@@ -112,7 +112,7 @@
 <meta property="og:description" content="本文最后更新于 2019年3月7日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            在安装了 Android Studio 之后，相关的 adb fastboot 等工具应该都应经下载在电脑里了。但是 AS 并没有把相关的目录加入 PATH，导致在终端里不可以方便的直接使用，需要加上很长的一串路径才可可以。这个文章记录下解决的办法。 编辑 B">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://real-neo.me/uploads/2019/03/屏幕快照%202019-03-07%2012.46.11.png">
-<meta property="og:updated_time" content="2019-03-07T12:49:52.932Z">
+<meta property="og:updated_time" content="2019-03-14T17:27:05.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="macOS 下 Android 平台工具的 PATH 配置">
 <meta name="twitter:description" content="本文最后更新于 2019年3月7日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            在安装了 Android Studio 之后，相关的 adb fastboot 等工具应该都应经下载在电脑里了。但是 AS 并没有把相关的目录加入 PATH，导致在终端里不可以方便的直接使用，需要加上很长的一串路径才可可以。这个文章记录下解决的办法。 编辑 B">
@@ -518,10 +518,10 @@
             <p>本文最后更新于 2019年3月7日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
           </div>
 <p>在安装了 Android Studio 之后，相关的 <code>adb</code> <code>fastboot</code> 等工具应该都应经下载在电脑里了。但是 AS 并没有把相关的目录加入 PATH，导致在终端里不可以方便的直接使用，需要加上很长的一串路径才可可以。这个文章记录下解决的办法。</p>
-<p>编辑 BASH 的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<p>在文件最后追加几行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=~/Library/Android/sdk</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$ANDROID_HOME</span>/platform-tools:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$ANDROID_HOME</span>/tools:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>编辑 BASH 的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nano ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>在文件最后追加几行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="variable">$HOME</span>/Library/Android/sdk</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/platform-tools"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/tools"</span></span><br></pre></td></tr></table></figure></p>
 <p>macOS 下的默认 <code>ANDROID_HOME</code> 位置就是如上配置，无需修改，其他系统下的路径需要根据实际情况修改。</p>
-<p>之后再使刚改好的配置生效，或者重新打开终端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>之后再使刚改好的配置生效，或者重新打开终端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
 <p>配置好后的效果如下图。<br><img src="/uploads/2019/03/屏幕快照 2019-03-07 12.46.11.png" alt></p>
 
       
@@ -663,7 +663,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -827,7 +827,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

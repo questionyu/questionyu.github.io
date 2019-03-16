@@ -415,6 +415,508 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Git-GPG-Signing-Commits.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Git-GPG-Signing-Commits.html" class="post-title-link" itemprop="url">使用 GPG 签名你的 Commits</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-15 16:37:08" itemprop="dateCreated datePublished" datetime="2019-03-15T16:37:08Z">2019-03-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <div class="note info">
+            <p>本文最后更新于 2019年3月15日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
+          </div>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>首先要安装好 GPG 工具。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install gnupg gnupg2 pinentry-mac</span><br></pre></td></tr></table></figure></p>
+<p>配置使用环境。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">test</span> -r ~/.bash_profile &amp;&amp; <span class="built_in">echo</span> <span class="string">'export GPG_TTY=$(tty)'</span> &gt;&gt; ~/.bash_profile</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">'export GPG_TTY=$(tty)'</span> &gt;&gt; ~/.profile</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"pinentry-program /usr/local/bin/pinentry-mac"</span> &gt;&gt; ~/.gnupg/gpg-agent.conf</span><br><span class="line"></span><br><span class="line">$ killall gpg-agent</span><br></pre></td></tr></table></figure></p>
+<h2 id="检查现有的-GPG-秘钥"><a href="#检查现有的-GPG-秘钥" class="headerlink" title="检查现有的 GPG 秘钥"></a>检查现有的 GPG 秘钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --list-secret-keys --keyid-format LONG</span><br></pre></td></tr></table></figure>
+<p>如果没有返回值，则说明此电脑上没有配置 GPG 秘钥。<br>如果有，则可以跳过生成 GPG 秘钥的步骤。
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Git-GPG-Signing-Commits.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Ubuntu-18-Startup.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Ubuntu-18-Startup.html" class="post-title-link" itemprop="url">Ubuntu 18.04 配置开机启动项</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-14 18:47:58" itemprop="dateCreated datePublished" datetime="2019-03-14T18:47:58Z">2019-03-14</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div class="note info">
+            <p>本文最后更新于 2019年3月14日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
+          </div>
+<p>在 Ubuntu 16.04 版本中，配置开机启动项是一件很简单的事情，只需在 <code>/etc/rc.local</code> 中添加即可。</p>
+<p>但在 Ubuntu 18.04 中，此方法失效。经搜索实践，总结了一下较为简单的设置开机启动项的方法。</p>
+<p>首先运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ crontab -e</span><br></pre></td></tr></table></figure></p>
+<p>之后<strong>可能</strong>会出现以下提示<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">no crontab <span class="keyword">for</span> neo - using an empty one</span><br><span class="line"></span><br><span class="line">Select an editor.  To change later, run <span class="string">'select-editor'</span>.</span><br><span class="line">  1. /bin/nano        &lt;---- easiest</span><br><span class="line">  2. /usr/bin/vim.basic</span><br><span class="line">  3. /usr/bin/vim.tiny</span><br><span class="line">  4. /bin/ed</span><br><span class="line"></span><br><span class="line">Choose 1-4 [1]:</span><br></pre></td></tr></table></figure></p>
+<p>推荐选 1。</p>
+<p>在末尾添加新的一行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@reboot /path/to/your/boot.sh</span><br></pre></td></tr></table></figure></p>
+<p>之后把开机启动命令都写在 <code>/path/to/your/boot.sh</code> 这个文件里。</p>
+<p>最后别忘了给文件加上可执行属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chmod +x /path/to/your/boot.sh</span><br></pre></td></tr></table></figure></p>
+<p>此时重启即可看到效果。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Date-Regex.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Date-Regex.html" class="post-title-link" itemprop="url">最强日期正则表达式</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-13 21:24:27" itemprop="dateCreated datePublished" datetime="2019-03-13T21:24:27Z">2019-03-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="简单的日期判断（YYYY-MM-DD）"><a href="#简单的日期判断（YYYY-MM-DD）" class="headerlink" title="简单的日期判断（YYYY/MM/DD）"></a>简单的日期判断（YYYY/MM/DD）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\d&#123;4&#125;(\-|\/|\.)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$</span><br></pre></td></tr></table></figure>
+<h2 id="演化的日期判断（YYYY-MM-DD-YY-MM-DD）"><a href="#演化的日期判断（YYYY-MM-DD-YY-MM-DD）" class="headerlink" title="演化的日期判断（YYYY/MM/DD| YY/MM/DD）"></a>演化的日期判断（YYYY/MM/DD| YY/MM/DD）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^(^(\d&#123;4&#125;|\d&#123;2&#125;)(\-|\/|\.)\d&#123;1,2&#125;\3\d&#123;1,2&#125;$)|(^\d&#123;4&#125;年\d&#123;1,2&#125;月\d&#123;1,2&#125;日$)$</span><br></pre></td></tr></table></figure>
+<h2 id="加入闰年的判断"><a href="#加入闰年的判断" class="headerlink" title="加入闰年的判断"></a>加入闰年的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^((((1[6-9]|[2-9]\d)\d&#123;2&#125;)-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d&#123;2&#125;)-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d&#123;2&#125;)-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Date-Regex.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/macOS-Package-Manager-Homebrew.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -686,506 +1188,11 @@
             <p>本文最后更新于 2019年3月7日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
           </div>
 <p>在安装了 Android Studio 之后，相关的 <code>adb</code> <code>fastboot</code> 等工具应该都应经下载在电脑里了。但是 AS 并没有把相关的目录加入 PATH，导致在终端里不可以方便的直接使用，需要加上很长的一串路径才可可以。这个文章记录下解决的办法。</p>
-<p>编辑 BASH 的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<p>在文件最后追加几行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=~/Library/Android/sdk</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$ANDROID_HOME</span>/platform-tools:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$ANDROID_HOME</span>/tools:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>编辑 BASH 的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nano ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>在文件最后追加几行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="variable">$HOME</span>/Library/Android/sdk</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/platform-tools"</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$ANDROID_HOME</span>/tools"</span></span><br></pre></td></tr></table></figure></p>
 <p>macOS 下的默认 <code>ANDROID_HOME</code> 位置就是如上配置，无需修改，其他系统下的路径需要根据实际情况修改。</p>
-<p>之后再使刚改好的配置生效，或者重新打开终端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>之后再使刚改好的配置生效，或者重新打开终端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
 <p>配置好后的效果如下图。<br><img src="/uploads/2019/03/屏幕快照 2019-03-07 12.46.11.png" alt></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Remove-Next-Gray-Border.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Remove-Next-Gray-Border.html" class="post-title-link" itemprop="url">去除 Next 主题图片的灰色边框</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-06 22:52:49" itemprop="dateCreated datePublished" datetime="2019-03-06T22:52:49Z">2019-03-06</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <div class="note info">
-            <p>本文最后更新于 2019年3月6日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
-          </div>
-<p>最近发了篇文章，带了些截图，发现对于 macOS 处理过的截图，Next 主题在图片周围加一圈灰色边框并不美观。<br><img src="/uploads/2019/03/屏幕快照 2019-03-06 22.50.30.png" alt></p>
-<p>于是便想办法去掉它。
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/Remove-Next-Gray-Border.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Create-Localhost-Certificate.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Create-Localhost-Certificate.html" class="post-title-link" itemprop="url">创建 Localhost 证书</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-05 19:53:15" itemprop="dateCreated datePublished" datetime="2019-03-05T19:53:15Z">2019-03-05</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <div class="note info">
-            <p>本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
-          </div>
-<p>有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。</p>
-<h2 id="Xcode-Command-Line-Tools"><a href="#Xcode-Command-Line-Tools" class="headerlink" title="Xcode Command Line Tools"></a>Xcode Command Line Tools</h2><p>基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中一句命令即可安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/Create-Localhost-Certificate.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Fix-Ubuntu-Input-Method-Crash.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Fix-Ubuntu-Input-Method-Crash.html" class="post-title-link" itemprop="url">修复 Ubuntu 下拼音输入法崩溃问题</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-03 21:36:03" itemprop="dateCreated datePublished" datetime="2019-01-03T21:36:03Z">2019-01-03</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随笔/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近在使用 Ubuntu 18.04 的过程中，遇到了一个拼音输入法总是在选字的时候崩溃的问题。</p>
-<h2 id="崩溃表现"><a href="#崩溃表现" class="headerlink" title="崩溃表现"></a>崩溃表现</h2><p><code>crashed with SIGABRT in __assert_fail_base()</code></p>
-<p>具体表现为：在打字时，无法使用数字键选择字词，鼠标点选也无效，只能按空格打出第一个字词。当按数字键选择字词时，输入法会崩溃，并输出字母和数字，例如我想打出“谷歌”，“谷歌”在候选列表第二个位置，按下 <code>2</code>，输入法崩溃，输出 <code>guge2</code>。</p>
-<p>我搜索了一下，并没有找到解决办法，只好退而求其次，使用 fcitx 代替了 ibus，就这么过了半个月。然而我今天再次搜索的时候竟然找到了解决办法：<span class="exturl" data-url="aHR0cHM6Ly9hc2t1YnVudHUuY29tL3F1ZXN0aW9ucy8xMDUzMTgyL3NlbGVjdGluZy1hLW51bWJlci1kb2VzLW5vdC1hbHdheXMtcmV0dXJuLWEtY2hpbmVzZS1jaGFyYWN0ZXItd2l0aC1pYnVzLXBpbnlpbg==" title="https://askubuntu.com/questions/1053182/selecting-a-number-does-not-always-return-a-chinese-character-with-ibus-pinyin">Selecting a number does not always return a Chinese character with ibus pinyin<i class="fa fa-external-link"></i></span>。</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>直接删除输入法的缓存就好：<code>rm ~/.cache/ibus/libpinyin/*</code></p>
 
           
         
@@ -1231,7 +1238,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1276,7 +1283,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1440,7 +1447,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

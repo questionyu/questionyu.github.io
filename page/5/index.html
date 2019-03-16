@@ -415,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python03.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week03.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -435,7 +435,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Python03.html" class="post-title-link" itemprop="url">Python程序设计 第三周</a>
+                <a href="/COM6516-Week03.html" class="post-title-link" itemprop="url">COM6516 Week03</a>
               
             
           </h2>
@@ -460,7 +460,7 @@
                 
               
 
-              <time title="Created: 2018-03-31 21:39:52" itemprop="dateCreated datePublished" datetime="2018-03-31T21:39:52Z">2018-03-31</time>
+              <time title="Created: 2018-10-08 11:58:45" itemprop="dateCreated datePublished" datetime="2018-10-08T11:58:45Z">2018-10-08</time>
             
 
             
@@ -514,182 +514,11 @@
 
       
         
-          <ul>
-<li>绘画如图所示分形树。</li>
-</ul>
-<p><img src="/uploads/2018/03/分形树.png" alt="分形树">
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * FoodStore.java  	1.0 26/08/2011</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Copyright (c) University of Sheffield 2011</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * FoodStore.java</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * A simple class used in COM6516 lab class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// this line of code declares the class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FoodStore</span> </span>&#123;</span><br><span class="line">	<span class="comment">// this is the constructor, which is called when a new object is created</span></span><br><span class="line">	<span class="comment">// the constructor name is always the same as the class name</span></span><br><span class="line">	<span class="comment">// classes can have more than one constructor</span></span><br><span class="line">	<span class="comment">// the constructor make take zero or more parameters</span></span><br><span class="line">	<span class="comment">// in this case there is one parameter (int a) that is used to set the</span></span><br><span class="line">	<span class="comment">// instance field of the class</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">FoodStore</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">		amountStored = a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">// these are class methods, which enable the value of the instance</span></span><br><span class="line">	<span class="comment">// field to be modified</span></span><br><span class="line">	<span class="comment">// these methods have a public access modifier, because they need to</span></span><br><span class="line">	<span class="comment">// be called by other classes</span></span><br><span class="line">	<span class="comment">// neither class method returns anything, so the return type is void</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">depositFood</span><span class="params">(<span class="keyword">int</span> amountToDeposit)</span> </span>&#123;</span><br><span class="line">		depositAmount += amountToDeposit;</span><br><span class="line">		amountStored = amountStored + amountToDeposit;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">withdrawFood</span><span class="params">(<span class="keyword">int</span> amountToWithdraw)</span> </span>&#123;</span><br><span class="line">		withdrawAmount += amountToWithdraw;</span><br><span class="line">		amountStored = amountStored - amountToWithdraw;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// these are accessor methods, which return the value of the</span></span><br><span class="line">	<span class="comment">// instance field</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAmountStored</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (amountStored);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// this is the instance field, which is an attribute associated with</span></span><br><span class="line">	<span class="comment">// each object of the FoodStore class</span></span><br><span class="line">	<span class="comment">// the access modifier is private, which means that this field can </span></span><br><span class="line">	<span class="comment">// only be accessed through the class methods</span></span><br><span class="line">	<span class="comment">// by keeping instance fields private there is a well specified interface </span></span><br><span class="line">	<span class="comment">// to the data associated with each object</span></span><br><span class="line">	<span class="comment">// this approach is called encapsulation</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> amountStored;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> depositAmount = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> withdrawAmount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDepositAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> depositAmount;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWithdrawAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> withdrawAmount;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/Python03.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python02.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Python02.html" class="post-title-link" itemprop="url">Python程序设计 第二周</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-03-16 17:53:12" itemprop="dateCreated datePublished" datetime="2018-03-16T17:53:12Z">2018-03-16</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li>利用嵌套循环 ， 输出 2-100 之间的质数。</li>
-<li>有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？</li>
-<li>输出 9*9 乘法口诀表。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出2-100之间的素数</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">101</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>, i):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> (i % j):         <span class="comment"># 如果 i 整除 j（i 不是素数）</span></span><br><span class="line">            <span class="keyword">break</span>                   <span class="comment"># 跳出循环</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(i, <span class="string">"是素数"</span>)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/Python02.html#more" rel="contents">
+              <a class="btn" href="/COM6516-Week03.html#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -749,7 +578,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python-Lecture-Notes.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week01-02.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -769,7 +598,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Python-Lecture-Notes.html" class="post-title-link" itemprop="url">Python程序设计 课件</a>
+                <a href="/COM6516-Week01-02.html" class="post-title-link" itemprop="url">COM6516 Week01-02</a>
               
             
           </h2>
@@ -794,7 +623,7 @@
                 
               
 
-              <time title="Created: 2018-03-16 10:35:13" itemprop="dateCreated datePublished" datetime="2018-03-16T10:35:13Z">2018-03-16</time>
+              <time title="Created: 2018-10-01 15:03:47" itemprop="dateCreated datePublished" datetime="2018-10-01T15:03:47Z">2018-10-01</time>
             
 
             
@@ -813,6 +642,328 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * HelloWorld.java</span></span><br><span class="line"><span class="comment"> * A traditional Hello World program!</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// In Java, all programs reside in a class. This class is called HelloWorld, </span></span><br><span class="line"><span class="comment">// and should be saved in a file called HelloWorld.java. This class has a single</span></span><br><span class="line"><span class="comment">// method called main, which is the entry point to the program.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Compiling the class with javac HelloWorld.java will produce a bytecode file</span></span><br><span class="line"><span class="comment">// called HelloWorld.class if compilation is successful. This bytecode can then</span></span><br><span class="line"><span class="comment">// be run on any machine with a java bytecode interpreter. You can run the</span></span><br><span class="line"><span class="comment">// bytecode in a console by typing java HelloWorld.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		String helloString = <span class="string">"Hello"</span>;</span><br><span class="line">		String worldString = <span class="string">"World!"</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java the System.out.println command displays the argument to the </span></span><br><span class="line">		<span class="comment">// console. However the command below doesn't work, because helloWorldAString</span></span><br><span class="line">		<span class="comment">// has not been declared. Try compiling this file to see what happens, </span></span><br><span class="line">		<span class="comment">// and take a careful look at the error message that is produced.</span></span><br><span class="line"></span><br><span class="line">		System.out.println(helloString + <span class="string">" "</span> + worldString);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java, we can use the '+' operator to concatenate strings, </span></span><br><span class="line">		<span class="comment">// so to fix this problem, either change the argument passed to the</span></span><br><span class="line">		<span class="comment">// System.out.println method from (helloWorldString) to </span></span><br><span class="line">		<span class="comment">// (helloString + " " + worldString)</span></span><br><span class="line">		<span class="comment">// or declare the variable helloWorldString before it is used by </span></span><br><span class="line">		<span class="comment">// System.out.println by inserting </span></span><br><span class="line">		<span class="comment">// String helloWorldString = helloString + " " + worldString;</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java a variable can be declared anywhere in the code, so it is</span></span><br><span class="line">		<span class="comment">// possible to declare a variable just before it is used, which makes for</span></span><br><span class="line">		<span class="comment">// code that is easier to read and understand.</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// It is conventional to use mixed case for variable names and method </span></span><br><span class="line">		<span class="comment">// names in Java, with with the first letter lower case, and then the </span></span><br><span class="line">		<span class="comment">// first letter of each internal word in upper case -- e.g. helloString.</span></span><br><span class="line">		<span class="comment">// Class names start with a capital letter -- e.g. HelloWorld.java</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// details at: http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-135099.html</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/COM6516-Week01-02.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Change-Comment-System.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Change-Comment-System.html" class="post-title-link" itemprop="url">更换评论系统</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-02 16:40:14" itemprop="dateCreated datePublished" datetime="2018-07-02T16:40:14Z">2018-07-02</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/糟心/" itemprop="url" rel="index"><span itemprop="name">糟心</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近一直在忙着毕业的事情，没有打理博客。等到基本事情都做完回来看博客的时候发现，原来使用的 HyperComments 评论系统已经开始收费了，并且只有在订阅之后才可以进入管理页面。</p>
+<p>这样一来，原本的评论想要找回来就只能强制被收费了，那只好对 HyperComments 说再见了，重新投入 Disqus 的怀抱。</p>
+<p>然而 Disqus 在国内被屏蔽，这也是没办法的事情，所以……以后网站的评论就只能是随缘评论了……</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/OxygenOS-Bus-Card.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/OxygenOS-Bus-Card.html" class="post-title-link" itemprop="url">氧 OS 也能使用公交卡</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-15 09:32:23" itemprop="dateCreated datePublished" datetime="2018-05-15T09:32:23Z">2018-05-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
 
                 
                 
@@ -849,187 +1000,15 @@
       
         
           <div class="note info">
-            <h2 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL3hmV1FLYUdYZHE5YUxEaw==" title="https://drive.real-neo.me/s/xfWQKaGXdq9aLDk">Python程序设计-第一周.pdf<i class="fa fa-external-link"></i></span></p>
+            <p>本文最后更新于 2018年5月24日 可能会因为没有更新而失效。如已失效或需要修正，请留言！</p>
           </div>
-<div class="note info">
-            <h2 id="第二周"><a href="#第二周" class="headerlink" title="第二周"></a>第二周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL293eng3RTVieERwWnF0OA==" title="https://drive.real-neo.me/s/owzx7E5bxDpZqt8">Python程序设计-第二周.pdf<i class="fa fa-external-link"></i></span></p>
-          </div>
-<div class="note info">
-            <h2 id="第三周"><a href="#第三周" class="headerlink" title="第三周"></a>第三周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL0NKUXBldEhlajdHZkZ5Vw==" title="https://drive.real-neo.me/s/CJQpetHej7GfFyW">Python程序设计-第三周.pdf<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL1B5d1dlbkZtZ3Q5UE5jRw==" title="https://drive.real-neo.me/s/PywWenFmgt9PNcG">玫瑰花.py<i class="fa fa-external-link"></i></span></p>
-          </div>
-<div class="note info">
-            <h2 id="第四周"><a href="#第四周" class="headerlink" title="第四周"></a>第四周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL2N4NWdDeXQzRnhNZThaag==" title="https://drive.real-neo.me/s/cx5gCyt3FxMe8Zj">Python程序设计-第四周.pdf<i class="fa fa-external-link"></i></span></p>
-          </div>
-<div class="note info">
-            <h2 id="第五周"><a href="#第五周" class="headerlink" title="第五周"></a>第五周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL3A1QmdOV2JQREhNeXhacA==" title="https://drive.real-neo.me/s/p5BgNWbPDHMyxZp">Python程序设计-第五周.pdf<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL0dKdDhjZUNqZU43U21NbQ==" title="https://drive.real-neo.me/s/GJt8ceCjeN7SmMm">三国演义.txt<i class="fa fa-external-link"></i></span></p>
-          </div>
+<p>两个月前，我换了一加 5T，算是 48 年入国军了吧，不过等于 7 看样子会有刘海，无爱，放弃；而 5T 的 835 性能又很足够，造型也很讨我喜欢。</p>
+<p>买来后果断刷了氧 OS 使用，确实没让我失望，内置 Google 框架，使用很流畅。前两天，因为想尝试着体验一下全球上网和公交卡功能，刷成了氢 OS 8.1 稳定版，但是是 dirty flash。开机后检查各项软件，果然，电话闪退无法使用。在设置中找边所有地方也没找到全球上网，不过还好，卡券里的公交卡功能可用，没算是白刷。但是这修改过的氢的界面用起来还是各种别扭，还预装了许多中国特色软件。于是打算把公交卡功能搬到氧 OS 中使用。</p>
+<p>在氢中提取了一加商店，在刷回氧以后，可以装上，但是只能下载不能自动安装，需要在手机目录中找到 <code>apk</code> 文件手动安装。<br>按照常规操作，安装卡券和一加公交卡插件以后，在负一屏添加卡券部件，打开之后，点击加号，就会开始扫码添加会员卡。但这不是我们想要的，氢中点击加号有公交卡选项，而氧中屏蔽了这一入口。这时有两个方法可以解决。
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/Python-Lecture-Notes.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/BIRCH 的初步了解.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/BIRCH 的初步了解.html" class="post-title-link" itemprop="url">BIRCH 的初步了解</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-01-13 13:13:08" itemprop="dateCreated datePublished" datetime="2018-01-13T13:13:08Z">2018-01-13</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="BIRCH-概述"><a href="#BIRCH-概述" class="headerlink" title="BIRCH 概述"></a>BIRCH 概述</h2><p>BIRCH 算法属于层次聚类算法的一种，全称是利用层次方法的平衡迭代规约和聚类 (Balanced Iterative Reducing and Clustering Using Hierarchies)。<br>BIRCH 算法利用了一个树结构进行快速的聚类，这个数结构类似于平衡 B+ 树，一般将它称之为聚类特征树 (Clustering Feature Tree，简称 CF Tree)。这颗树的每一个节点是由若干个聚类特征 (Clustering Feature，简称 CF)组成。聚类特征树的样子：每个节点包括叶子节点都有若干个 CF，而内部节点的 CF 有指向孩子节点的指针，所有的叶子节点用一个双向链表链接起来。<br><img src="/uploads/2018/01/1.png" alt="聚类特征树">
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/BIRCH 的初步了解.html#more" rel="contents">
+              <a class="btn" href="/OxygenOS-Bus-Card.html#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1089,7 +1068,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/DBSCAN 的初步了解.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/MI3TD-Merge-Partitions.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -1109,7 +1088,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/DBSCAN 的初步了解.html" class="post-title-link" itemprop="url">DBSCAN 的初步了解</a>
+                <a href="/MI3TD-Merge-Partitions.html" class="post-title-link" itemprop="url">MI3TD 调整系统分区/合并分区 支持 64G 支持官方 OTA【存档】</a>
               
             
           </h2>
@@ -1134,7 +1113,7 @@
                 
               
 
-              <time title="Created: 2018-01-01 18:44:13" itemprop="dateCreated datePublished" datetime="2018-01-01T18:44:13Z">2018-01-01</time>
+              <time title="Created: 2018-04-07 15:13:41" itemprop="dateCreated datePublished" datetime="2018-04-07T15:13:41Z">2018-04-07</time>
             
 
             
@@ -1152,7 +1131,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
 
                 
                 
@@ -1188,16 +1167,20 @@
 
       
         
-          <p>K-means 解决不了不规则形状的聚类。于是就有了 Density-based methods 来系统解决这个问题。该方法同时也对噪声数据的处理比较好。典型的基于密度的方法就是 DBSCAN 了。</p>
-<p>DBSCAN，英文全写为 Density-based spatial clustering of applications with noise，是在 1996 年由 Martin Ester, Hans-Peter Kriegel, Jörg Sander 及 Xiaowei Xu 提出的聚类分析算法， 这个算法是以密度为本的：给定某空间里的一个点集合，这算法能把附近的点分成一组（有很多相邻点的点），并标记出位于低密度区域的局外点（最接近它的点也十分远），DBSCAN 是其中一个最常用的聚类分析算法，也是其中一个科学文章中最常引用的。</p>
-<h2 id="DBSCAN-的数据分类"><a href="#DBSCAN-的数据分类" class="headerlink" title="DBSCAN 的数据分类"></a>DBSCAN 的数据分类</h2><ul>
-<li>核心点。在半径 Eps 内含有超过 MinPts 数目的点。</li>
-<li>边界点。在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内。</li>
-<li>噪音点。既不是核心点也不是边界点的点。
+          <h2 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h2><div class="note info">
+            <p>If you want to see English Version of this post, you can go here: <span class="exturl" data-url="aHR0cHM6Ly9lbi5taXVpLmNvbS90aHJlYWQtMjU2MzM0LTEtMS5odG1s" title="Xiaomi MIUI Official Forum">Adjust the system partition &amp; Merge partitions of Mi3TD-Support offical OTA<i class="fa fa-external-link"></i></span></p>
+          </div>
+<p>这是一篇可以指导你将你的小米 3 TD 调整系统分区/合并分区的教程，支持 16G 和 64G 的 TD。</p>
+<ul>
+<li>有时候你想安装软件，提示你空间不足，去查看一下明明剩余空间还多。</li>
+<li>有时候你想刷 Gapps 包，却因为系统分区空间不够而刷不进去。</li>
+</ul>
+<p>遇到以上这些情况，就需要本文的教程来解决问题了。</p>
+<p>可能你看过许多相关帖子，不过方法都不太完美，官方合并分区方法有 BUG，合并之后存储空间会缺失一个多 G，只有 12.25G 大小，而本教程则完美解决了官方合并分区的 BUG，合并之后存储空间全部利用，不再丢失一个 G。
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/DBSCAN 的初步了解.html#more" rel="contents">
+              <a class="btn" href="/MI3TD-Merge-Partitions.html#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1205,7 +1188,7 @@
           <!--/noindex-->
         
       
-    </li></ul></div>
+    </p></div>
 
     
 
@@ -1246,7 +1229,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1291,7 +1274,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1455,7 +1438,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

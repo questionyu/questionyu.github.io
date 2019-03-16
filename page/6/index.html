@@ -415,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Apriori 的初步了解.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python03.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -435,7 +435,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Apriori 的初步了解.html" class="post-title-link" itemprop="url">Apriori 的初步了解</a>
+                <a href="/Python03.html" class="post-title-link" itemprop="url">Python程序设计 第三周</a>
               
             
           </h2>
@@ -460,7 +460,7 @@
                 
               
 
-              <time title="Created: 2017-09-02 11:52:23" itemprop="dateCreated datePublished" datetime="2017-09-02T11:52:23Z">2017-09-02</time>
+              <time title="Created: 2018-03-31 21:39:52" itemprop="dateCreated datePublished" datetime="2018-03-31T21:39:52Z">2018-03-31</time>
             
 
             
@@ -478,7 +478,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
 
                 
                 
@@ -514,18 +514,187 @@
 
       
         
-          
-            <p>Apriori 算法是一种最有影响力的挖掘布尔关联规则的频繁项集的算法，它是由 Rakesh Agrawal 和 RamakrishnanSkrikant 提出的。</p>
-<p>Apriori 算法是一种挖掘关联规则的频繁项集算法，其核心思想是通过候选集生成和情节的向下封闭检测两个阶段来挖掘频繁项集。 Apriori 算法应用广泛，可用于消费市场价格分析，猜测顾客的消费习惯；网络安全领域中的入侵检测技术；可用在用于高校管理中，根据挖掘规则可以有效地辅助学校管理部门有针对性的开展贫困助学工作；也可用在移动通信领域中，指导运营商的业务运营和辅助业务提供商的决策制定。</p>
-<p>Apriori 算法过程分为两个步骤：</p>
-<ul>
-<li>通过迭代，检索出事务数据库中的所有频繁项集，即支持度不低于用户设定的阈值的项集；</li>
-<li>利用频繁项集构造出满足用户最小信任度的规则。</li>
+          <ul>
+<li>绘画如图所示分形树。</li>
 </ul>
-<p>具体做法就是：</p>
-<p>首先找出频繁 1- 项集，记为 L1；然后利用 L1 来产生候选项集 C2，对 C2 中的项进行判定挖掘出 L2，即频繁 2- 项集；不断如此循环下去直到无法发现更多的频繁 k- 项集为止。每挖掘一层 Lk 就需要扫描整个数据库一遍。算法利用了一个性质：任一频繁项集的所有非空子集也必须是频繁的。意思就是说，生成一个 k-itemset 的候选项时，如果这个候选项有子集不在 (k-1)-itemset（已经确定是 frequent 的）中时，那么这个候选项就不用拿去和支持度判断了，直接删除。</p>
+<p><img src="/uploads/2018/03/分形树.png" alt="分形树">
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Python03.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python02.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Python02.html" class="post-title-link" itemprop="url">Python程序设计 第二周</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-03-16 17:53:12" itemprop="dateCreated datePublished" datetime="2018-03-16T17:53:12Z">2018-03-16</time>
+            
+
+            
+          </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li>利用嵌套循环 ， 输出 2-100 之间的质数。</li>
+<li>有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？</li>
+<li>输出 9*9 乘法口诀表。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出2-100之间的素数</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">101</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">2</span>, i):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> (i % j):         <span class="comment"># 如果 i 整除 j（i 不是素数）</span></span><br><span class="line">            <span class="keyword">break</span>                   <span class="comment"># 跳出循环</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(i, <span class="string">"是素数"</span>)</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Python02.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -580,7 +749,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的基本流程.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Python-Lecture-Notes.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -600,7 +769,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/K-means 的基本流程.html" class="post-title-link" itemprop="url">K-means 的基本流程</a>
+                <a href="/Python-Lecture-Notes.html" class="post-title-link" itemprop="url">Python程序设计 课件</a>
               
             
           </h2>
@@ -625,7 +794,184 @@
                 
               
 
-              <time title="Created: 2017-08-26 11:49:13" itemprop="dateCreated datePublished" datetime="2017-08-26T11:49:13Z">2017-08-26</time>
+              <time title="Created: 2018-03-16 10:35:13" itemprop="dateCreated datePublished" datetime="2018-03-16T10:35:13Z">2018-03-16</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <div class="note info">
+            <h2 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL3hmV1FLYUdYZHE5YUxEaw==" title="https://drive.real-neo.me/s/xfWQKaGXdq9aLDk">Python程序设计-第一周.pdf<i class="fa fa-external-link"></i></span></p>
+          </div>
+<div class="note info">
+            <h2 id="第二周"><a href="#第二周" class="headerlink" title="第二周"></a>第二周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL293eng3RTVieERwWnF0OA==" title="https://drive.real-neo.me/s/owzx7E5bxDpZqt8">Python程序设计-第二周.pdf<i class="fa fa-external-link"></i></span></p>
+          </div>
+<div class="note info">
+            <h2 id="第三周"><a href="#第三周" class="headerlink" title="第三周"></a>第三周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL0NKUXBldEhlajdHZkZ5Vw==" title="https://drive.real-neo.me/s/CJQpetHej7GfFyW">Python程序设计-第三周.pdf<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL1B5d1dlbkZtZ3Q5UE5jRw==" title="https://drive.real-neo.me/s/PywWenFmgt9PNcG">玫瑰花.py<i class="fa fa-external-link"></i></span></p>
+          </div>
+<div class="note info">
+            <h2 id="第四周"><a href="#第四周" class="headerlink" title="第四周"></a>第四周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL2N4NWdDeXQzRnhNZThaag==" title="https://drive.real-neo.me/s/cx5gCyt3FxMe8Zj">Python程序设计-第四周.pdf<i class="fa fa-external-link"></i></span></p>
+          </div>
+<div class="note info">
+            <h2 id="第五周"><a href="#第五周" class="headerlink" title="第五周"></a>第五周</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL3A1QmdOV2JQREhNeXhacA==" title="https://drive.real-neo.me/s/p5BgNWbPDHMyxZp">Python程序设计-第五周.pdf<i class="fa fa-external-link"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9kcml2ZS5yZWFsLW5lby5tZS9zL0dKdDhjZUNqZU43U21NbQ==" title="https://drive.real-neo.me/s/GJt8ceCjeN7SmMm">三国演义.txt<i class="fa fa-external-link"></i></span></p>
+          </div>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Python-Lecture-Notes.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/BIRCH 的初步了解.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/BIRCH 的初步了解.html" class="post-title-link" itemprop="url">BIRCH 的初步了解</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-01-13 13:13:08" itemprop="dateCreated datePublished" datetime="2018-01-13T13:13:08Z">2018-01-13</time>
             
 
             
@@ -679,38 +1025,19 @@
 
       
         
+          <h2 id="BIRCH-概述"><a href="#BIRCH-概述" class="headerlink" title="BIRCH 概述"></a>BIRCH 概述</h2><p>BIRCH 算法属于层次聚类算法的一种，全称是利用层次方法的平衡迭代规约和聚类 (Balanced Iterative Reducing and Clustering Using Hierarchies)。<br>BIRCH 算法利用了一个树结构进行快速的聚类，这个数结构类似于平衡 B+ 树，一般将它称之为聚类特征树 (Clustering Feature Tree，简称 CF Tree)。这颗树的每一个节点是由若干个聚类特征 (Clustering Feature，简称 CF)组成。聚类特征树的样子：每个节点包括叶子节点都有若干个 CF，而内部节点的 CF 有指向孩子节点的指针，所有的叶子节点用一个双向链表链接起来。<br><img src="/uploads/2018/01/1.png" alt="聚类特征树">
+          <!--noindex-->
           
-            <p>K-means 算法的基本流程如下：</p>
-<ol>
-<li>随机取 K 个种子点。</li>
-<li>然后对所有点求到这K个种子点的距离，假如点 Pi 离种子点 Si 最近，那么 Pi 属于 Si 点群</li>
-<li>接下来，移动种子点到属于他的“点群”的中心。</li>
-<li>然后重复第2）和第3）步，直到种子点没有移动。</li>
-</ol>
-<p>其中求点群中心的算法，可以有更多的更灵活的公式：</p>
-<ul>
-<li>Minkowski Distance 公式，λ 可以随意取值，可以是负数，也可以是正数，或是无穷大。</li>
-<li>Euclidean Distance 公式，第一个公式 λ=2 的情况。</li>
-<li>CityBlock Distance 公式，第一个公式 λ=1 的情况。</li>
-</ul>
-<p>K-means 主要有两个缺陷：</p>
-<ul>
-<li>K 是事先给定的，这个 K 值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。（ ISODATA 算法通过类的自动合并和分裂，得到较为合理的类型数目 K）</li>
-<li>K-means算法需要用初始随机种子点来搞，这个随机种子点太重要，不同的随机种子点会有得到完全不同的结果。（K-Means++ 算法可以用来解决这个问题，其可以有效地选择初始点）</li>
-</ul>
-<p>K-means++ 算法的基本流程如下：</p>
-<ol>
-<li>先从我们的数据库随机挑个随机点当“种子点”。</li>
-<li>对于每个点，计算其和最近的一个“种子点”的距离 D(x) 并保存在一个数组里，把这些距离加起来得到 Sum(D(x))。</li>
-<li>取一个随机值，用权重的方式来取计算下一个“种子点”。这个算法的实现是，先取一个能落在 Sum(D(x)) 中的随机值 Random，然后用 Random -= D(x)，直到其 &lt;=0，此时的点就是下一个“种子点”。</li>
-<li>重复第（2）和第（3）步直到所有的K个种子点都被选出来。</li>
-<li>进行 K-means 算法。</li>
-</ol>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/BIRCH 的初步了解.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -762,7 +1089,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/移动对象轨迹序列模式挖掘.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/DBSCAN 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -782,7 +1109,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/移动对象轨迹序列模式挖掘.html" class="post-title-link" itemprop="url">移动对象轨迹序列模式挖掘</a>
+                <a href="/DBSCAN 的初步了解.html" class="post-title-link" itemprop="url">DBSCAN 的初步了解</a>
               
             
           </h2>
@@ -807,331 +1134,7 @@
                 
               
 
-              <time title="Created: 2017-08-19 09:18:25" itemprop="dateCreated datePublished" datetime="2017-08-19T09:18:25Z">2017-08-19</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>移动对象轨迹是由大量的时空数据组成的一系列数据，具有实时性、海量性、不确定性等特点，如何通过对实时的时空轨迹数据进行分析进而挖掘出用户需要的轨迹行为模式是基于位置服务的一大研究热点。</p>
-<p>数据挖掘 (Data Mining) 近来一直备受关注，相关研究也逐渐深入，加之技术日趋成熟，已逐渐转变成用户移动数据挖掘的一种重要工具。由时间序列引出的序列模式挖掘 (Sequence Pattern Mining)，作为数据挖掘的一个重要方法，吸引了很多研究者前来研究，一定程度上解决了如何通过用户的移动轨迹数据集挖掘出有效信息的困惑。面对时间和空间两个方面的移动轨迹信息，首先通过时间这一属性将轨迹数据转化为时间线上的序列模式 (Sequence Pattern)，再对每条的序列数据进行模式挖掘 (Pattern Mining)，去除噪音，挖掘出有效信息。序列模式挖掘已经成为将移动对象的大量轨迹数据转化为有用的信息资源的有效工具，进而可以进行高效的科学决策。</p>
-<p>对于序列模式挖掘算法，国内外的一些研究均在 Apriori 的算法以及 PrefixSpan 算法这两大类的基础上进行的。Apriori 算法是 R.Agrawal 和 R.Srikant 共同提出的规则挖掘频繁项集的算法，并且此算法衍生了很多其他的算法，例如：AprioriAll 算法、GSP 算法和 SPADE 算法等。而 PrefixSpan 算法则是由 J.Han 等人提出的基于数据库投影模式增长的算法，此算法也衍生出很多算法，例如：Freespan 算法等。</p>
-<p>序列模式挖掘 (Sequence Pattern Mining) 是指在时间序列数据中挖掘频繁出现的时间序列。序列模式挖掘在数据挖掘的研究中占着十分重要的位置。时间序列数据通过系统提取，能够让人们做出适当的调整或者及时发现变动，而且时间序列数据之间的规律通过序列模式挖掘之后则可以发现更多潜在的知识，甚至成为一个重要的理论热点或者发现更高的实用价值。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/4 种序列模式挖掘算法的比较分析.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/4 种序列模式挖掘算法的比较分析.html" class="post-title-link" itemprop="url">4 种序列模式挖掘算法的比较分析</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-08-12 22:28:52" itemprop="dateCreated datePublished" datetime="2017-08-12T22:28:52Z">2017-08-12</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>AprioriAll 算法属于 Apriori 类算法，其基本思想为首先遍历序列数据库生成候选序列并利用 Apriori 性质进行剪枝得到频繁序列。每次遍历都是通过连接上次得到的频繁序列生成新的长度加1的候选序列，然后扫描每个候选序列验证其是否为频繁序列。</li>
-<li>GSP（generalized sequential pattern）算法是 AprioriAll 算法的扩展算法，其算法的执行过程和 AprioriAll 类似，最大的不同在于 GSP 引入了时间约束、滑动时间窗和分类层次技术，增加了扫描的约束条件，有效地减少了需要扫描的候选序列的数量。此外 GSP 利用哈希树来存储候选序列，减少了需要扫描的序列数量。</li>
-<li>FreeSpan 算法是基于模式投影的序列挖掘算法，其基本思想：利用当前挖掘的频繁序列集将序列数据库递归地投影到一组更小的投影数据库上，分别在每个投影数据库上增长子序列。这一过程对数据和待检验的频繁模式集都进行了分割，并且每一次检验限制在与其相符合的更小投影数据库中。</li>
-<li>PrefixSpan 是 FreeSpan 的改进算法，即通过前缀投影挖掘序列模式。其基本思想：投影时不考虑所有可能出现的频繁子序列，只检查前缀序列，然后把相应的后缀投影成投影数据库。每个投影数据库中，只检查局部频繁模式，在整个过程中不需要生成候选序列。</li>
-</ul>
-<p>AprioriAll GSP 这两种算法都属于 Apriori 类算法，都要产生大量的候选序列，需要有足够的存贮空间。同时还需要反复扫描数据库，需要占用很多运行时间。该类算法的执行效率比较低，特别是在支持度比较低的情况下，其执行效率将会大大下降。和 AprioriAll 相比，GSP 的执行效率比较高，总体来说要比 AprioriAll 高 2~20 倍。</p>
-<p>FreeSpan PrefixSpan 这两种算法都属于模式增长算法，它们的查找更加集中和有效。由于该类算法不生成大量的候选序列以及不需要反复扫描原数据库，和 Apriori 类算法相比该类算法要快且更有效，特别是在支持度比较低的情况下更明显。此外，在时空的执行效率上，PrefixSpan 比 FreeSpan 更优。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的初步了解.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/K-means 的初步了解.html" class="post-title-link" itemprop="url">K-means 的初步了解</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-08-05 20:28:19" itemprop="dateCreated datePublished" datetime="2017-08-05T20:28:19Z">2017-08-05</time>
+              <time title="Created: 2018-01-01 18:44:13" itemprop="dateCreated datePublished" datetime="2018-01-01T18:44:13Z">2018-01-01</time>
             
 
             
@@ -1185,24 +1188,24 @@
 
       
         
+          <p>K-means 解决不了不规则形状的聚类。于是就有了 Density-based methods 来系统解决这个问题。该方法同时也对噪声数据的处理比较好。典型的基于密度的方法就是 DBSCAN 了。</p>
+<p>DBSCAN，英文全写为 Density-based spatial clustering of applications with noise，是在 1996 年由 Martin Ester, Hans-Peter Kriegel, Jörg Sander 及 Xiaowei Xu 提出的聚类分析算法， 这个算法是以密度为本的：给定某空间里的一个点集合，这算法能把附近的点分成一组（有很多相邻点的点），并标记出位于低密度区域的局外点（最接近它的点也十分远），DBSCAN 是其中一个最常用的聚类分析算法，也是其中一个科学文章中最常引用的。</p>
+<h2 id="DBSCAN-的数据分类"><a href="#DBSCAN-的数据分类" class="headerlink" title="DBSCAN 的数据分类"></a>DBSCAN 的数据分类</h2><ul>
+<li>核心点。在半径 Eps 内含有超过 MinPts 数目的点。</li>
+<li>边界点。在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内。</li>
+<li>噪音点。既不是核心点也不是边界点的点。
+          <!--noindex-->
           
-            <p>K-means 算法属于基于划分的聚类方法，是一种最简单的无监督学习算法，也是十大经典数据挖掘算法之一。<br>K-means 算法通过迭代来实现，其基本思想为：每次确定 K 个中心点，将各节点归属到与之最近的中心点所代表的 cluster，然后确定新的中心点，并继续聚类，直到聚类结果不再变化停止迭代。</p>
-<p>K 值的选取：<br>算法中 K 值需要事先给定，但这个K值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。这也是 K-means 算法的一个不足。</p>
-<p>初始中心点的选取：<br>初始聚类中心点唯一地决定了聚类结果，因此其选择对聚类结果有很大的影响，一旦初始值选择的不好，可能无法得到有效的聚类结果，这也是 K-means 算法的一个主要问题。</p>
-<p>K-means 算法并不能保证得到的解为全局最优解，通常得到的是一个局部最优解。</p>
-<p>K-means 算法确定的 K 个 cluster 达到平方误差最小。当聚类是密集的，且类与类之间区别明显时，效果比较好。对于处理大数据集，这个算法是高效和可扩展的，时间复杂度可达到最优。</p>
-<p>改进算法：</p>
-<ul>
-<li>K-means 要手工输入类数目，对初始值的设置很敏感，所以有了 K-means++、intelligent K-means、genetic K-means；</li>
-<li>K-means 对噪声和离群值非常敏感，所以有了 K-medoids 和 K-medians；</li>
-<li>K-means 只用于numerical类型数据，不适用于 categorical 类型数据，所以 K-modes；</li>
-<li>K-means 不能解决非凸（non-convex）数据，所以有了 kernel K-means。</li>
-</ul>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/DBSCAN 的初步了解.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
 
     
 
@@ -1243,7 +1246,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1288,7 +1291,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1452,7 +1455,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

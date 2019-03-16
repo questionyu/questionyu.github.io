@@ -415,7 +415,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/聚类算法的初步了解.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Apriori 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -435,7 +435,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/聚类算法的初步了解.html" class="post-title-link" itemprop="url">聚类算法的初步了解</a>
+                <a href="/Apriori 的初步了解.html" class="post-title-link" itemprop="url">Apriori 的初步了解</a>
               
             
           </h2>
@@ -460,7 +460,172 @@
                 
               
 
-              <time title="Created: 2017-07-31 17:28:06" itemprop="dateCreated datePublished" datetime="2017-07-31T17:28:06Z">2017-07-31</time>
+              <time title="Created: 2017-09-02 11:52:23" itemprop="dateCreated datePublished" datetime="2017-09-02T11:52:23Z">2017-09-02</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Apriori 算法是一种最有影响力的挖掘布尔关联规则的频繁项集的算法，它是由 Rakesh Agrawal 和 RamakrishnanSkrikant 提出的。</p>
+<p>Apriori 算法是一种挖掘关联规则的频繁项集算法，其核心思想是通过候选集生成和情节的向下封闭检测两个阶段来挖掘频繁项集。 Apriori 算法应用广泛，可用于消费市场价格分析，猜测顾客的消费习惯；网络安全领域中的入侵检测技术；可用在用于高校管理中，根据挖掘规则可以有效地辅助学校管理部门有针对性的开展贫困助学工作；也可用在移动通信领域中，指导运营商的业务运营和辅助业务提供商的决策制定。</p>
+<p>Apriori 算法过程分为两个步骤：</p>
+<ul>
+<li>通过迭代，检索出事务数据库中的所有频繁项集，即支持度不低于用户设定的阈值的项集；</li>
+<li>利用频繁项集构造出满足用户最小信任度的规则。</li>
+</ul>
+<p>具体做法就是：</p>
+<p>首先找出频繁 1- 项集，记为 L1；然后利用 L1 来产生候选项集 C2，对 C2 中的项进行判定挖掘出 L2，即频繁 2- 项集；不断如此循环下去直到无法发现更多的频繁 k- 项集为止。每挖掘一层 Lk 就需要扫描整个数据库一遍。算法利用了一个性质：任一频繁项集的所有非空子集也必须是频繁的。意思就是说，生成一个 k-itemset 的候选项时，如果这个候选项有子集不在 (k-1)-itemset（已经确定是 frequent 的）中时，那么这个候选项就不用拿去和支持度判断了，直接删除。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的基本流程.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/K-means 的基本流程.html" class="post-title-link" itemprop="url">K-means 的基本流程</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-08-26 11:49:13" itemprop="dateCreated datePublished" datetime="2017-08-26T11:49:13Z">2017-08-26</time>
             
 
             
@@ -515,15 +680,32 @@
       
         
           
-            <p>聚类算法主要是用在聚类分析中的算法，而聚类分析（群集分析）是对于统计数据分析的一门技术把相似的对象通过静态分类的方法分成不同的组别或者更多的子集，这样让在同一个子集中的成员对象都有相似的一些属性，常见的包括在坐标系中更加短的空间距离等。</p>
-<p>移动对象常访问位置点的挖掘（聚类算法）：</p>
+            <p>K-means 算法的基本流程如下：</p>
+<ol>
+<li>随机取 K 个种子点。</li>
+<li>然后对所有点求到这K个种子点的距离，假如点 Pi 离种子点 Si 最近，那么 Pi 属于 Si 点群</li>
+<li>接下来，移动种子点到属于他的“点群”的中心。</li>
+<li>然后重复第2）和第3）步，直到种子点没有移动。</li>
+</ol>
+<p>其中求点群中心的算法，可以有更多的更灵活的公式：</p>
 <ul>
-<li>基于划分的算法的输入是包含n个对象的数据库和簇的数目 k；输出是 k 个簇，使平方误差准则最小。优点：简单，易于理解和实现；时间复杂度低。缺点：K-means 要手工输入类数目，对初始值的设置很敏感；对噪声和离群值非常敏感；只用于 numerical 类型数据，不适用于 categorical 类型数据；不能解决非凸 (non-convex) 数据；主要发现圆形或者球形簇，不能识别非球形的簇。</li>
-<li>基于密度的算法的输入是包含n个对象的数据库，输出是多个簇。优点：与 K-means 方法相比，DBSCAN 不需要事先知道要形成的簇类的数量；与 K-means 方法相比，DBSCAN 可以发现任意形状的簇类；同时，DBSCAN 能够识别出噪声点；DBSCAN 对于数据库中样本的顺序不敏感。缺点：DBSCAN 不能很好反映高尺寸数据；DBSCAN 不能很好反映数据集变化的密度；对于高维数据，点之间极为稀疏，密度很难定义。</li>
-<li>基于层次的算法的输入是包含 n 个对象的数据库，输出是一类簇。优点：距离和规则的相似度容易定义，限制少；不需要预先制定聚类数；可以发现类的层次关系；可以聚类成其它形状。缺点：计算复杂度太高；奇异值也能产生很大影响；算法很可能聚类成链状。</li>
-<li>基于网络的算法的输入是高维的输入向量，输出是聚类网络。优点：可以实现从输入空间（n 维）到输出平面（2 维）的降维映射。缺点：时间复杂度高，处理时间较长。</li>
+<li>Minkowski Distance 公式，λ 可以随意取值，可以是负数，也可以是正数，或是无穷大。</li>
+<li>Euclidean Distance 公式，第一个公式 λ=2 的情况。</li>
+<li>CityBlock Distance 公式，第一个公式 λ=1 的情况。</li>
 </ul>
-<p>K-means 是划分方法中较经典的聚类算法之一。由于该算法的效率高，所以在对大规模数据进行聚类时被广泛应用。目前，许多算法均围绕着该算法进行扩展和改进。<br>K-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似度，而簇间的相似度较低。K-means 算法的处理过程如下：首先，随机地选择 k 个对象，每个对象初始地代表了一个簇的平均值或中心；对剩余的每个对象，根据其与各簇中心的距离，将它赋给最近的簇；然后重新计算每个簇的平均值。这个过程不断重复，直到准则函数收敛。</p>
+<p>K-means 主要有两个缺陷：</p>
+<ul>
+<li>K 是事先给定的，这个 K 值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。（ ISODATA 算法通过类的自动合并和分裂，得到较为合理的类型数目 K）</li>
+<li>K-means算法需要用初始随机种子点来搞，这个随机种子点太重要，不同的随机种子点会有得到完全不同的结果。（K-Means++ 算法可以用来解决这个问题，其可以有效地选择初始点）</li>
+</ul>
+<p>K-means++ 算法的基本流程如下：</p>
+<ol>
+<li>先从我们的数据库随机挑个随机点当“种子点”。</li>
+<li>对于每个点，计算其和最近的一个“种子点”的距离 D(x) 并保存在一个数组里，把这些距离加起来得到 Sum(D(x))。</li>
+<li>取一个随机值，用权重的方式来取计算下一个“种子点”。这个算法的实现是，先取一个能落在 Sum(D(x)) 中的随机值 Random，然后用 Random -= D(x)，直到其 &lt;=0，此时的点就是下一个“种子点”。</li>
+<li>重复第（2）和第（3）步直到所有的K个种子点都被选出来。</li>
+<li>进行 K-means 算法。</li>
+</ol>
 
           
         
@@ -580,7 +762,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab8.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/移动对象轨迹序列模式挖掘.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -600,7 +782,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/IA-Lab8.html" class="post-title-link" itemprop="url">互联网应用 Lab8</a>
+                <a href="/移动对象轨迹序列模式挖掘.html" class="post-title-link" itemprop="url">移动对象轨迹序列模式挖掘</a>
               
             
           </h2>
@@ -625,7 +807,7 @@
                 
               
 
-              <time title="Created: 2017-05-13 21:29:00" itemprop="dateCreated datePublished" datetime="2017-05-13T21:29:00Z">2017-05-13</time>
+              <time title="Created: 2017-08-19 09:18:25" itemprop="dateCreated datePublished" datetime="2017-08-19T09:18:25Z">2017-08-19</time>
             
 
             
@@ -643,7 +825,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
 
                 
                 
@@ -679,17 +861,13 @@
 
       
         
-          <h2 id="The-Configuration-of-Wireshark"><a href="#The-Configuration-of-Wireshark" class="headerlink" title="The Configuration of Wireshark"></a>The Configuration of Wireshark</h2><p>Capture the interface <strong>“enp2s0”</strong> which is my Ethernet adapter.<br>The filter rule is <strong>“udp port 67”</strong> for capturing DHCP packets, <strong>“udp port 53”</strong> for capturing DNS packets.</p>
-<h2 id="DHCP-Message-Format"><a href="#DHCP-Message-Format" class="headerlink" title="DHCP Message Format"></a>DHCP Message Format</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|     op (1)    |   htype (1)   |   hlen (1)    |   hops (1)    |</span><br><span class="line">+---------------+---------------+---------------+---------------+</span><br><span class="line">|                            xid (4)                            |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">|           secs (2)            |           flags (2)           |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">|                          ciaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          yiaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          siaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          giaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          chaddr  (16)                         |</span><br><span class="line">|                                                               |</span><br><span class="line">|                                                               |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          sname   (64)                         |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          file    (128)                        |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          options (variable)                   |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab8.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <p>移动对象轨迹是由大量的时空数据组成的一系列数据，具有实时性、海量性、不确定性等特点，如何通过对实时的时空轨迹数据进行分析进而挖掘出用户需要的轨迹行为模式是基于位置服务的一大研究热点。</p>
+<p>数据挖掘 (Data Mining) 近来一直备受关注，相关研究也逐渐深入，加之技术日趋成熟，已逐渐转变成用户移动数据挖掘的一种重要工具。由时间序列引出的序列模式挖掘 (Sequence Pattern Mining)，作为数据挖掘的一个重要方法，吸引了很多研究者前来研究，一定程度上解决了如何通过用户的移动轨迹数据集挖掘出有效信息的困惑。面对时间和空间两个方面的移动轨迹信息，首先通过时间这一属性将轨迹数据转化为时间线上的序列模式 (Sequence Pattern)，再对每条的序列数据进行模式挖掘 (Pattern Mining)，去除噪音，挖掘出有效信息。序列模式挖掘已经成为将移动对象的大量轨迹数据转化为有用的信息资源的有效工具，进而可以进行高效的科学决策。</p>
+<p>对于序列模式挖掘算法，国内外的一些研究均在 Apriori 的算法以及 PrefixSpan 算法这两大类的基础上进行的。Apriori 算法是 R.Agrawal 和 R.Srikant 共同提出的规则挖掘频繁项集的算法，并且此算法衍生了很多其他的算法，例如：AprioriAll 算法、GSP 算法和 SPADE 算法等。而 PrefixSpan 算法则是由 J.Han 等人提出的基于数据库投影模式增长的算法，此算法也衍生出很多算法，例如：Freespan 算法等。</p>
+<p>序列模式挖掘 (Sequence Pattern Mining) 是指在时间序列数据中挖掘频繁出现的时间序列。序列模式挖掘在数据挖掘的研究中占着十分重要的位置。时间序列数据通过系统提取，能够让人们做出适当的调整或者及时发现变动，而且时间序列数据之间的规律通过序列模式挖掘之后则可以发现更多潜在的知识，甚至成为一个重要的理论热点或者发现更高的实用价值。</p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -744,7 +922,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab7.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/4 种序列模式挖掘算法的比较分析.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -764,7 +942,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/IA-Lab7.html" class="post-title-link" itemprop="url">互联网应用 Lab7</a>
+                <a href="/4 种序列模式挖掘算法的比较分析.html" class="post-title-link" itemprop="url">4 种序列模式挖掘算法的比较分析</a>
               
             
           </h2>
@@ -789,7 +967,7 @@
                 
               
 
-              <time title="Created: 2017-04-29 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-29T12:00:00Z">2017-04-29</time>
+              <time title="Created: 2017-08-12 22:28:52" itemprop="dateCreated datePublished" datetime="2017-08-12T22:28:52Z">2017-08-12</time>
             
 
             
@@ -807,7 +985,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
 
                 
                 
@@ -843,16 +1021,17 @@
 
       
         
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), bind(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_ntoa() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">3</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage:\n%s &lt;IP Address&gt; &lt;File Name&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> serverSock;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serverAddr</span>;</span></span><br><span class="line">	<span class="keyword">char</span> *fileName, buffer[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((serverSock = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(&amp;serverAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(serverAddr));</span><br><span class="line">	serverAddr.sin_family = AF_INET;</span><br><span class="line">	serverAddr.sin_addr.s_addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">	serverAddr.sin_port = htons(<span class="number">1234</span>);</span><br><span class="line"></span><br><span class="line">	connect(serverSock, (struct sockaddr *) &amp;serverAddr, <span class="keyword">sizeof</span>(serverAddr));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Connecting to server:  %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">	send(serverSock, argv[<span class="number">2</span>], <span class="built_in">strlen</span>(argv[<span class="number">2</span>]), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	fileName = argv[<span class="number">2</span>];</span><br><span class="line">	<span class="built_in">strcat</span>(fileName, <span class="string">".bak\0"</span>);</span><br><span class="line">	<span class="keyword">int</span> file = open(fileName, O_RDWR | O_CREAT);</span><br><span class="line">	<span class="keyword">int</span> transferSize = <span class="number">0</span>, recvLen;</span><br><span class="line">	<span class="keyword">while</span> ((recvLen = recv(serverSock, buffer, <span class="number">50</span>, <span class="number">0</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(file, buffer, recvLen);</span><br><span class="line">		transferSize += recvLen;</span><br><span class="line">	&#125;</span><br><span class="line">	close(file);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"File received\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d BYTES received, and stored in %s\n"</span>, transferSize, fileName);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab7.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <ul>
+<li>AprioriAll 算法属于 Apriori 类算法，其基本思想为首先遍历序列数据库生成候选序列并利用 Apriori 性质进行剪枝得到频繁序列。每次遍历都是通过连接上次得到的频繁序列生成新的长度加1的候选序列，然后扫描每个候选序列验证其是否为频繁序列。</li>
+<li>GSP（generalized sequential pattern）算法是 AprioriAll 算法的扩展算法，其算法的执行过程和 AprioriAll 类似，最大的不同在于 GSP 引入了时间约束、滑动时间窗和分类层次技术，增加了扫描的约束条件，有效地减少了需要扫描的候选序列的数量。此外 GSP 利用哈希树来存储候选序列，减少了需要扫描的序列数量。</li>
+<li>FreeSpan 算法是基于模式投影的序列挖掘算法，其基本思想：利用当前挖掘的频繁序列集将序列数据库递归地投影到一组更小的投影数据库上，分别在每个投影数据库上增长子序列。这一过程对数据和待检验的频繁模式集都进行了分割，并且每一次检验限制在与其相符合的更小投影数据库中。</li>
+<li>PrefixSpan 是 FreeSpan 的改进算法，即通过前缀投影挖掘序列模式。其基本思想：投影时不考虑所有可能出现的频繁子序列，只检查前缀序列，然后把相应的后缀投影成投影数据库。每个投影数据库中，只检查局部频繁模式，在整个过程中不需要生成候选序列。</li>
+</ul>
+<p>AprioriAll GSP 这两种算法都属于 Apriori 类算法，都要产生大量的候选序列，需要有足够的存贮空间。同时还需要反复扫描数据库，需要占用很多运行时间。该类算法的执行效率比较低，特别是在支持度比较低的情况下，其执行效率将会大大下降。和 AprioriAll 相比，GSP 的执行效率比较高，总体来说要比 AprioriAll 高 2~20 倍。</p>
+<p>FreeSpan PrefixSpan 这两种算法都属于模式增长算法，它们的查找更加集中和有效。由于该类算法不生成大量的候选序列以及不需要反复扫描原数据库，和 Apriori 类算法相比该类算法要快且更有效，特别是在支持度比较低的情况下更明显。此外，在时空的执行效率上，PrefixSpan 比 FreeSpan 更优。</p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -907,7 +1086,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab6.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -927,7 +1106,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/IA-Lab6.html" class="post-title-link" itemprop="url">互联网应用 Lab6</a>
+                <a href="/K-means 的初步了解.html" class="post-title-link" itemprop="url">K-means 的初步了解</a>
               
             
           </h2>
@@ -952,7 +1131,7 @@
                 
               
 
-              <time title="Created: 2017-04-28 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-28T12:00:00Z">2017-04-28</time>
+              <time title="Created: 2017-08-05 20:28:19" itemprop="dateCreated datePublished" datetime="2017-08-05T20:28:19Z">2017-08-05</time>
             
 
             
@@ -970,170 +1149,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_addr() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; /* for atoi() and exit() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ECHOMAX 255 <span class="comment">/* Longest string to echo */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sock; <span class="comment">/* Socket descriptor */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoServAddr</span>;</span> <span class="comment">/* Echo server address */</span></span><br><span class="line"><span class="comment">//	struct sockaddr_in fromAddr; /* Source address of echo */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span> echoServPort; <span class="comment">/* Echo server port */</span></span><br><span class="line"><span class="comment">//	unsigned int fromSize; /* In-out of address size for recvfrom() */</span></span><br><span class="line">	<span class="keyword">char</span> *servIP; <span class="comment">/* IP address of server */</span></span><br><span class="line">	<span class="keyword">char</span> *echoString; <span class="comment">/* String to send to echo server */</span></span><br><span class="line"><span class="comment">//	char echoBuffer[ECHOMAX + 1]; /* Buffer for receiving echoed string */</span></span><br><span class="line">	<span class="keyword">size_t</span> echoStringLen; <span class="comment">/* Length of string to echo */</span></span><br><span class="line"><span class="comment">//	int respStringLen; /* Length of received response */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">3</span>) &#123; <span class="comment">/* Test for correct number of arguments */</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;Server IP&gt; &lt;Echo Word&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	servIP = argv[<span class="number">1</span>]; <span class="comment">/* First arg: server IP address (dotted quad) */</span></span><br><span class="line">	echoServPort = <span class="number">56325</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Create a datagram/UDP socket */</span></span><br><span class="line">	<span class="keyword">if</span> ((sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line">	<span class="comment">/* Construct the server address structure */</span></span><br><span class="line">	<span class="built_in">memset</span>(&amp;echoServAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(echoServAddr));<span class="comment">/*Zero out structure*/</span></span><br><span class="line">	echoServAddr.sin_family = AF_INET; <span class="comment">/* Internet addr family */</span></span><br><span class="line">	echoServAddr.sin_addr.s_addr = inet_addr(servIP);<span class="comment">/*Server IP address*/</span></span><br><span class="line">	echoServAddr.sin_port = htons(echoServPort); <span class="comment">/* Server port */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; argc; i++) &#123;</span><br><span class="line">		echoString = argv[i]; <span class="comment">/* Second arg: string to echo */</span></span><br><span class="line">		<span class="keyword">if</span> ((echoStringLen = <span class="built_in">strlen</span>(echoString)) &gt; ECHOMAX) <span class="comment">/* Check input length */</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Echo word too long.\n"</span>);</span><br><span class="line">		<span class="comment">/* Send the string to the server */</span></span><br><span class="line">		<span class="keyword">if</span> (sendto(sock, echoString, echoStringLen, <span class="number">0</span>, (struct sockaddr *) &amp;echoServAddr, <span class="keyword">sizeof</span>(echoServAddr)) != echoStringLen)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"sendto() sent a different number of bytes than expected.\n"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"sending data to '%s'\n"</span>, servIP);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//	/* Recv a response */</span></span><br><span class="line"><span class="comment">//	fromSize = sizeof(fromAddr);</span></span><br><span class="line"><span class="comment">//	if ((respStringLen = recvfrom(sock, echoBuffer, ECHOMAX, 0, (struct sockaddr *) &amp;fromAddr, &amp;fromSize)) != echoStringLen)</span></span><br><span class="line"><span class="comment">//		printf("recvfrom() failed\n");</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr) &#123;</span></span><br><span class="line"><span class="comment">//		printf("Error: received a packet from unknown source.\n");</span></span><br><span class="line"><span class="comment">//		exit(1);</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	/* null-terminate the received data */</span></span><br><span class="line"><span class="comment">//	echoBuffer[respStringLen] = '\0';</span></span><br><span class="line"><span class="comment">//	printf("Received: %s\n", echoBuffer);/*Print the echoed message*/</span></span><br><span class="line">	close(sock);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab6.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab5.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab5.html" class="post-title-link" itemprop="url">互联网应用 Lab5</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-27 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-27T12:00:00Z">2017-04-27</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
 
                 
                 
@@ -1170,7 +1186,18 @@
       
         
           
-            <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;netdb.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">hostent</span> *<span class="title">h</span>;</span></span><br><span class="line">	<span class="keyword">long</span> addr;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage:\n%s sample.com\nor\n%s 8.8.8.8\n"</span>, argv[<span class="number">0</span>], argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (inet_addr(argv[<span class="number">1</span>]) != <span class="number">-1</span>) &#123;</span><br><span class="line">		addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyaddr((<span class="keyword">char</span> *) &amp;addr, <span class="keyword">sizeof</span>(addr), AF_INET)) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyaddr error for address: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyname(argv[<span class="number">1</span>])) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyname error for name: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Looking information for host: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Official Name: %s\n"</span>, h-&gt;h_name);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_aliases)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Host aliases: %s\n"</span>, *h-&gt;h_aliases++);</span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_addr_list)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"IP address: %s\n"</span>, inet_ntoa(*(struct in_addr *) *h-&gt;h_addr_list++));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>K-means 算法属于基于划分的聚类方法，是一种最简单的无监督学习算法，也是十大经典数据挖掘算法之一。<br>K-means 算法通过迭代来实现，其基本思想为：每次确定 K 个中心点，将各节点归属到与之最近的中心点所代表的 cluster，然后确定新的中心点，并继续聚类，直到聚类结果不再变化停止迭代。</p>
+<p>K 值的选取：<br>算法中 K 值需要事先给定，但这个K值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。这也是 K-means 算法的一个不足。</p>
+<p>初始中心点的选取：<br>初始聚类中心点唯一地决定了聚类结果，因此其选择对聚类结果有很大的影响，一旦初始值选择的不好，可能无法得到有效的聚类结果，这也是 K-means 算法的一个主要问题。</p>
+<p>K-means 算法并不能保证得到的解为全局最优解，通常得到的是一个局部最优解。</p>
+<p>K-means 算法确定的 K 个 cluster 达到平方误差最小。当聚类是密集的，且类与类之间区别明显时，效果比较好。对于处理大数据集，这个算法是高效和可扩展的，时间复杂度可达到最优。</p>
+<p>改进算法：</p>
+<ul>
+<li>K-means 要手工输入类数目，对初始值的设置很敏感，所以有了 K-means++、intelligent K-means、genetic K-means；</li>
+<li>K-means 对噪声和离群值非常敏感，所以有了 K-medoids 和 K-medians；</li>
+<li>K-means 只用于numerical类型数据，不适用于 categorical 类型数据，所以 K-modes；</li>
+<li>K-means 不能解决非凸（non-convex）数据，所以有了 kernel K-means。</li>
+</ul>
 
           
         
@@ -1216,7 +1243,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1261,7 +1288,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">83</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1425,7 +1452,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">66</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
