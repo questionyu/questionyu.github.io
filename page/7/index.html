@@ -415,6 +415,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/DBSCAN 的初步了解.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/DBSCAN 的初步了解.html" class="post-title-link" itemprop="url">DBSCAN 的初步了解</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-01-01 18:44:13" itemprop="dateCreated datePublished" datetime="2018-01-01T18:44:13Z">2018-01-01</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>K-means 解决不了不规则形状的聚类。于是就有了 Density-based methods 来系统解决这个问题。该方法同时也对噪声数据的处理比较好。典型的基于密度的方法就是 DBSCAN 了。</p>
+<p>DBSCAN，英文全写为 Density-based spatial clustering of applications with noise，是在 1996 年由 Martin Ester, Hans-Peter Kriegel, Jörg Sander 及 Xiaowei Xu 提出的聚类分析算法， 这个算法是以密度为本的：给定某空间里的一个点集合，这算法能把附近的点分成一组（有很多相邻点的点），并标记出位于低密度区域的局外点（最接近它的点也十分远），DBSCAN 是其中一个最常用的聚类分析算法，也是其中一个科学文章中最常引用的。</p>
+<h2 id="DBSCAN-的数据分类"><a href="#DBSCAN-的数据分类" class="headerlink" title="DBSCAN 的数据分类"></a>DBSCAN 的数据分类</h2><ul>
+<li>核心点。在半径 Eps 内含有超过 MinPts 数目的点。</li>
+<li>边界点。在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内。</li>
+<li>噪音点。既不是核心点也不是边界点的点。
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/DBSCAN 的初步了解.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </li></ul></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/Apriori 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1071,174 +1239,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的初步了解.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/K-means 的初步了解.html" class="post-title-link" itemprop="url">K-means 的初步了解</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-08-05 20:28:19" itemprop="dateCreated datePublished" datetime="2017-08-05T20:28:19Z">2017-08-05</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>K-means 算法属于基于划分的聚类方法，是一种最简单的无监督学习算法，也是十大经典数据挖掘算法之一。<br>K-means 算法通过迭代来实现，其基本思想为：每次确定 K 个中心点，将各节点归属到与之最近的中心点所代表的 cluster，然后确定新的中心点，并继续聚类，直到聚类结果不再变化停止迭代。</p>
-<p>K 值的选取：<br>算法中 K 值需要事先给定，但这个K值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。这也是 K-means 算法的一个不足。</p>
-<p>初始中心点的选取：<br>初始聚类中心点唯一地决定了聚类结果，因此其选择对聚类结果有很大的影响，一旦初始值选择的不好，可能无法得到有效的聚类结果，这也是 K-means 算法的一个主要问题。</p>
-<p>K-means 算法并不能保证得到的解为全局最优解，通常得到的是一个局部最优解。</p>
-<p>K-means 算法确定的 K 个 cluster 达到平方误差最小。当聚类是密集的，且类与类之间区别明显时，效果比较好。对于处理大数据集，这个算法是高效和可扩展的，时间复杂度可达到最优。</p>
-<p>改进算法：</p>
-<ul>
-<li>K-means 要手工输入类数目，对初始值的设置很敏感，所以有了 K-means++、intelligent K-means、genetic K-means；</li>
-<li>K-means 对噪声和离群值非常敏感，所以有了 K-medoids 和 K-medians；</li>
-<li>K-means 只用于numerical类型数据，不适用于 categorical 类型数据，所以 K-modes；</li>
-<li>K-means 不能解决非凸（non-convex）数据，所以有了 kernel K-means。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1288,7 +1288,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">83</span>
+                    <span class="site-state-item-count">84</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1458,7 +1458,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">66</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">68</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
