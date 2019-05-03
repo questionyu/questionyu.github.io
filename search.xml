@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[二进制数中 1 的个数]]></title>
+    <url>%2Fnumber-of-1-bits.html</url>
+    <content type="text"><![CDATA[二进制数中 1 的个数这个问题可以说是很常见的基础问题了。 最简单最慢的方法就是转换成字符串查 1 的数量。 比较快的方法是使用位运算。 举例来说，整数 35，用二进制表示就是 0000 0000 0010 0011，二进制数中有 3 个 1。计算这个数字中的 1 的个数，使用与运算便可以快速完成。 这里有个位运算的小知识，n &amp; (n-1) 可以消去二进制数的最右边的 1。比如 35 &amp; 34：12340000 0000 0010 00110000 0000 0010 0010-------------------0000 0000 0010 0010 结果得到 34，接下来 34 &amp; 33：12340000 0000 0010 00100000 0000 0010 0001-------------------0000 0000 0010 0000 结果得到 32，接下来 32 &amp; 31：12340000 0000 0010 00000000 0000 0001 1111-------------------0000 0000 0000 0000 结果得到 0，计算过程便完成了。 在得到 0 之前，一共计算了 3 次，也就是说一共消去了 3 个 1。即，给定数字 35，得出结果为 3。 使用 C 语言表示以上算法：123456789int hammingWeight(uint32_t n) &#123; if (!n) return 0; uint8_t sum; for (sum = 0; n; sum++) &#123; n &amp;= (n - 1); &#125; return sum;&#125;]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS 原生输入法设置自然码]]></title>
     <url>%2FmacOS-Input-Method-ZRM.html</url>
     <content type="text"><![CDATA[用了 macOS 一段时间了，一直使用的是搜狗输入法，因为系统自带的双拼输入法不支持自然码。 不过最近在网上看相关的双拼练习时，发现原来用过的双拼练习的作者 @BlueSky 给出了提示，macOS 其实内置隐藏了双拼的自然码方案。 只需在终端内输入以下命令即可：1$ defaults write com.apple.inputmethod.CoreChineseEngineFramework shuangpinLayout 5 在输入法偏好设置中会看到这样的效果： 此时即可使用自然码方案了。 附：系统为 macOS 10.14.4]]></content>
@@ -279,8 +291,8 @@
         <category>糟心</category>
       </categories>
       <tags>
-        <tag>Disqus</tag>
         <tag>HyperComments</tag>
+        <tag>Disqus</tag>
       </tags>
   </entry>
   <entry>
@@ -304,9 +316,9 @@
         <category>Tips</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>小米</tag>
         <tag>pisces</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -578,11 +590,11 @@
         <category>Tips</category>
       </categories>
       <tags>
-        <tag>Shadowsocks</tag>
         <tag>免流</tag>
         <tag>校园网</tag>
         <tag>DNS64</tag>
         <tag>IPv6</tag>
+        <tag>Shadowsocks</tag>
         <tag>SSTap</tag>
       </tags>
   </entry>
@@ -969,8 +981,8 @@
         <category>Tips</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Shadowsocks</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

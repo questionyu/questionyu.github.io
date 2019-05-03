@@ -406,6 +406,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week09.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/COM6516-Week09.html" class="post-title-link" itemprop="url">COM6516 Week09</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-11-19 16:57:25" itemprop="dateCreated datePublished" datetime="2018-11-19T16:57:25Z">2018-11-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Developed by Neo on 19/11/18 11:54.</span></span><br><span class="line"><span class="comment"> * Last modified 19/11/18 11:54.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2018. All rights reserved.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.swing.*;</span><br><span class="line"><span class="keyword">import</span> java.awt.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CornerString</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">CornerString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>(<span class="string">"Corner String"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//For better looks.</span></span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			UIManager.setLookAndFeel(<span class="string">"com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"</span>);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">		<span class="keyword">this</span>.setSize(<span class="number">960</span>, <span class="number">480</span>);</span><br><span class="line">		<span class="keyword">this</span>.setResizable(<span class="keyword">false</span>);</span><br><span class="line">		<span class="keyword">this</span>.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.setContentPane(<span class="keyword">new</span> StringPanel());</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">new</span> CornerString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringPanel</span> <span class="keyword">extends</span> <span class="title">JPanel</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">StringPanel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">super</span>(<span class="keyword">new</span> BorderLayout());</span><br><span class="line"></span><br><span class="line">			JLabel label1 = <span class="keyword">new</span> JLabel(<span class="string">"To be or not to be"</span>);</span><br><span class="line">			JLabel label2 = <span class="keyword">new</span> JLabel(<span class="string">"To be or not to be"</span>);</span><br><span class="line">			JLabel label3 = <span class="keyword">new</span> JLabel(<span class="string">"To be or not to be"</span>);</span><br><span class="line">			JLabel label4 = <span class="keyword">new</span> JLabel(<span class="string">"To be or not to be"</span>);</span><br><span class="line"></span><br><span class="line">			label1.setFont(<span class="keyword">new</span> Font(<span class="string">"Consolas"</span>, Font.PLAIN, <span class="number">32</span>));</span><br><span class="line">			label1.setForeground(Color.BLUE);</span><br><span class="line">			label2.setFont(<span class="keyword">new</span> Font(<span class="string">"Comic Sans MS"</span>, Font.PLAIN, <span class="number">32</span>));</span><br><span class="line">			label2.setForeground(Color.GREEN);</span><br><span class="line">			label3.setFont(<span class="keyword">new</span> Font(<span class="string">"Monospaced"</span>, Font.PLAIN, <span class="number">32</span>));</span><br><span class="line">			label3.setForeground(Color.RED);</span><br><span class="line">			label4.setFont(<span class="keyword">new</span> Font(<span class="string">"Courier"</span>, Font.PLAIN, <span class="number">32</span>));</span><br><span class="line">			label4.setForeground(Color.YELLOW);</span><br><span class="line"></span><br><span class="line">			JPanel northPanel = <span class="keyword">new</span> JPanel();</span><br><span class="line">			northPanel.setLayout(<span class="keyword">new</span> BoxLayout(northPanel, BoxLayout.X_AXIS));</span><br><span class="line"></span><br><span class="line">			northPanel.add(label1);</span><br><span class="line">			northPanel.add(Box.createHorizontalGlue());</span><br><span class="line">			northPanel.add(label2);</span><br><span class="line"></span><br><span class="line">			JPanel southPanel = <span class="keyword">new</span> JPanel();</span><br><span class="line">			southPanel.setLayout(<span class="keyword">new</span> BoxLayout(southPanel, BoxLayout.X_AXIS));</span><br><span class="line"></span><br><span class="line">			southPanel.add(label3);</span><br><span class="line">			southPanel.add(Box.createHorizontalGlue());</span><br><span class="line">			southPanel.add(label4);</span><br><span class="line"></span><br><span class="line">			add(northPanel, BorderLayout.NORTH);</span><br><span class="line">			add(southPanel, BorderLayout.SOUTH);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/COM6516-Week09.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week08.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1046,169 +1209,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week04.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/COM6516-Week04.html" class="post-title-link" itemprop="url">COM6516 Week04</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-10-15 11:07:29" itemprop="dateCreated datePublished" datetime="2018-10-15T11:07:29Z">2018-10-15</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String birth;</span><br><span class="line"></span><br><span class="line">	Person(String name, String birth) &#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.birth = birth;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Name: "</span> + name + <span class="string">"\n"</span> +</span><br><span class="line">				<span class="string">"Birth: "</span> + birth;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/COM6516-Week04.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1257,7 +1257,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">84</span>
+                    <span class="site-state-item-count">85</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1439,7 +1439,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">68</span>
+                      
+                    
+                    <span class="site-state-item-count">69</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
