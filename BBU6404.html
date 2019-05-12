@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Lab 31234567891011121314151617#include &amp;lt;unistd.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	char *arg[] = &amp;#123;&quot;/bin/ls&quot;, 0&amp;#125;;	/* fork, and exec within child process */	if (fork() == 0) &amp;#12">
+<meta name="keywords" content="C,互联网应用,BBU6404">
+<meta property="og:type" content="article">
+<meta property="og:title" content="互联网应用 Lab">
+<meta property="og:url" content="https://real-neo.me/BBU6404.html">
+<meta property="og:site_name" content="问少的小站">
+<meta property="og:description" content="Lab 31234567891011121314151617#include &amp;lt;unistd.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	char *arg[] = &amp;#123;&quot;/bin/ls&quot;, 0&amp;#125;;	/* fork, and exec within child process */	if (fork() == 0) &amp;#12">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/DHCP.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/A-questionyu.com.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/MX-questionyu.com.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/PTR-8.8.8.8.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/AAAA-questionyu.com.png">
+<meta property="og:image" content="https://real-neo.me/uploads/2017/05/TXT-google-public-dns-a.google.com.png">
+<meta property="og:updated_time" content="2019-05-12T17:23:50.002Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="互联网应用 Lab">
+<meta name="twitter:description" content="Lab 31234567891011121314151617#include &amp;lt;unistd.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	char *arg[] = &amp;#123;&quot;/bin/ls&quot;, 0&amp;#125;;	/* fork, and exec within child process */	if (fork() == 0) &amp;#12">
+<meta name="twitter:image" content="https://real-neo.me/uploads/2017/05/DHCP.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="问少的小站" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://real-neo.me/BBU6404">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>互联网应用 Lab | 问少的小站</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">问少的小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Thoughts, stories and ideas.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>Sitemap</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlYWwtbmVv" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/BBU6404.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">互联网应用 Lab
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-04-20 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-20T12:00:00Z">2017-04-20</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Lab-3"><a href="#Lab-3" class="headerlink" title="Lab 3"></a>Lab 3</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *arg[] = &#123;<span class="string">"/bin/ls"</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* fork, and exec within child process */</span></span><br><span class="line">	<span class="keyword">if</span> (fork() == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"In child process:\n"</span>);</span><br><span class="line">		execv(arg[<span class="number">0</span>], arg);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"I will never be called\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Execution continues in parent process\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">pid_t</span> t;</span><br><span class="line">	t = fork();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"fork returned %d\n"</span>, t);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">pid_t</span> t;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Original program, pid = %d\n"</span>, getpid());</span><br><span class="line"></span><br><span class="line">	t = fork();</span><br><span class="line">	<span class="keyword">if</span> (t == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"In child process, pid = %d, ppid = %d\n"</span>, getpid(), getppid());</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"In parent, pid = %d, for returned = %d\n"</span>, getpid(), t);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> buf1[] = <span class="string">"abcdefghij"</span>;</span><br><span class="line"><span class="keyword">char</span> buf2[] = <span class="string">"ABCDEFGHIJ"</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FILE_MODE 0644</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">if</span> ((fd = creat(<span class="string">"file.hole"</span>, FILE_MODE)) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"creat error\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (write(fd, buf1, <span class="number">10</span>) != <span class="number">10</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"buf1 write error\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/*offset now = 10*/</span></span><br><span class="line">	<span class="keyword">if</span> (lseek(fd, <span class="number">40</span>, SEEK_SET) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"lseek error\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/*offset now = 40*/</span></span><br><span class="line">	<span class="keyword">if</span> (write(fd, buf2, <span class="number">10</span>) != <span class="number">10</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"buf2 write error\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/*offset now = 50*/</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> quit = <span class="string">'.'</span>;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">if</span> ((fd = open(<span class="string">"out.out"</span>, O_RDWR | O_CREAT)) == <span class="number">-1</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening\n"</span>);</span><br><span class="line">	<span class="keyword">while</span> (buf[<span class="number">0</span>] != quit) &#123;</span><br><span class="line">		read(<span class="number">0</span>, buf, <span class="number">1</span>);</span><br><span class="line">		write(fd, buf, <span class="number">1</span>);</span><br><span class="line">		write(<span class="number">1</span>, buf, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	close(fd);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">signalRoutine</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"signal processing demo program\n"</span>);</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">		signal(SIGINT, signalRoutine);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">signalRoutine</span><span class="params">(<span class="keyword">int</span> dummy)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Signal routine called[%d]\n"</span>, dummy);</span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lab-4"><a href="#Lab-4" class="headerlink" title="Lab 4"></a>Lab 4</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> fd1, fd2;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd1 = open(<span class="string">"test1"</span>, O_RDWR | O_APPEND)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd2 = open(<span class="string">"test2"</span>, O_RDONLY)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-2\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((read(fd2, buf, <span class="number">1</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(fd1, buf, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	close(fd1);</span><br><span class="line">	close(fd2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fd1;</span><br><span class="line">	<span class="keyword">off_t</span> off;</span><br><span class="line">	<span class="keyword">char</span> s[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd1 = open(<span class="string">"test1"</span>, O_RDWR | O_APPEND)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	write(fd1, <span class="string">"Hiiii"</span>, <span class="number">5</span>);</span><br><span class="line">	off = lseek(fd1, <span class="number">0</span>, SEEK_SET);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Using append, offset: %lli\n"</span>, (<span class="keyword">long</span> <span class="keyword">long</span>) off);</span><br><span class="line"></span><br><span class="line"><span class="comment">//	off = lseek(fd1, -502, SEEK_CUR);</span></span><br><span class="line"><span class="comment">//	printf("%lli\n", (long long)off);</span></span><br><span class="line"></span><br><span class="line">	read(fd1, s, <span class="number">50</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"String: %s\n"</span>, s);</span><br><span class="line">	lseek(fd1, <span class="number">0</span>, SEEK_SET);</span><br><span class="line">	write(fd1, <span class="string">"Abbbb"</span>, <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">	close(fd1);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lab-5"><a href="#Lab-5" class="headerlink" title="Lab 5"></a>Lab 5</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;netdb.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">hostent</span> *<span class="title">h</span>;</span></span><br><span class="line">	<span class="keyword">long</span> addr;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage:\n%s sample.com\nor\n%s 8.8.8.8\n"</span>, argv[<span class="number">0</span>], argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (inet_addr(argv[<span class="number">1</span>]) != <span class="number">-1</span>) &#123;</span><br><span class="line">		addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyaddr((<span class="keyword">char</span> *) &amp;addr, <span class="keyword">sizeof</span>(addr), AF_INET)) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyaddr error for address: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyname(argv[<span class="number">1</span>])) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyname error for name: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Looking information for host: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Official Name: %s\n"</span>, h-&gt;h_name);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_aliases)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Host aliases: %s\n"</span>, *h-&gt;h_aliases++);</span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_addr_list)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"IP address: %s\n"</span>, inet_ntoa(*(struct in_addr *) *h-&gt;h_addr_list++));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lab-6"><a href="#Lab-6" class="headerlink" title="Lab 6"></a>Lab 6</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_addr() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; /* for atoi() and exit() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ECHOMAX 255 <span class="comment">/* Longest string to echo */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sock; <span class="comment">/* Socket descriptor */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoServAddr</span>;</span> <span class="comment">/* Echo server address */</span></span><br><span class="line"><span class="comment">//	struct sockaddr_in fromAddr; /* Source address of echo */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span> echoServPort; <span class="comment">/* Echo server port */</span></span><br><span class="line"><span class="comment">//	unsigned int fromSize; /* In-out of address size for recvfrom() */</span></span><br><span class="line">	<span class="keyword">char</span> *servIP; <span class="comment">/* IP address of server */</span></span><br><span class="line">	<span class="keyword">char</span> *echoString; <span class="comment">/* String to send to echo server */</span></span><br><span class="line"><span class="comment">//	char echoBuffer[ECHOMAX + 1]; /* Buffer for receiving echoed string */</span></span><br><span class="line">	<span class="keyword">size_t</span> echoStringLen; <span class="comment">/* Length of string to echo */</span></span><br><span class="line"><span class="comment">//	int respStringLen; /* Length of received response */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">3</span>) &#123; <span class="comment">/* Test for correct number of arguments */</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;Server IP&gt; &lt;Echo Word&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	servIP = argv[<span class="number">1</span>]; <span class="comment">/* First arg: server IP address (dotted quad) */</span></span><br><span class="line">	echoServPort = <span class="number">56325</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Create a datagram/UDP socket */</span></span><br><span class="line">	<span class="keyword">if</span> ((sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line">	<span class="comment">/* Construct the server address structure */</span></span><br><span class="line">	<span class="built_in">memset</span>(&amp;echoServAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(echoServAddr));<span class="comment">/*Zero out structure*/</span></span><br><span class="line">	echoServAddr.sin_family = AF_INET; <span class="comment">/* Internet addr family */</span></span><br><span class="line">	echoServAddr.sin_addr.s_addr = inet_addr(servIP);<span class="comment">/*Server IP address*/</span></span><br><span class="line">	echoServAddr.sin_port = htons(echoServPort); <span class="comment">/* Server port */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; argc; i++) &#123;</span><br><span class="line">		echoString = argv[i]; <span class="comment">/* Second arg: string to echo */</span></span><br><span class="line">		<span class="keyword">if</span> ((echoStringLen = <span class="built_in">strlen</span>(echoString)) &gt; ECHOMAX) <span class="comment">/* Check input length */</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Echo word too long.\n"</span>);</span><br><span class="line">		<span class="comment">/* Send the string to the server */</span></span><br><span class="line">		<span class="keyword">if</span> (sendto(sock, echoString, echoStringLen, <span class="number">0</span>, (struct sockaddr *) &amp;echoServAddr, <span class="keyword">sizeof</span>(echoServAddr)) != echoStringLen)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"sendto() sent a different number of bytes than expected.\n"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"sending data to '%s'\n"</span>, servIP);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//	/* Recv a response */</span></span><br><span class="line"><span class="comment">//	fromSize = sizeof(fromAddr);</span></span><br><span class="line"><span class="comment">//	if ((respStringLen = recvfrom(sock, echoBuffer, ECHOMAX, 0, (struct sockaddr *) &amp;fromAddr, &amp;fromSize)) != echoStringLen)</span></span><br><span class="line"><span class="comment">//		printf("recvfrom() failed\n");</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr) &#123;</span></span><br><span class="line"><span class="comment">//		printf("Error: received a packet from unknown source.\n");</span></span><br><span class="line"><span class="comment">//		exit(1);</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	/* null-terminate the received data */</span></span><br><span class="line"><span class="comment">//	echoBuffer[respStringLen] = '\0';</span></span><br><span class="line"><span class="comment">//	printf("Received: %s\n", echoBuffer);/*Print the echoed message*/</span></span><br><span class="line">	close(sock);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="comment">//#include &lt;sys/socket.h&gt; /* for socket(), bind(), sendto() and recvfrom() */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_ntoa() */</span></span></span><br><span class="line"><span class="comment">//#include &lt;stdlib.h&gt; /* for atoi() and exit() */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="comment">//#include &lt;unistd.h&gt; /* for close() */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ECHOMAX 255 <span class="comment">/* Longest string to echo */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sock; <span class="comment">/* Socket */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoServAddr</span>;</span> <span class="comment">/* Local address */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoClntAddr</span>;</span> <span class="comment">/* Client address */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> cliAddrLen; <span class="comment">/* Length of client address */</span></span><br><span class="line">	<span class="keyword">char</span> echoBuffer[ECHOMAX]; <span class="comment">/* Buffer for echo string */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span> echoServPort; <span class="comment">/* Server port */</span></span><br><span class="line">	<span class="keyword">ssize_t</span> recvMsgSize; <span class="comment">/* Size of received message */</span></span><br><span class="line"></span><br><span class="line">	echoServPort = <span class="number">56325</span>;</span><br><span class="line">	<span class="comment">/* Create socket for sending/receiving datagrams */</span></span><br><span class="line">	<span class="keyword">if</span> ((sock = socket(PF_INET, SOCK_DGRAM, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line">	<span class="comment">/* Construct local address structure */</span></span><br><span class="line">	<span class="built_in">memset</span>(&amp;echoServAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(echoServAddr));</span><br><span class="line">	echoServAddr.sin_family = AF_INET;</span><br><span class="line">	echoServAddr.sin_addr.s_addr = htonl(INADDR_ANY);</span><br><span class="line">	echoServAddr.sin_port = htons(echoServPort);</span><br><span class="line">	<span class="comment">/* Bind to the local address */</span></span><br><span class="line">	<span class="keyword">if</span> ((bind(sock, (struct sockaddr *) &amp;echoServAddr, <span class="keyword">sizeof</span>(echoServAddr))) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"bind() failed.\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (;;) &#123; <span class="comment">/* Run forever */</span></span><br><span class="line">		<span class="comment">/* Set the size of the in-out parameter */</span></span><br><span class="line">		cliAddrLen = <span class="keyword">sizeof</span>(echoClntAddr);</span><br><span class="line">		<span class="comment">/* Block until receive message from a client */</span></span><br><span class="line">		<span class="keyword">if</span> ((recvMsgSize = recvfrom(sock, echoBuffer, ECHOMAX, <span class="number">0</span>, (struct sockaddr *) &amp;echoClntAddr, &amp;cliAddrLen)) &lt; <span class="number">0</span>)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"recvfrom() failed.\n"</span>);</span><br><span class="line">		echoBuffer[recvMsgSize] = <span class="string">'\0'</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"from %s:UDP%d : %s\n"</span>, inet_ntoa(echoClntAddr.sin_addr), echoClntAddr.sin_port, echoBuffer);</span><br><span class="line"><span class="comment">//		/* Send received datagram back to the client */</span></span><br><span class="line"><span class="comment">//		if ((sendto(sock, echoBuffer, recvMsgSize, 0, (struct sockaddr *) &amp;echoClntAddr, sizeof(echoClntAddr))) != recvMsgSize)</span></span><br><span class="line"><span class="comment">//			printf("sendto() sent a different number of bytes than expected.\n");</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lab-7"><a href="#Lab-7" class="headerlink" title="Lab 7"></a>Lab 7</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), bind(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_ntoa() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">3</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage:\n%s &lt;IP Address&gt; &lt;File Name&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> serverSock;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serverAddr</span>;</span></span><br><span class="line">	<span class="keyword">char</span> *fileName, buffer[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((serverSock = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(&amp;serverAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(serverAddr));</span><br><span class="line">	serverAddr.sin_family = AF_INET;</span><br><span class="line">	serverAddr.sin_addr.s_addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">	serverAddr.sin_port = htons(<span class="number">1234</span>);</span><br><span class="line"></span><br><span class="line">	connect(serverSock, (struct sockaddr *) &amp;serverAddr, <span class="keyword">sizeof</span>(serverAddr));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Connecting to server:  %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">	send(serverSock, argv[<span class="number">2</span>], <span class="built_in">strlen</span>(argv[<span class="number">2</span>]), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	fileName = argv[<span class="number">2</span>];</span><br><span class="line">	<span class="built_in">strcat</span>(fileName, <span class="string">".bak\0"</span>);</span><br><span class="line">	<span class="keyword">int</span> file = open(fileName, O_RDWR | O_CREAT);</span><br><span class="line">	<span class="keyword">int</span> transferSize = <span class="number">0</span>, recvLen;</span><br><span class="line">	<span class="keyword">while</span> ((recvLen = recv(serverSock, buffer, <span class="number">50</span>, <span class="number">0</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(file, buffer, recvLen);</span><br><span class="line">		transferSize += recvLen;</span><br><span class="line">	&#125;</span><br><span class="line">	close(file);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"File received\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d BYTES received, and stored in %s\n"</span>, transferSize, fileName);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), bind(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_ntoa() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> serverSock, clientSock;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serverAddr</span>, <span class="title">clientAddr</span>;</span></span><br><span class="line">	<span class="keyword">socklen_t</span> clientAddrSize = <span class="keyword">sizeof</span>(clientAddr);</span><br><span class="line">	<span class="keyword">char</span> fileName[<span class="number">20</span>], buffer[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((serverSock = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">memset</span>(&amp;serverAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(serverAddr));</span><br><span class="line">	serverAddr.sin_family = AF_INET;</span><br><span class="line">	serverAddr.sin_addr.s_addr = inet_addr(<span class="string">"127.0.0.1"</span>);</span><br><span class="line">	serverAddr.sin_port = htons(<span class="number">1234</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((bind(serverSock, (struct sockaddr *) &amp;serverAddr, <span class="keyword">sizeof</span>(serverAddr))) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"bind() failed.\n"</span>);</span><br><span class="line"></span><br><span class="line">	listen(serverSock, SOMAXCONN);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">		clientSock = accept(serverSock, (struct sockaddr *) &amp;clientAddr, &amp;clientAddrSize);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"*********************************\n"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Accept client %s on TCP Port %d\n"</span>, inet_ntoa(clientAddr.sin_addr), clientAddr.sin_port);</span><br><span class="line">		<span class="keyword">if</span> (recv(clientSock, fileName, <span class="number">20</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">			fileName[<span class="built_in">strlen</span>(fileName)] = <span class="string">'\0'</span>;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"This client request for file name: %s\n"</span>, fileName);</span><br><span class="line">			<span class="keyword">int</span> file = open(fileName, O_RDONLY);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Entering file transfer...\n"</span>);</span><br><span class="line">			<span class="keyword">int</span> transferSize = <span class="number">0</span>, sendLen;</span><br><span class="line">			<span class="keyword">while</span> ((sendLen = read(file, buffer, <span class="number">50</span>)) != <span class="number">0</span>)&#123;</span><br><span class="line">				send(clientSock, buffer, sendLen, <span class="number">0</span>);</span><br><span class="line">				transferSize += sendLen;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"End of the file\n"</span>);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d BYTES data have been sent\n"</span>, transferSize);</span><br><span class="line">			close(file);</span><br><span class="line">		&#125;</span><br><span class="line">		close(clientSock);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Lab-8"><a href="#Lab-8" class="headerlink" title="Lab 8"></a>Lab 8</h2><h3 id="The-Configuration-of-Wireshark"><a href="#The-Configuration-of-Wireshark" class="headerlink" title="The Configuration of Wireshark"></a>The Configuration of Wireshark</h3><p>Capture the interface <strong>“enp2s0”</strong> which is my Ethernet adapter.<br>The filter rule is <strong>“udp port 67”</strong> for capturing DHCP packets, <strong>“udp port 53”</strong> for capturing DNS packets.</p>
+<h3 id="DHCP-Message-Format"><a href="#DHCP-Message-Format" class="headerlink" title="DHCP Message Format"></a>DHCP Message Format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|     op (1)    |   htype (1)   |   hlen (1)    |   hops (1)    |</span><br><span class="line">+---------------+---------------+---------------+---------------+</span><br><span class="line">|                            xid (4)                            |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">|           secs (2)            |           flags (2)           |</span><br><span class="line">+-------------------------------+-------------------------------+</span><br><span class="line">|                          ciaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          yiaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          siaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                          giaddr  (4)                          |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          chaddr  (16)                         |</span><br><span class="line">|                                                               |</span><br><span class="line">|                                                               |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          sname   (64)                         |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          file    (128)                        |</span><br><span class="line">+---------------------------------------------------------------+</span><br><span class="line">|                                                               |</span><br><span class="line">|                          options (variable)                   |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure>
+<h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><p><img src="/uploads/2017/05/DHCP.png" alt="DHCP"></p>
+<h4 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h4><ul>
+<li>Message Type: 1 = BOOTREQUEST, 2 = BOOTREPLY</li>
+<li>Hardware type: Hardware address type, see ARP section in “Assigned Numbers” RFC; e.g., ‘1’ = 10mb ethernet.</li>
+<li>Hardware address length: Hardware address length (e.g.  ‘6’ for 10mb ethernet).</li>
+<li>Hops: Client sets to zero, optionally used by relay agents when booting via a relay agent.</li>
+<li>Transaction ID: A random number chosen by the client, used by the client and server to associate messages and responses between a client and a server.</li>
+<li>Seconds elapsed: Filled in by client, seconds elapsed since client began address acquisition or renewal process.</li>
+<li>Bootp flags: Flags.</li>
+<li>Client IP address:  Only filled in if client is in BOUND, RENEW or REBINDING state and can respond to ARP requests.</li>
+<li>Your (client) IP address: ‘your’ (client) IP address.</li>
+<li>Next server IP address: IP address of next server to use in bootstrap; returned in DHCPOFFER, DHCPACK by server.</li>
+<li>Relay agent IP address: Relay agent IP address, used in booting via a relay agent.</li>
+<li>Client MAC address: Client hardware address.</li>
+<li>Server host name: Optional server host name, null terminated string.</li>
+<li>Boot file name:  Boot file name, null terminated string; “generic” name or null in DHCPDISCOVER, fully qualifiedcdirectory-path name in DHCPOFFER.</li>
+<li>Option: (1) Subnet Mask - The subnet mask option specifies the client’s subnet mask.</li>
+<li>Option: (3) Router Option - The router option specifies a list of IP addresses for routers on the client’s subnet.  Routers SHOULD be listed in order of preference.</li>
+<li>Option: (6) Domain Name Server Option - The domain name server option specifies a list of Domain Name System name servers available to the client.  Servers SHOULD be listed in order of preference.</li>
+<li>Option: (12) Host Name Option - This option specifies the name of the client. The name may or may not be qualified with the local domain name.</li>
+<li>Option: (15) Domain Name - This option specifies the domain name that client should use when resolving hostnames via the Domain Name System.</li>
+<li>Option: (50) Requested IP Address - This option is used in a client request (DHCPDISCOVER) to allow the client to request that a particular IP address be assigned.</li>
+<li>Option: (51) IP Address Lease Time - This option is used in a client request (DHCPDISCOVER or DHCPREQUEST) to allow the client to request a lease time for the IP address. In a server reply (DHCPOFFER), a DHCP server uses this option to specify the lease time it is willing to offer.</li>
+<li>Option: (53) DHCP Message Type - This option is used to convey the type of the DHCP message. 1 = DHCPDISCOVER, 2 = DHCPOFFER, 3 = DHCPREQUEST, 5 = DHCPACK, 7 = DHCPRELEASE</li>
+<li>Option: (54) Server Identifier - This option is used in DHCPOFFER and DHCPREQUEST messages, and may optionally be included in the DHCPACK and DHCPNAK messages.  DHCP servers include this option in the DHCPOFFER in order to allow the client to distinguish between lease offers.  DHCP clients use the contents of the ‘server identifier’ field as the destination address for any DHCP messages unicast to the DHCP server. DHCP clients also indicate which of several lease offers is being accepted by including this option in a DHCPREQUEST message. The identifier is the IP address of the selected server.</li>
+<li>Option: (55) Parameter Request List - This option is used by a DHCP client to request values for specified configuration parameters.  The list of requested parameters is specified as n octets, where each octet is a valid DHCP option code as defined in this document. The client MAY list the options in order of preference. The DHCP server is not required to return the options in the requested order, but MUST try to insert the requested options in the order requested by the client.</li>
+<li>Option: (58) Renewal (T1) Time Value - This option specifies the time interval from address assignment until the client transitions to the RENEWING state.</li>
+<li><p>Option: (59) Rebinding (T2) Time Value - This option specifies the time interval from address assignment until the client transitions to the REBINDING state.</p>
+</li>
+<li><p>By the packets I have captured, all of DHCP packets were sent by unicast.</p>
+</li>
+</ul>
+<blockquote>
+<p>Differences from lecture notes: your IP address is different because of the different DHCP server. No server IP address, no router IP address because the router in room is not DHCP server in BUPT campus.</p>
+</blockquote>
+<h4 id="Message-Sequence-Chart"><a href="#Message-Sequence-Chart" class="headerlink" title="Message Sequence Chart"></a>Message Sequence Chart</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Note over Client: Graceful shutdown</span><br><span class="line">Client-&gt;Server: DHCPRELEASE</span><br><span class="line">Note over Server: Discards lease</span><br><span class="line">Note over Client: Begins initialization </span><br><span class="line">Client-&gt;Server: DHCPDISCOVER</span><br><span class="line">Note over Server: Determines configuration</span><br><span class="line">Server--&gt;Client: DHCPOFFER</span><br><span class="line">Note over Client: Collects replies</span><br><span class="line">Client-&gt;Server: DHCPREQUEST</span><br><span class="line">Note over Server: Commits configuration</span><br><span class="line">Server--&gt;Client: DHCPACK</span><br><span class="line">Note over Client: Initialization complete</span><br></pre></td></tr></table></figure>
+<h4 id="No-1-DHCP-Release"><a href="#No-1-DHCP-Release" class="headerlink" title="No.1 DHCP Release"></a>No.1 DHCP Release</h4><p>@(Client to server relinquishing network address and cancelling remaining lease.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap Protocol (Release)</span><br><span class="line">	Message type: Boot Request (1)</span><br><span class="line">	Hops: 0</span><br><span class="line">	Transaction ID: 0x6bb0247f</span><br><span class="line">	Bootp flags: 0x0000 (Unicast)</span><br><span class="line">		0... .... .... .... = Broadcast flag: Unicast</span><br><span class="line">		.000 0000 0000 0000 = Reserved flags: 0x0000</span><br><span class="line">	Client IP address: 10.205.0.212</span><br><span class="line">	Your (client) IP address: 0.0.0.0</span><br><span class="line">	Option: (53) DHCP Message Type (Release)</span><br><span class="line">		Length: 1</span><br><span class="line">		DHCP: Release (7)</span><br><span class="line">	Option: (54) DHCP Server Identifier</span><br><span class="line">		Length: 4</span><br><span class="line">		DHCP Server Identifier: 10.3.9.3</span><br><span class="line">	Option: (12) Host Name</span><br><span class="line">		Length: 16</span><br><span class="line">		Host Name: i.questionyu.com</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51) </li>
+<li>IP address: Source: 10.205.0.212 Destination: 10.3.9.3</li>
+<li>Port number: Source Port: 68 Destination Port: 67</li>
+</ul>
+<h4 id="No-2-DHCP-Discover"><a href="#No-2-DHCP-Discover" class="headerlink" title="No.2 DHCP Discover"></a>No.2 DHCP Discover</h4><p>@(Client broadcast to locate available servers.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap Protocol (Discover)</span><br><span class="line">    Message type: Boot Request (1)</span><br><span class="line">    Hops: 0</span><br><span class="line">    Transaction ID: 0x7cf5b152</span><br><span class="line">    Bootp flags: 0x0000 (Unicast)</span><br><span class="line">        0... .... .... .... = Broadcast flag: Unicast</span><br><span class="line">        .000 0000 0000 0000 = Reserved flags: 0x0000</span><br><span class="line">    Client IP address: 0.0.0.0</span><br><span class="line">    Your (client) IP address: 0.0.0.0</span><br><span class="line">    Option: (53) DHCP Message Type (Discover)</span><br><span class="line">        Length: 1</span><br><span class="line">        DHCP: Discover (1)</span><br><span class="line">    Option: (50) Requested IP Address</span><br><span class="line">        Length: 4</span><br><span class="line">        Requested IP Address: 10.205.0.212</span><br><span class="line">    Option: (12) Host Name</span><br><span class="line">        Length: 16</span><br><span class="line">        Host Name: i.questionyu.com</span><br><span class="line">    Option: (55) Parameter Request List</span><br><span class="line">        Length: 13</span><br><span class="line">        Parameter Request List Item: (1) Subnet Mask</span><br><span class="line">        Parameter Request List Item: (28) Broadcast Address</span><br><span class="line">        Parameter Request List Item: (2) Time Offset</span><br><span class="line">        Parameter Request List Item: (3) Router</span><br><span class="line">        Parameter Request List Item: (15) Domain Name</span><br><span class="line">        Parameter Request List Item: (6) Domain Name Server</span><br><span class="line">        Parameter Request List Item: (119) Domain Search</span><br><span class="line">        Parameter Request List Item: (12) Host Name</span><br><span class="line">        Parameter Request List Item: (44) NetBIOS over TCP/IP Name Server</span><br><span class="line">        Parameter Request List Item: (47) NetBIOS over TCP/IP Scope</span><br><span class="line">        Parameter Request List Item: (26) Interface MTU</span><br><span class="line">        Parameter Request List Item: (121) Classless Static Route</span><br><span class="line">        Parameter Request List Item: (42) Network Time Protocol Servers</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Broadcast (ff:ff:ff:ff:ff:ff) </li>
+<li>IP address: Source: 0.0.0.0 Destination: 255.255.255.255</li>
+<li>Port number: Source Port: 68 Destination Port: 67</li>
+</ul>
+<h4 id="No-3-DHCP-Offer"><a href="#No-3-DHCP-Offer" class="headerlink" title="No.3 DHCP Offer"></a>No.3 DHCP Offer</h4><p>@(Server to client in response to DHCPDISCOVER with offer of configuration parameters.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap Protocol (Offer)</span><br><span class="line">    Message type: Boot Reply (2)</span><br><span class="line">    Hops: 1</span><br><span class="line">    Transaction ID: 0x7cf5b152</span><br><span class="line">    Bootp flags: 0x0000 (Unicast)</span><br><span class="line">        0... .... .... .... = Broadcast flag: Unicast</span><br><span class="line">        .000 0000 0000 0000 = Reserved flags: 0x0000</span><br><span class="line">    Client IP address: 0.0.0.0</span><br><span class="line">    Your (client) IP address: 10.205.0.212</span><br><span class="line">    Option: (53) DHCP Message Type (Offer)</span><br><span class="line">        Length: 1</span><br><span class="line">        DHCP: Offer (2)</span><br><span class="line">    Option: (54) DHCP Server Identifier</span><br><span class="line">        Length: 4</span><br><span class="line">        DHCP Server Identifier: 10.3.9.3</span><br><span class="line">    Option: (51) IP Address Lease Time</span><br><span class="line">        Length: 4</span><br><span class="line">        IP Address Lease Time: (3600s) 1 hour</span><br><span class="line">    Option: (1) Subnet Mask</span><br><span class="line">        Length: 4</span><br><span class="line">        Subnet Mask: 255.255.255.224</span><br><span class="line">    Option: (3) Router</span><br><span class="line">        Length: 4</span><br><span class="line">        Router: 10.205.0.193</span><br><span class="line">    Option: (15) Domain Name</span><br><span class="line">        Length: 11</span><br><span class="line">        Domain Name: bupt.edu.cn</span><br><span class="line">    Option: (6) Domain Name Server</span><br><span class="line">        Length: 12</span><br><span class="line">        Domain Name Server: 10.3.9.5</span><br><span class="line">        Domain Name Server: 10.3.9.4</span><br><span class="line">        Domain Name Server: 10.3.9.6</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 10.205.0.193 Destination: 10.205.0.212</li>
+<li>Port number: Source Port: 67 Destination Port: 68</li>
+</ul>
+<h4 id="No-4-DHCP-Request"><a href="#No-4-DHCP-Request" class="headerlink" title="No.4 DHCP Request"></a>No.4 DHCP Request</h4><p>@(Client message to servers either (a) requesting offered parameters from one server and implicitly declining offers from all others, (b) confirming correctness of previously allocated address after, e.g., system reboot, or (c) extending the lease on a particular network address.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap Protocol (Request)</span><br><span class="line">    Message type: Boot Request (1)</span><br><span class="line">    Hops: 0</span><br><span class="line">    Transaction ID: 0x7cf5b152</span><br><span class="line">    Bootp flags: 0x0000 (Unicast)</span><br><span class="line">        0... .... .... .... = Broadcast flag: Unicast</span><br><span class="line">        .000 0000 0000 0000 = Reserved flags: 0x0000</span><br><span class="line">    Client IP address: 0.0.0.0</span><br><span class="line">    Your (client) IP address: 0.0.0.0</span><br><span class="line">    Option: (53) DHCP Message Type (Request)</span><br><span class="line">        Length: 1</span><br><span class="line">        DHCP: Request (3)</span><br><span class="line">    Option: (54) DHCP Server Identifier</span><br><span class="line">        Length: 4</span><br><span class="line">        DHCP Server Identifier: 10.3.9.3</span><br><span class="line">    Option: (50) Requested IP Address</span><br><span class="line">        Length: 4</span><br><span class="line">        Requested IP Address: 10.205.0.212</span><br><span class="line">    Option: (12) Host Name</span><br><span class="line">        Length: 16</span><br><span class="line">        Host Name: i.questionyu.com</span><br><span class="line">    Option: (55) Parameter Request List</span><br><span class="line">        Length: 13</span><br><span class="line">        Parameter Request List Item: (1) Subnet Mask</span><br><span class="line">        Parameter Request List Item: (28) Broadcast Address</span><br><span class="line">        Parameter Request List Item: (2) Time Offset</span><br><span class="line">        Parameter Request List Item: (3) Router</span><br><span class="line">        Parameter Request List Item: (15) Domain Name</span><br><span class="line">        Parameter Request List Item: (6) Domain Name Server</span><br><span class="line">        Parameter Request List Item: (119) Domain Search</span><br><span class="line">        Parameter Request List Item: (12) Host Name</span><br><span class="line">        Parameter Request List Item: (44) NetBIOS over TCP/IP Name Server</span><br><span class="line">        Parameter Request List Item: (47) NetBIOS over TCP/IP Scope</span><br><span class="line">        Parameter Request List Item: (26) Interface MTU</span><br><span class="line">        Parameter Request List Item: (121) Classless Static Route</span><br><span class="line">        Parameter Request List Item: (42) Network Time Protocol Servers</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Broadcast (ff:ff:ff:ff:ff:ff)</li>
+<li>IP address: Source: 0.0.0.0 Destination: 255.255.255.255</li>
+<li>Port number: Source Port: 68 Destination Port: 67</li>
+</ul>
+<h4 id="No-5-DHCP-ACK"><a href="#No-5-DHCP-ACK" class="headerlink" title="No.5 DHCP ACK"></a>No.5 DHCP ACK</h4><p>@(Server to client with configuration parameters, including committed network address.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Bootstrap Protocol (ACK)</span><br><span class="line">    Message type: Boot Reply (2)</span><br><span class="line">    Hops: 1</span><br><span class="line">    Transaction ID: 0x7cf5b152</span><br><span class="line">    Bootp flags: 0x0000 (Unicast)</span><br><span class="line">        0... .... .... .... = Broadcast flag: Unicast</span><br><span class="line">        .000 0000 0000 0000 = Reserved flags: 0x0000</span><br><span class="line">    Client IP address: 0.0.0.0</span><br><span class="line">    Your (client) IP address: 10.205.0.212</span><br><span class="line">    Option: (53) DHCP Message Type (ACK)</span><br><span class="line">        Length: 1</span><br><span class="line">        DHCP: ACK (5)</span><br><span class="line">    Option: (54) DHCP Server Identifier</span><br><span class="line">        Length: 4</span><br><span class="line">        DHCP Server Identifier: 10.3.9.3</span><br><span class="line">    Option: (51) IP Address Lease Time</span><br><span class="line">        Length: 4</span><br><span class="line">        IP Address Lease Time: (3600s) 1 hour</span><br><span class="line">    Option: (1) Subnet Mask</span><br><span class="line">        Length: 4</span><br><span class="line">        Subnet Mask: 255.255.255.224</span><br><span class="line">    Option: (3) Router</span><br><span class="line">        Length: 4</span><br><span class="line">        Router: 10.205.0.193</span><br><span class="line">    Option: (15) Domain Name</span><br><span class="line">        Length: 11</span><br><span class="line">        Domain Name: bupt.edu.cn</span><br><span class="line">    Option: (6) Domain Name Server</span><br><span class="line">        Length: 12</span><br><span class="line">        Domain Name Server: 10.3.9.5</span><br><span class="line">        Domain Name Server: 10.3.9.4</span><br><span class="line">        Domain Name Server: 10.3.9.6</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 10.205.0.193 Destination: 10.205.0.212</li>
+<li>Port number: Source Port: 67 Destination Port: 68</li>
+</ul>
+<h3 id="DNS-Message-Format"><a href="#DNS-Message-Format" class="headerlink" title="DNS Message Format"></a>DNS Message Format</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|                      ID                       |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|QR|   Opcode  |AA|TC|RD|RA|   Z    |   RCODE   |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|                    QDCOUNT                    |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|                    ANCOUNT                    |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|                    NSCOUNT                    |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br><span class="line">|                    ARCOUNT                    |</span><br><span class="line">+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+</span><br></pre></td></tr></table></figure>
+<h3 id="DNS-A-questionyu-com"><a href="#DNS-A-questionyu-com" class="headerlink" title="DNS-A questionyu.com"></a>DNS-A questionyu.com</h3><p><img src="/uploads/2017/05/A-questionyu.com.png" alt="DNS-A"></p>
+<h4 id="No-1-DNS-Query"><a href="#No-1-DNS-Query" class="headerlink" title="No.1 DNS Query"></a>No.1 DNS Query</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (query)</span><br><span class="line">    [Response In: 2]</span><br><span class="line">    Transaction ID: 0x3a72</span><br><span class="line">    Flags: 0x0100 Standard query</span><br><span class="line">        0... .... .... .... = Response: Message is a query</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 0</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type A, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: A (Host Address) (1)</span><br><span class="line">            Class: IN (0x0001)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51)</li>
+<li>IP address: Source: 2001:da8:215:c506::beef Destination: 2001:4860:4860::8888</li>
+<li>Port number: Source Port: 48542 Destination Port: 53</li>
+</ul>
+<h4 id="No-2-DNS-Response"><a href="#No-2-DNS-Response" class="headerlink" title="No.2 DNS Response"></a>No.2 DNS Response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (response)</span><br><span class="line">    [Request In: 1]</span><br><span class="line">    [Time: 0.100708994 seconds]</span><br><span class="line">    Transaction ID: 0x3a72</span><br><span class="line">    Flags: 0x8180 Standard query response, No error</span><br><span class="line">        1... .... .... .... = Response: Message is a response</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... .0.. .... .... = Authoritative: Server is not an authority for domain</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... 1... .... = Recursion available: Server can do recursive queries</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">        .... .... .... 0000 = Reply code: No error (0)</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 2</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type A, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: A (Host Address) (1)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">    Answers</span><br><span class="line">        questionyu.com: type A, class IN, addr 104.31.77.20</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            Type: A (Host Address) (1)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 299</span><br><span class="line">            Data length: 4</span><br><span class="line">            Address: 104.31.77.20</span><br><span class="line">        questionyu.com: type A, class IN, addr 104.31.76.20</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            Type: A (Host Address) (1)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 299</span><br><span class="line">            Data length: 4</span><br><span class="line">            Address: 104.31.76.20</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 2001:4860:4860::8888 Destination: 2001:da8:215:c506::beef</li>
+<li>Port number: Source Port: 53 Destination Port: 48542</li>
+</ul>
+<h3 id="DNS-MX-questionyu-com"><a href="#DNS-MX-questionyu-com" class="headerlink" title="DNS-MX questionyu.com"></a>DNS-MX questionyu.com</h3><p><img src="/uploads/2017/05/MX-questionyu.com.png" alt="DNS-MX"></p>
+<h4 id="No-1-DNS-Query-1"><a href="#No-1-DNS-Query-1" class="headerlink" title="No.1 DNS Query"></a>No.1 DNS Query</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (query)</span><br><span class="line">    [Response In: 2]</span><br><span class="line">    Transaction ID: 0xfec1</span><br><span class="line">    Flags: 0x0100 Standard query</span><br><span class="line">        0... .... .... .... = Response: Message is a query</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 0</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type MX, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: MX (Mail eXchange) (15)</span><br><span class="line">            Class: IN (0x0001)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51)</li>
+<li>IP address: Source: 2001:da8:215:c506::beef Destination: 2001:4860:4860::8888</li>
+<li>Port number: Source Port: 38337 Destination Port: 53</li>
+</ul>
+<h4 id="No-2-DNS-Response-1"><a href="#No-2-DNS-Response-1" class="headerlink" title="No.2 DNS Response"></a>No.2 DNS Response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (response)</span><br><span class="line">    [Request In: 1]</span><br><span class="line">    [Time: 0.067065156 seconds]</span><br><span class="line">    Transaction ID: 0xfec1</span><br><span class="line">    Flags: 0x8180 Standard query response, No error</span><br><span class="line">        1... .... .... .... = Response: Message is a response</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... .0.. .... .... = Authoritative: Server is not an authority for domain</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... 1... .... = Recursion available: Server can do recursive queries</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">        .... .... .... 0000 = Reply code: No error (0)</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 1</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type MX, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: MX (Mail eXchange) (15)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">    Answers</span><br><span class="line">        questionyu.com: type MX, class IN, preference 10, mx mxdomain.qq.com</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            Type: MX (Mail eXchange) (15)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 299</span><br><span class="line">            Data length: 16</span><br><span class="line">            Preference: 10</span><br><span class="line">            Mail Exchange: mxdomain.qq.com</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 2001:4860:4860::8888 Destination: 2001:da8:215:c506::beef</li>
+<li>Port number: Source Port: 53 Destination Port: 38337</li>
+</ul>
+<h3 id="DNS-PTR-8-8-8-8"><a href="#DNS-PTR-8-8-8-8" class="headerlink" title="DNS-PTR 8.8.8.8"></a>DNS-PTR 8.8.8.8</h3><p><img src="/uploads/2017/05/PTR-8.8.8.8.png" alt="DNS-PTR"></p>
+<h4 id="No-1-DNS-Query-2"><a href="#No-1-DNS-Query-2" class="headerlink" title="No.1 DNS Query"></a>No.1 DNS Query</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (query)</span><br><span class="line">    [Response In: 2]</span><br><span class="line">    Transaction ID: 0x7806</span><br><span class="line">    Flags: 0x0100 Standard query</span><br><span class="line">        0... .... .... .... = Response: Message is a query</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 0</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        8.8.8.8.in-addr.arpa: type PTR, class IN</span><br><span class="line">            Name: 8.8.8.8.in-addr.arpa</span><br><span class="line">            [Name Length: 20]</span><br><span class="line">            [Label Count: 6]</span><br><span class="line">            Type: PTR (domain name PoinTeR) (12)</span><br><span class="line">            Class: IN (0x0001)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51)</li>
+<li>IP address: Source: 2001:da8:215:c506::beef Destination: 2001:4860:4860::8888</li>
+<li>Port number: Source Port: 33287 Destination Port: 53</li>
+</ul>
+<h4 id="No-2-DNS-Response-2"><a href="#No-2-DNS-Response-2" class="headerlink" title="No.2 DNS Response"></a>No.2 DNS Response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (response)</span><br><span class="line">    [Request In: 1]</span><br><span class="line">    [Time: 0.055456438 seconds]</span><br><span class="line">    Transaction ID: 0x7806</span><br><span class="line">    Flags: 0x8180 Standard query response, No error</span><br><span class="line">        1... .... .... .... = Response: Message is a response</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... .0.. .... .... = Authoritative: Server is not an authority for domain</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... 1... .... = Recursion available: Server can do recursive queries</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">        .... .... .... 0000 = Reply code: No error (0)</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 1</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        8.8.8.8.in-addr.arpa: type PTR, class IN</span><br><span class="line">            Name: 8.8.8.8.in-addr.arpa</span><br><span class="line">            [Name Length: 20]</span><br><span class="line">            [Label Count: 6]</span><br><span class="line">            Type: PTR (domain name PoinTeR) (12)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">    Answers</span><br><span class="line">        8.8.8.8.in-addr.arpa: type PTR, class IN, google-public-dns-a.google.com</span><br><span class="line">            Name: 8.8.8.8.in-addr.arpa</span><br><span class="line">            Type: PTR (domain name PoinTeR) (12)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 86399</span><br><span class="line">            Data length: 32</span><br><span class="line">            Domain Name: google-public-dns-a.google.com</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 2001:4860:4860::8888 Destination: 2001:da8:215:c506::beef</li>
+<li>Port number: Source Port: 53 Destination Port: 33287</li>
+</ul>
+<h3 id="DNS-AAAA-questionyu-com"><a href="#DNS-AAAA-questionyu-com" class="headerlink" title="DNS-AAAA questionyu.com"></a>DNS-AAAA questionyu.com</h3><p><img src="/uploads/2017/05/AAAA-questionyu.com.png" alt="DNS-AAAA"></p>
+<h4 id="No-1-DNS-Query-3"><a href="#No-1-DNS-Query-3" class="headerlink" title="No.1 DNS Query"></a>No.1 DNS Query</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (query)</span><br><span class="line">    [Response In: 2]</span><br><span class="line">    Transaction ID: 0x96a2</span><br><span class="line">    Flags: 0x0100 Standard query</span><br><span class="line">        0... .... .... .... = Response: Message is a query</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 0</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type AAAA, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: AAAA (IPv6 Address) (28)</span><br><span class="line">            Class: IN (0x0001)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51)</li>
+<li>IP address: Source: 2001:da8:215:c506::beef Destination: 2001:4860:4860::8888</li>
+<li>Port number: Source Port: 52731 Destination Port: 53</li>
+</ul>
+<h4 id="No-2-DNS-Response-3"><a href="#No-2-DNS-Response-3" class="headerlink" title="No.2 DNS Response"></a>No.2 DNS Response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (response)</span><br><span class="line">    [Request In: 1]</span><br><span class="line">    [Time: 0.068031471 seconds]</span><br><span class="line">    Transaction ID: 0x96a2</span><br><span class="line">    Flags: 0x8180 Standard query response, No error</span><br><span class="line">        1... .... .... .... = Response: Message is a response</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... .0.. .... .... = Authoritative: Server is not an authority for domain</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... 1... .... = Recursion available: Server can do recursive queries</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">        .... .... .... 0000 = Reply code: No error (0)</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 2</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        questionyu.com: type AAAA, class IN</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            [Name Length: 14]</span><br><span class="line">            [Label Count: 2]</span><br><span class="line">            Type: AAAA (IPv6 Address) (28)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">    Answers</span><br><span class="line">        questionyu.com: type AAAA, class IN, addr 2400:cb00:2048:1::681f:4d14</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            Type: AAAA (IPv6 Address) (28)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 299</span><br><span class="line">            Data length: 16</span><br><span class="line">            AAAA Address: 2400:cb00:2048:1::681f:4d14</span><br><span class="line">        questionyu.com: type AAAA, class IN, addr 2400:cb00:2048:1::681f:4c14</span><br><span class="line">            Name: questionyu.com</span><br><span class="line">            Type: AAAA (IPv6 Address) (28)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 299</span><br><span class="line">            Data length: 16</span><br><span class="line">            AAAA Address: 2400:cb00:2048:1::681f:4c14</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 2001:4860:4860::8888 Destination: 2001:da8:215:c506::beef</li>
+<li>Port number: Source Port: 53 Destination Port: 52731</li>
+</ul>
+<h3 id="DNS-TXT-google-public-dns-a-google-com"><a href="#DNS-TXT-google-public-dns-a-google-com" class="headerlink" title="DNS-TXT google-public-dns-a.google.com"></a>DNS-TXT google-public-dns-a.google.com</h3><p><img src="/uploads/2017/05/TXT-google-public-dns-a.google.com.png" alt="DNS-TXT"></p>
+<h4 id="No-1-DNS-Query-4"><a href="#No-1-DNS-Query-4" class="headerlink" title="No.1 DNS Query"></a>No.1 DNS Query</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (query)</span><br><span class="line">    [Response In: 2]</span><br><span class="line">    Transaction ID: 0x8836</span><br><span class="line">    Flags: 0x0100 Standard query</span><br><span class="line">        0... .... .... .... = Response: Message is a query</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 0</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        google-public-dns-a.google.com: type TXT, class IN</span><br><span class="line">            Name: google-public-dns-a.google.com</span><br><span class="line">            [Name Length: 30]</span><br><span class="line">            [Label Count: 3]</span><br><span class="line">            Type: TXT (Text strings) (16)</span><br><span class="line">            Class: IN (0x0001)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f) Destination: Hangzhou_56:f1:51 (00:23:89:56:f1:51)</li>
+<li>IP address: Source: 2001:da8:215:c506::beef Destination: 2001:4860:4860::8888</li>
+<li>Port number: Source Port: 58105 Destination Port: 53</li>
+</ul>
+<h4 id="No-2-DNS-Response-4"><a href="#No-2-DNS-Response-4" class="headerlink" title="No.2 DNS Response"></a>No.2 DNS Response</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Domain Name System (response)</span><br><span class="line">    [Request In: 1]</span><br><span class="line">    [Time: 0.056486861 seconds]</span><br><span class="line">    Transaction ID: 0x8836</span><br><span class="line">    Flags: 0x8180 Standard query response, No error</span><br><span class="line">        1... .... .... .... = Response: Message is a response</span><br><span class="line">        .000 0... .... .... = Opcode: Standard query (0)</span><br><span class="line">        .... .0.. .... .... = Authoritative: Server is not an authority for domain</span><br><span class="line">        .... ..0. .... .... = Truncated: Message is not truncated</span><br><span class="line">        .... ...1 .... .... = Recursion desired: Do query recursively</span><br><span class="line">        .... .... 1... .... = Recursion available: Server can do recursive queries</span><br><span class="line">        .... .... .0.. .... = Z: reserved (0)</span><br><span class="line">        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server</span><br><span class="line">        .... .... ...0 .... = Non-authenticated data: Unacceptable</span><br><span class="line">        .... .... .... 0000 = Reply code: No error (0)</span><br><span class="line">    Questions: 1</span><br><span class="line">    Answer RRs: 1</span><br><span class="line">    Authority RRs: 0</span><br><span class="line">    Additional RRs: 0</span><br><span class="line">    Queries</span><br><span class="line">        google-public-dns-a.google.com: type TXT, class IN</span><br><span class="line">            Name: google-public-dns-a.google.com</span><br><span class="line">            [Name Length: 30]</span><br><span class="line">            [Label Count: 3]</span><br><span class="line">            Type: TXT (Text strings) (16)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">    Answers</span><br><span class="line">        google-public-dns-a.google.com: type TXT, class IN</span><br><span class="line">            Name: google-public-dns-a.google.com</span><br><span class="line">            Type: TXT (Text strings) (16)</span><br><span class="line">            Class: IN (0x0001)</span><br><span class="line">            Time to live: 86399</span><br><span class="line">            Data length: 22</span><br><span class="line">            TXT Length: 21</span><br><span class="line">            TXT: http://xkcd.com/1361/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Frame address: Source: Hangzhou_56:f1:51 (00:23:89:56:f1:51) Destination: HewlettP_3c:7c:0f (e4:11:5b:3c:7c:0f)</li>
+<li>IP address: Source: 2001:4860:4860::8888 Destination: 2001:da8:215:c506::beef</li>
+<li>Port number: Source Port: 53 Destination Port: 52731</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>问少</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    
+    <a href="https://real-neo.me/BBU6404.html" title="互联网应用 Lab">https://real-neo.me/BBU6404.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C</a>
+          
+            <a href="/tags/互联网应用/" rel="tag"># 互联网应用</a>
+          
+            <a href="/tags/BBU6404/" rel="tag"># BBU6404</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Config-OpenGL-Dev.html" rel="next" title="OpenGL 开发环境的配置 Win/Mac">
+                <i class="fa fa-chevron-left"></i> OpenGL 开发环境的配置 Win/Mac
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/聚类算法的初步了解.html" rel="prev" title="聚类算法的初步了解">
+                聚类算法的初步了解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="问少">
+            
+              <p class="site-author-name" itemprop="name">问少</p>
+              <div class="site-description motion-element" itemprop="description">一个问少写字的地方。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">50</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3JlYWwtbmVv" title="GitHub &rarr; https://github.com/real-neo"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOnF1ZXN0aW9ueXVnb29kQGdtYWlsLmNvbQ==" title="E-Mail &rarr; mailto:questionyugood@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vcmVhbG5lb2Jybw==" title="Weibo &rarr; https://weibo.com/realneobro"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9yZWFsbmVvYnJv" title="Twitter &rarr; https://twitter.com/realneobro"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3JlYWxuZW9icm8=" title="FB Page &rarr; https://www.facebook.com/realneobro"><i class="fa fa-fw fa-facebook"></i>FB Page</span>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9haXNha2FraS5jb20=" title="https://aisakaki.com">Aisaka</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnlpemhpbGVlLmNvbQ==" title="https://blog.yizhilee.com">荔枝的博客</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9mZmlzLm1l" title="https://ffis.me">饭饭's Blog</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cDovL3d3dy5oYW54dWV5aW5nLmNvbQ==" title="http://www.hanxueying.com">Santanico's Blog</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cDovL21pc3R5Lm1vZQ==" title="http://misty.moe">Misty的小窝~</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnBocGdhby5jb20=" title="https://blog.phpgao.com">老高的技术博客</span>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <span class="exturl" data-url="aHR0cDovL2J5cmlvLm9yZw==" title="http://byrio.org">BYRIO 社区</span>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-3"><span class="nav-number">1.</span> <span class="nav-text">Lab 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-4"><span class="nav-number">2.</span> <span class="nav-text">Lab 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-5"><span class="nav-number">3.</span> <span class="nav-text">Lab 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-6"><span class="nav-number">4.</span> <span class="nav-text">Lab 6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-7"><span class="nav-number">5.</span> <span class="nav-text">Lab 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab-8"><span class="nav-number">6.</span> <span class="nav-text">Lab 8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Configuration-of-Wireshark"><span class="nav-number">6.1.</span> <span class="nav-text">The Configuration of Wireshark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP-Message-Format"><span class="nav-number">6.2.</span> <span class="nav-text">DHCP Message Format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DHCP"><span class="nav-number">6.3.</span> <span class="nav-text">DHCP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Explanation"><span class="nav-number">6.3.1.</span> <span class="nav-text">Explanation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Message-Sequence-Chart"><span class="nav-number">6.3.2.</span> <span class="nav-text">Message Sequence Chart</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DHCP-Release"><span class="nav-number">6.3.3.</span> <span class="nav-text">No.1 DHCP Release</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DHCP-Discover"><span class="nav-number">6.3.4.</span> <span class="nav-text">No.2 DHCP Discover</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-3-DHCP-Offer"><span class="nav-number">6.3.5.</span> <span class="nav-text">No.3 DHCP Offer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-4-DHCP-Request"><span class="nav-number">6.3.6.</span> <span class="nav-text">No.4 DHCP Request</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-5-DHCP-ACK"><span class="nav-number">6.3.7.</span> <span class="nav-text">No.5 DHCP ACK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-Message-Format"><span class="nav-number">6.4.</span> <span class="nav-text">DNS Message Format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-A-questionyu-com"><span class="nav-number">6.5.</span> <span class="nav-text">DNS-A questionyu.com</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DNS-Query"><span class="nav-number">6.5.1.</span> <span class="nav-text">No.1 DNS Query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DNS-Response"><span class="nav-number">6.5.2.</span> <span class="nav-text">No.2 DNS Response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-MX-questionyu-com"><span class="nav-number">6.6.</span> <span class="nav-text">DNS-MX questionyu.com</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DNS-Query-1"><span class="nav-number">6.6.1.</span> <span class="nav-text">No.1 DNS Query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DNS-Response-1"><span class="nav-number">6.6.2.</span> <span class="nav-text">No.2 DNS Response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-PTR-8-8-8-8"><span class="nav-number">6.7.</span> <span class="nav-text">DNS-PTR 8.8.8.8</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DNS-Query-2"><span class="nav-number">6.7.1.</span> <span class="nav-text">No.1 DNS Query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DNS-Response-2"><span class="nav-number">6.7.2.</span> <span class="nav-text">No.2 DNS Response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-AAAA-questionyu-com"><span class="nav-number">6.8.</span> <span class="nav-text">DNS-AAAA questionyu.com</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DNS-Query-3"><span class="nav-number">6.8.1.</span> <span class="nav-text">No.1 DNS Query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DNS-Response-3"><span class="nav-number">6.8.2.</span> <span class="nav-text">No.2 DNS Response</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-TXT-google-public-dns-a-google-com"><span class="nav-number">6.9.</span> <span class="nav-text">DNS-TXT google-public-dns-a.google.com</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#No-1-DNS-Query-4"><span class="nav-number">6.9.1.</span> <span class="nav-text">No.1 DNS Query</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-2-DNS-Response-4"><span class="nav-number">6.9.2.</span> <span class="nav-text">No.2 DNS Response</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">问少</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.1.0"></script>
+
+
+  
+  
+  
+
+  
+
+  
+  
+  
+
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'd757825157181a21c3f0',
+    clientSecret: '5128dd1e75825f2d630152344b5b924275143db5',
+    repo: 'real-neo.github.io',
+    owner: 'real-neo',
+    admin: ['real-neo'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('Copied');
+        else $(this).text('Copy failed');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('Copy');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

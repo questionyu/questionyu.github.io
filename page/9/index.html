@@ -406,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab6.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Computer-Internship.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -426,7 +426,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/IA-Lab6.html" class="post-title-link" itemprop="url">互联网应用 Lab6</a>
+                <a href="/Computer-Internship.html" class="post-title-link" itemprop="url">小学期完成</a>
               
             
           </h2>
@@ -451,7 +451,7 @@
                 
               
 
-              <time title="Created: 2017-04-28 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-28T12:00:00Z">2017-04-28</time>
+              <time title="Created: 2015-09-30 12:12:36" itemprop="dateCreated datePublished" datetime="2015-09-30T12:12:36Z">2015-09-30</time>
             
 
             
@@ -505,660 +505,16 @@
 
       
         
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; /* for printf() and fprintf() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt; /* for socket(), sendto() and recvfrom() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt; /* for sockaddr_in and inet_addr() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; /* for atoi() and exit() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; /* for memset() */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt; /* for close() */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ECHOMAX 255 <span class="comment">/* Longest string to echo */</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sock; <span class="comment">/* Socket descriptor */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">echoServAddr</span>;</span> <span class="comment">/* Echo server address */</span></span><br><span class="line"><span class="comment">//	struct sockaddr_in fromAddr; /* Source address of echo */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">short</span> echoServPort; <span class="comment">/* Echo server port */</span></span><br><span class="line"><span class="comment">//	unsigned int fromSize; /* In-out of address size for recvfrom() */</span></span><br><span class="line">	<span class="keyword">char</span> *servIP; <span class="comment">/* IP address of server */</span></span><br><span class="line">	<span class="keyword">char</span> *echoString; <span class="comment">/* String to send to echo server */</span></span><br><span class="line"><span class="comment">//	char echoBuffer[ECHOMAX + 1]; /* Buffer for receiving echoed string */</span></span><br><span class="line">	<span class="keyword">size_t</span> echoStringLen; <span class="comment">/* Length of string to echo */</span></span><br><span class="line"><span class="comment">//	int respStringLen; /* Length of received response */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc &lt; <span class="number">3</span>) &#123; <span class="comment">/* Test for correct number of arguments */</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage: %s &lt;Server IP&gt; &lt;Echo Word&gt;\n"</span>, argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	servIP = argv[<span class="number">1</span>]; <span class="comment">/* First arg: server IP address (dotted quad) */</span></span><br><span class="line">	echoServPort = <span class="number">56325</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Create a datagram/UDP socket */</span></span><br><span class="line">	<span class="keyword">if</span> ((sock = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP)) &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"socket() failed.\n"</span>);</span><br><span class="line">	<span class="comment">/* Construct the server address structure */</span></span><br><span class="line">	<span class="built_in">memset</span>(&amp;echoServAddr, <span class="number">0</span>, <span class="keyword">sizeof</span>(echoServAddr));<span class="comment">/*Zero out structure*/</span></span><br><span class="line">	echoServAddr.sin_family = AF_INET; <span class="comment">/* Internet addr family */</span></span><br><span class="line">	echoServAddr.sin_addr.s_addr = inet_addr(servIP);<span class="comment">/*Server IP address*/</span></span><br><span class="line">	echoServAddr.sin_port = htons(echoServPort); <span class="comment">/* Server port */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; argc; i++) &#123;</span><br><span class="line">		echoString = argv[i]; <span class="comment">/* Second arg: string to echo */</span></span><br><span class="line">		<span class="keyword">if</span> ((echoStringLen = <span class="built_in">strlen</span>(echoString)) &gt; ECHOMAX) <span class="comment">/* Check input length */</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"Echo word too long.\n"</span>);</span><br><span class="line">		<span class="comment">/* Send the string to the server */</span></span><br><span class="line">		<span class="keyword">if</span> (sendto(sock, echoString, echoStringLen, <span class="number">0</span>, (struct sockaddr *) &amp;echoServAddr, <span class="keyword">sizeof</span>(echoServAddr)) != echoStringLen)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"sendto() sent a different number of bytes than expected.\n"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"sending data to '%s'\n"</span>, servIP);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//	/* Recv a response */</span></span><br><span class="line"><span class="comment">//	fromSize = sizeof(fromAddr);</span></span><br><span class="line"><span class="comment">//	if ((respStringLen = recvfrom(sock, echoBuffer, ECHOMAX, 0, (struct sockaddr *) &amp;fromAddr, &amp;fromSize)) != echoStringLen)</span></span><br><span class="line"><span class="comment">//		printf("recvfrom() failed\n");</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	if (echoServAddr.sin_addr.s_addr != fromAddr.sin_addr.s_addr) &#123;</span></span><br><span class="line"><span class="comment">//		printf("Error: received a packet from unknown source.\n");</span></span><br><span class="line"><span class="comment">//		exit(1);</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	/* null-terminate the received data */</span></span><br><span class="line"><span class="comment">//	echoBuffer[respStringLen] = '\0';</span></span><br><span class="line"><span class="comment">//	printf("Received: %s\n", echoBuffer);/*Print the echoed message*/</span></span><br><span class="line">	close(sock);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab6.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab5.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab5.html" class="post-title-link" itemprop="url">互联网应用 Lab5</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-27 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-27T12:00:00Z">2017-04-27</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;netdb.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">hostent</span> *<span class="title">h</span>;</span></span><br><span class="line">	<span class="keyword">long</span> addr;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Usage:\n%s sample.com\nor\n%s 8.8.8.8\n"</span>, argv[<span class="number">0</span>], argv[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (inet_addr(argv[<span class="number">1</span>]) != <span class="number">-1</span>) &#123;</span><br><span class="line">		addr = inet_addr(argv[<span class="number">1</span>]);</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyaddr((<span class="keyword">char</span> *) &amp;addr, <span class="keyword">sizeof</span>(addr), AF_INET)) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyaddr error for address: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> ((h = gethostbyname(argv[<span class="number">1</span>])) == <span class="literal">NULL</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"gethostbyname error for name: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Looking information for host: %s\n"</span>, argv[<span class="number">1</span>]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Official Name: %s\n"</span>, h-&gt;h_name);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_aliases)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Host aliases: %s\n"</span>, *h-&gt;h_aliases++);</span><br><span class="line">	<span class="keyword">while</span> ((h-&gt;h_addr_list)[<span class="number">0</span>])</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"IP address: %s\n"</span>, inet_ntoa(*(struct in_addr *) *h-&gt;h_addr_list++));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab4.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab4.html" class="post-title-link" itemprop="url">互联网应用 Lab4</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-21 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-21T12:00:00Z">2017-04-21</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buf[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> fd1, fd2;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd1 = open(<span class="string">"test1"</span>, O_RDWR | O_APPEND)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((fd2 = open(<span class="string">"test2"</span>, O_RDONLY)) == <span class="number">-1</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Error in opening-2\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> ((read(fd2, buf, <span class="number">1</span>)) != <span class="number">0</span>) &#123;</span><br><span class="line">		write(fd1, buf, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	close(fd1);</span><br><span class="line">	close(fd2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab4.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/IA-Lab3.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/IA-Lab3.html" class="post-title-link" itemprop="url">互联网应用 Lab3</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-04-20 12:00:00" itemprop="dateCreated datePublished" datetime="2017-04-20T12:00:00Z">2017-04-20</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *arg[] = &#123;<span class="string">"/bin/ls"</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* fork, and exec within child process */</span></span><br><span class="line">	<span class="keyword">if</span> (fork() == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"In child process:\n"</span>);</span><br><span class="line">		execv(arg[<span class="number">0</span>], arg);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"I will never be called\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Execution continues in parent process\n"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/IA-Lab3.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Config-OpenGL-Dev.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="问少">
-      <meta itemprop="description" content="一个问少写字的地方。">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="问少的小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Config-OpenGL-Dev.html" class="post-title-link" itemprop="url">OpenGL 开发环境的配置 Win/Mac</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-03-10 22:50:58" itemprop="dateCreated datePublished" datetime="2017-03-10T22:50:58Z">2017-03-10</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近3D图形程序设计的课需要用 C 写一些 OpenGL 代码，Windows 下的开发环境配置起来还稍稍有些麻烦，写个文章记录一下步骤。</p>
-<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p>准备工作：<span class="exturl" data-url="aHR0cDovL2Nob3J0bGUuY2NzdS5lZHUvQmxvb2RzaGVkL2dsdXRtaW5nLnppcA==" title="http://chortle.ccsu.edu/Bloodshed/glutming.zip">点击这里下载 glut 压缩包<i class="fa fa-external-link"></i></span>，解压出来待用。</p>
-<blockquote class="blockquote-center"><p><strong>这里请注意，不同 Windows 版本配置略有差别，请选择你的系统对应的方法。</strong></p>
+          <p>小学期。。。给我最深刻的启发就是。。。这辈子打死我都不做程序员。。。太TM累了。。。</p>
+<hr>
+<p>小学期的任务是这样的：</p>
+<blockquote>
+<p>题目概述：<br>某学校近年来招生规模不断扩大，每个院系的专业、班级、学生的数量急剧增加，在校学生管理的各种信息量也成倍增长。<br>旧有的人工操作的学生信息管理工作，重复工作多，工作量大，效率低。因此，迫切需要电子化办公来提高管理工作的效率。<br>请设计并实现一个学生选课管理系统或一个图书借阅系统来实现选课或图书借阅的电子化。<br>并且要求：<br>使用 C 语言；两个题目，任选其一；分组完成，五人一组，自愿组合；开发环境：Turbo C++ 或其它 C 编程环境；<br>提供命令行操作，无需图形界面；模块化结构；遵守编程规范；界面友好；运行正确；具有容错机制</p>
 </blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/Config-OpenGL-Dev.html#more" rel="contents">
+              <a class="btn" href="/Computer-Internship.html#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1167,6 +523,669 @@
         
       
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/XX.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/XX.html" class="post-title-link" itemprop="url">(๑و•̀ω•́)و</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-07-15 09:44:25" itemprop="dateCreated datePublished" datetime="2015-07-15T09:44:25Z">2015-07-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随笔/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/uploads/2015/07/XX.gif" alt="XX"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/CNNIC-Forged-CA-Certificates.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/CNNIC-Forged-CA-Certificates.html" class="post-title-link" itemprop="url">谷歌称 CNNIC 发布伪造 CA 证书</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-06-17 00:14:55" itemprop="dateCreated datePublished" datetime="2015-06-17T00:14:55Z">2015-06-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随笔/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>根据 <span class="exturl" data-url="aHR0cHM6Ly9zZWN1cml0eS5nb29nbGVibG9nLmNvbS8yMDE1LzAzL21haW50YWluaW5nLWRpZ2l0YWwtY2VydGlmaWNhdGUtc2VjdXJpdHkuaHRtbA==" title="Google Online Security Blog">谷歌在线安全博客<i class="fa fa-external-link"></i></span> 报道和 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLm1vemlsbGEub3JnL3NlY3VyaXR5LzIwMTUvMDMvMjMvcmV2b2tpbmctdHJ1c3QtaW4tb25lLWNubmljLWludGVybWVkaWF0ZS1jZXJ0aWZpY2F0ZS8=" title="Mozilla Security Blog">Mozilla 安全博客<i class="fa fa-external-link"></i></span> 报道，谷歌发现 CNNIC 颁发了多个针对谷歌域名的伪造 CA 假证书。这个名为 MCS 集团的中级证书颁发机构发行了多个谷歌域名的假证书，而 MCS 集团的中级证书则来自中国的 <span class="exturl" data-url="aHR0cHM6Ly93d3cud2lsbGlhbWxvbmcuaW5mby9hcmNoaXZlcy8yMjE5Lmh0bWw=" title="CNNIC 遭网友质疑">CNNIC<i class="fa fa-external-link"></i></span>。</p>
+<p>该证书冒充成受信任的谷歌的域名，被用于部署到网络防火墙中，用于劫持所有处于该防火墙后的HTTPS网络通信，而绕过浏览器警告。</p>
+<p>谷歌联系了 CNNIC，CNNIC 在 3 月 22 日回应称，CNNIC 向 MCS 发行了一个无约束的中级证书，MCS 本应该只向它拥有的域名发行证书，但 MCS 将其安装在一个防火墙设备上充当中间人代理，伪装成目标域名，用于执行加密连接拦截(SSL MITM)。企业如出于法律或安全理由需要监控员工的加密连接，必须限制在企业内网中，然而防火墙设备却在用户访问外部服务时发行了不受其控制的域名的证书，这种做法严重违反了证书信任系统的规则。尽管这种解释看起来符合事实，然而，CNNIC 还是签发了不适合 MCS 持有的证书。
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/CNNIC-Forged-CA-Certificates.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Coursework-2015.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Coursework-2015.html" class="post-title-link" itemprop="url">Coursework 2015</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-06-09 00:15:45" itemprop="dateCreated datePublished" datetime="2015-06-09T00:15:45Z">2015-06-09</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Write a program that will help elementary school pupils practice math.</p>
+<h3 id="a-The-program-will-first-ask-the-user-for-his-her-ID-number-including-two-letters-amp-4-digits-e-g"><a href="#a-The-program-will-first-ask-the-user-for-his-her-ID-number-including-two-letters-amp-4-digits-e-g" class="headerlink" title="a) The program will first ask the user for his/her ID number (including two letters &amp; 4 digits), e.g.:"></a>a) The program will first ask the user for his/her ID number (including two letters &amp; 4 digits), e.g.:</h3><p>Please input your four digit ID no: AB1234<br>The program should have input validation.<br>Then the program prompts three choices:</p>
+<ul>
+<li>Start a test</li>
+<li>Check scores</li>
+<li>Exit</li>
+</ul>
+<h3 id="b-Test-the-program-will-give-10-math-problems-e-g"><a href="#b-Test-the-program-will-give-10-math-problems-e-g" class="headerlink" title="b) Test: the program will give 10 math problems, e.g.:"></a>b) Test: the program will give 10 math problems, e.g.:</h3><ul>
+<li>12 * 3 = 36</li>
+<li>48 + 32 = 80</li>
+<li>…</li>
+<li>56 / 28 = 2
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Coursework-2015.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </li></ul></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Sorrow.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="问少">
+      <meta itemprop="description" content="一个问少写字的地方。">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="问少的小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Sorrow.html" class="post-title-link" itemprop="url">慢慢的，就没有了，就像从未存在过</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-05-28 17:37:18" itemprop="dateCreated datePublished" datetime="2015-05-28T17:37:18Z">2015-05-28</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随笔/" itemprop="url" rel="index"><span itemprop="name">生活随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>几年以前，我曾经嘲笑过某科技界大佬。当时他说：也许 90 后、95 后会慢慢不知道谷歌是什么网站。</p>
+<p>那一年，这对于我来说简直就是世界上最好笑的笑话。谷歌，全世界最卓越的互联网公司，活在互联网的一代中国人，会不知道他们的网站？</p>
+<p>今天，我收回这句嘲笑。因为这件不可能的事，它慢慢变成了现实。</p>
+<p>没有人再关注什么谷歌不谷歌。对他们来说，百度也蛮好用的，反正他们几乎没用过谷歌。没有谷歌又怎样？大家还是开心的刷微博，看微信，听歌，看娱乐节目。对于从来就不知道谷歌的人来说，少了谷歌又有什么影响？</p>
+<p><img src="/uploads/2015/05/sad.jpg" alt="sad">
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Sorrow.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </p></div>
 
     
 
@@ -1207,7 +1226,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1251,7 +1270,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">85</span>
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1435,7 +1454,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">69</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">73</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

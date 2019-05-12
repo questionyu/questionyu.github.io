@@ -406,7 +406,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week04.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Apriori 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -426,7 +426,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/COM6516-Week04.html" class="post-title-link" itemprop="url">COM6516 Week04</a>
+                <a href="/Apriori 的初步了解.html" class="post-title-link" itemprop="url">Apriori 的初步了解</a>
               
             
           </h2>
@@ -451,7 +451,7 @@
                 
               
 
-              <time title="Created: 2018-10-15 11:07:29" itemprop="dateCreated datePublished" datetime="2018-10-15T11:07:29Z">2018-10-15</time>
+              <time title="Created: 2017-09-02 11:52:23" itemprop="dateCreated datePublished" datetime="2017-09-02T11:52:23Z">2017-09-02</time>
             
 
             
@@ -469,7 +469,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
 
                 
                 
@@ -505,16 +505,18 @@
 
       
         
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String birth;</span><br><span class="line"></span><br><span class="line">	Person(String name, String birth) &#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.birth = birth;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Name: "</span> + name + <span class="string">"\n"</span> +</span><br><span class="line">				<span class="string">"Birth: "</span> + birth;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/COM6516-Week04.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <p>Apriori 算法是一种最有影响力的挖掘布尔关联规则的频繁项集的算法，它是由 Rakesh Agrawal 和 RamakrishnanSkrikant 提出的。</p>
+<p>Apriori 算法是一种挖掘关联规则的频繁项集算法，其核心思想是通过候选集生成和情节的向下封闭检测两个阶段来挖掘频繁项集。 Apriori 算法应用广泛，可用于消费市场价格分析，猜测顾客的消费习惯；网络安全领域中的入侵检测技术；可用在用于高校管理中，根据挖掘规则可以有效地辅助学校管理部门有针对性的开展贫困助学工作；也可用在移动通信领域中，指导运营商的业务运营和辅助业务提供商的决策制定。</p>
+<p>Apriori 算法过程分为两个步骤：</p>
+<ul>
+<li>通过迭代，检索出事务数据库中的所有频繁项集，即支持度不低于用户设定的阈值的项集；</li>
+<li>利用频繁项集构造出满足用户最小信任度的规则。</li>
+</ul>
+<p>具体做法就是：</p>
+<p>首先找出频繁 1- 项集，记为 L1；然后利用 L1 来产生候选项集 C2，对 C2 中的项进行判定挖掘出 L2，即频繁 2- 项集；不断如此循环下去直到无法发现更多的频繁 k- 项集为止。每挖掘一层 Lk 就需要扫描整个数据库一遍。算法利用了一个性质：任一频繁项集的所有非空子集也必须是频繁的。意思就是说，生成一个 k-itemset 的候选项时，如果这个候选项有子集不在 (k-1)-itemset（已经确定是 frequent 的）中时，那么这个候选项就不用拿去和支持度判断了，直接删除。</p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -569,7 +571,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6506-Week02.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的基本流程.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -589,7 +591,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/COM6506-Week02.html" class="post-title-link" itemprop="url">COM6506 Week02</a>
+                <a href="/K-means 的基本流程.html" class="post-title-link" itemprop="url">K-means 的基本流程</a>
               
             
           </h2>
@@ -614,7 +616,7 @@
                 
               
 
-              <time title="Created: 2018-10-08 15:35:30" itemprop="dateCreated datePublished" datetime="2018-10-08T15:35:30Z">2018-10-08</time>
+              <time title="Created: 2017-08-26 11:49:13" itemprop="dateCreated datePublished" datetime="2017-08-26T11:49:13Z">2017-08-26</time>
             
 
             
@@ -632,7 +634,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
 
                 
                 
@@ -668,16 +670,35 @@
 
       
         
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">double</span> weight;</span><br><span class="line">	<span class="keyword">double</span> height;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">double</span> weight, <span class="keyword">double</span> height)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.weight = weight;</span><br><span class="line">		<span class="keyword">this</span>.height = height;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getWeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> weight;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> height;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Person jeff = <span class="keyword">new</span> Person(<span class="string">"Jeff"</span>, <span class="number">72.4</span>, <span class="number">2.2</span>);</span><br><span class="line">		Person jim = <span class="keyword">new</span> Person(<span class="string">"Jim"</span>, <span class="number">65</span>, <span class="number">1.7</span>);</span><br><span class="line">		System.out.println(<span class="string">"Jeff is "</span> + jeff.getHeight() + <span class="string">"m tall."</span>);</span><br><span class="line">		System.out.println(<span class="string">"Jim is "</span> + jim.getHeight() + <span class="string">"m tall."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/COM6506-Week02.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <p>K-means 算法的基本流程如下：</p>
+<ol>
+<li>随机取 K 个种子点。</li>
+<li>然后对所有点求到这K个种子点的距离，假如点 Pi 离种子点 Si 最近，那么 Pi 属于 Si 点群</li>
+<li>接下来，移动种子点到属于他的“点群”的中心。</li>
+<li>然后重复第2）和第3）步，直到种子点没有移动。</li>
+</ol>
+<p>其中求点群中心的算法，可以有更多的更灵活的公式：</p>
+<ul>
+<li>Minkowski Distance 公式，λ 可以随意取值，可以是负数，也可以是正数，或是无穷大。</li>
+<li>Euclidean Distance 公式，第一个公式 λ=2 的情况。</li>
+<li>CityBlock Distance 公式，第一个公式 λ=1 的情况。</li>
+</ul>
+<p>K-means 主要有两个缺陷：</p>
+<ul>
+<li>K 是事先给定的，这个 K 值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。（ ISODATA 算法通过类的自动合并和分裂，得到较为合理的类型数目 K）</li>
+<li>K-means算法需要用初始随机种子点来搞，这个随机种子点太重要，不同的随机种子点会有得到完全不同的结果。（K-Means++ 算法可以用来解决这个问题，其可以有效地选择初始点）</li>
+</ul>
+<p>K-means++ 算法的基本流程如下：</p>
+<ol>
+<li>先从我们的数据库随机挑个随机点当“种子点”。</li>
+<li>对于每个点，计算其和最近的一个“种子点”的距离 D(x) 并保存在一个数组里，把这些距离加起来得到 Sum(D(x))。</li>
+<li>取一个随机值，用权重的方式来取计算下一个“种子点”。这个算法的实现是，先取一个能落在 Sum(D(x)) 中的随机值 Random，然后用 Random -= D(x)，直到其 &lt;=0，此时的点就是下一个“种子点”。</li>
+<li>重复第（2）和第（3）步直到所有的K个种子点都被选出来。</li>
+<li>进行 K-means 算法。</li>
+</ol>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -732,7 +753,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week03.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/移动对象轨迹序列模式挖掘.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -752,7 +773,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/COM6516-Week03.html" class="post-title-link" itemprop="url">COM6516 Week03</a>
+                <a href="/移动对象轨迹序列模式挖掘.html" class="post-title-link" itemprop="url">移动对象轨迹序列模式挖掘</a>
               
             
           </h2>
@@ -777,7 +798,7 @@
                 
               
 
-              <time title="Created: 2018-10-08 11:58:45" itemprop="dateCreated datePublished" datetime="2018-10-08T11:58:45Z">2018-10-08</time>
+              <time title="Created: 2017-08-19 09:18:25" itemprop="dateCreated datePublished" datetime="2017-08-19T09:18:25Z">2017-08-19</time>
             
 
             
@@ -795,7 +816,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
 
                 
                 
@@ -831,16 +852,13 @@
 
       
         
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * FoodStore.java  	1.0 26/08/2011</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Copyright (c) University of Sheffield 2011</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * FoodStore.java</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * A simple class used in COM6516 lab class</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// this line of code declares the class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FoodStore</span> </span>&#123;</span><br><span class="line">	<span class="comment">// this is the constructor, which is called when a new object is created</span></span><br><span class="line">	<span class="comment">// the constructor name is always the same as the class name</span></span><br><span class="line">	<span class="comment">// classes can have more than one constructor</span></span><br><span class="line">	<span class="comment">// the constructor make take zero or more parameters</span></span><br><span class="line">	<span class="comment">// in this case there is one parameter (int a) that is used to set the</span></span><br><span class="line">	<span class="comment">// instance field of the class</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">FoodStore</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">		amountStored = a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">// these are class methods, which enable the value of the instance</span></span><br><span class="line">	<span class="comment">// field to be modified</span></span><br><span class="line">	<span class="comment">// these methods have a public access modifier, because they need to</span></span><br><span class="line">	<span class="comment">// be called by other classes</span></span><br><span class="line">	<span class="comment">// neither class method returns anything, so the return type is void</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">depositFood</span><span class="params">(<span class="keyword">int</span> amountToDeposit)</span> </span>&#123;</span><br><span class="line">		depositAmount += amountToDeposit;</span><br><span class="line">		amountStored = amountStored + amountToDeposit;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">withdrawFood</span><span class="params">(<span class="keyword">int</span> amountToWithdraw)</span> </span>&#123;</span><br><span class="line">		withdrawAmount += amountToWithdraw;</span><br><span class="line">		amountStored = amountStored - amountToWithdraw;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// these are accessor methods, which return the value of the</span></span><br><span class="line">	<span class="comment">// instance field</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAmountStored</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (amountStored);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// this is the instance field, which is an attribute associated with</span></span><br><span class="line">	<span class="comment">// each object of the FoodStore class</span></span><br><span class="line">	<span class="comment">// the access modifier is private, which means that this field can </span></span><br><span class="line">	<span class="comment">// only be accessed through the class methods</span></span><br><span class="line">	<span class="comment">// by keeping instance fields private there is a well specified interface </span></span><br><span class="line">	<span class="comment">// to the data associated with each object</span></span><br><span class="line">	<span class="comment">// this approach is called encapsulation</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> amountStored;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> depositAmount = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> withdrawAmount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDepositAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> depositAmount;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWithdrawAmount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> withdrawAmount;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/COM6516-Week03.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <p>移动对象轨迹是由大量的时空数据组成的一系列数据，具有实时性、海量性、不确定性等特点，如何通过对实时的时空轨迹数据进行分析进而挖掘出用户需要的轨迹行为模式是基于位置服务的一大研究热点。</p>
+<p>数据挖掘 (Data Mining) 近来一直备受关注，相关研究也逐渐深入，加之技术日趋成熟，已逐渐转变成用户移动数据挖掘的一种重要工具。由时间序列引出的序列模式挖掘 (Sequence Pattern Mining)，作为数据挖掘的一个重要方法，吸引了很多研究者前来研究，一定程度上解决了如何通过用户的移动轨迹数据集挖掘出有效信息的困惑。面对时间和空间两个方面的移动轨迹信息，首先通过时间这一属性将轨迹数据转化为时间线上的序列模式 (Sequence Pattern)，再对每条的序列数据进行模式挖掘 (Pattern Mining)，去除噪音，挖掘出有效信息。序列模式挖掘已经成为将移动对象的大量轨迹数据转化为有用的信息资源的有效工具，进而可以进行高效的科学决策。</p>
+<p>对于序列模式挖掘算法，国内外的一些研究均在 Apriori 的算法以及 PrefixSpan 算法这两大类的基础上进行的。Apriori 算法是 R.Agrawal 和 R.Srikant 共同提出的规则挖掘频繁项集的算法，并且此算法衍生了很多其他的算法，例如：AprioriAll 算法、GSP 算法和 SPADE 算法等。而 PrefixSpan 算法则是由 J.Han 等人提出的基于数据库投影模式增长的算法，此算法也衍生出很多算法，例如：Freespan 算法等。</p>
+<p>序列模式挖掘 (Sequence Pattern Mining) 是指在时间序列数据中挖掘频繁出现的时间序列。序列模式挖掘在数据挖掘的研究中占着十分重要的位置。时间序列数据通过系统提取，能够让人们做出适当的调整或者及时发现变动，而且时间序列数据之间的规律通过序列模式挖掘之后则可以发现更多潜在的知识，甚至成为一个重要的理论热点或者发现更高的实用价值。</p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -895,7 +913,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/COM6516-Week01-02.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/4 种序列模式挖掘算法的比较分析.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -915,7 +933,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/COM6516-Week01-02.html" class="post-title-link" itemprop="url">COM6516 Week01-02</a>
+                <a href="/4 种序列模式挖掘算法的比较分析.html" class="post-title-link" itemprop="url">4 种序列模式挖掘算法的比较分析</a>
               
             
           </h2>
@@ -940,7 +958,7 @@
                 
               
 
-              <time title="Created: 2018-10-01 15:03:47" itemprop="dateCreated datePublished" datetime="2018-10-01T15:03:47Z">2018-10-01</time>
+              <time title="Created: 2017-08-12 22:28:52" itemprop="dateCreated datePublished" datetime="2017-08-12T22:28:52Z">2017-08-12</time>
             
 
             
@@ -958,7 +976,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/序列模式挖掘/" itemprop="url" rel="index"><span itemprop="name">序列模式挖掘</span></a></span>
 
                 
                 
@@ -994,16 +1012,17 @@
 
       
         
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * HelloWorld.java</span></span><br><span class="line"><span class="comment"> * A traditional Hello World program!</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// In Java, all programs reside in a class. This class is called HelloWorld, </span></span><br><span class="line"><span class="comment">// and should be saved in a file called HelloWorld.java. This class has a single</span></span><br><span class="line"><span class="comment">// method called main, which is the entry point to the program.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Compiling the class with javac HelloWorld.java will produce a bytecode file</span></span><br><span class="line"><span class="comment">// called HelloWorld.class if compilation is successful. This bytecode can then</span></span><br><span class="line"><span class="comment">// be run on any machine with a java bytecode interpreter. You can run the</span></span><br><span class="line"><span class="comment">// bytecode in a console by typing java HelloWorld.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		String helloString = <span class="string">"Hello"</span>;</span><br><span class="line">		String worldString = <span class="string">"World!"</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java the System.out.println command displays the argument to the </span></span><br><span class="line">		<span class="comment">// console. However the command below doesn't work, because helloWorldAString</span></span><br><span class="line">		<span class="comment">// has not been declared. Try compiling this file to see what happens, </span></span><br><span class="line">		<span class="comment">// and take a careful look at the error message that is produced.</span></span><br><span class="line"></span><br><span class="line">		System.out.println(helloString + <span class="string">" "</span> + worldString);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java, we can use the '+' operator to concatenate strings, </span></span><br><span class="line">		<span class="comment">// so to fix this problem, either change the argument passed to the</span></span><br><span class="line">		<span class="comment">// System.out.println method from (helloWorldString) to </span></span><br><span class="line">		<span class="comment">// (helloString + " " + worldString)</span></span><br><span class="line">		<span class="comment">// or declare the variable helloWorldString before it is used by </span></span><br><span class="line">		<span class="comment">// System.out.println by inserting </span></span><br><span class="line">		<span class="comment">// String helloWorldString = helloString + " " + worldString;</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// In Java a variable can be declared anywhere in the code, so it is</span></span><br><span class="line">		<span class="comment">// possible to declare a variable just before it is used, which makes for</span></span><br><span class="line">		<span class="comment">// code that is easier to read and understand.</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// It is conventional to use mixed case for variable names and method </span></span><br><span class="line">		<span class="comment">// names in Java, with with the first letter lower case, and then the </span></span><br><span class="line">		<span class="comment">// first letter of each internal word in upper case -- e.g. helloString.</span></span><br><span class="line">		<span class="comment">// Class names start with a capital letter -- e.g. HelloWorld.java</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// details at: http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-135099.html</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/COM6516-Week01-02.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
+            <ul>
+<li>AprioriAll 算法属于 Apriori 类算法，其基本思想为首先遍历序列数据库生成候选序列并利用 Apriori 性质进行剪枝得到频繁序列。每次遍历都是通过连接上次得到的频繁序列生成新的长度加1的候选序列，然后扫描每个候选序列验证其是否为频繁序列。</li>
+<li>GSP（generalized sequential pattern）算法是 AprioriAll 算法的扩展算法，其算法的执行过程和 AprioriAll 类似，最大的不同在于 GSP 引入了时间约束、滑动时间窗和分类层次技术，增加了扫描的约束条件，有效地减少了需要扫描的候选序列的数量。此外 GSP 利用哈希树来存储候选序列，减少了需要扫描的序列数量。</li>
+<li>FreeSpan 算法是基于模式投影的序列挖掘算法，其基本思想：利用当前挖掘的频繁序列集将序列数据库递归地投影到一组更小的投影数据库上，分别在每个投影数据库上增长子序列。这一过程对数据和待检验的频繁模式集都进行了分割，并且每一次检验限制在与其相符合的更小投影数据库中。</li>
+<li>PrefixSpan 是 FreeSpan 的改进算法，即通过前缀投影挖掘序列模式。其基本思想：投影时不考虑所有可能出现的频繁子序列，只检查前缀序列，然后把相应的后缀投影成投影数据库。每个投影数据库中，只检查局部频繁模式，在整个过程中不需要生成候选序列。</li>
+</ul>
+<p>AprioriAll GSP 这两种算法都属于 Apriori 类算法，都要产生大量的候选序列，需要有足够的存贮空间。同时还需要反复扫描数据库，需要占用很多运行时间。该类算法的执行效率比较低，特别是在支持度比较低的情况下，其执行效率将会大大下降。和 AprioriAll 相比，GSP 的执行效率比较高，总体来说要比 AprioriAll 高 2~20 倍。</p>
+<p>FreeSpan PrefixSpan 这两种算法都属于模式增长算法，它们的查找更加集中和有效。由于该类算法不生成大量的候选序列以及不需要反复扫描原数据库，和 Apriori 类算法相比该类算法要快且更有效，特别是在支持度比较低的情况下更明显。此外，在时空的执行效率上，PrefixSpan 比 FreeSpan 更优。</p>
+
           
-          <!--/noindex-->
         
       
     </div>
@@ -1058,7 +1077,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://real-neo.me/Change-Comment-System.html">
+    <link itemprop="mainEntityOfPage" href="https://real-neo.me/K-means 的初步了解.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="问少">
@@ -1078,7 +1097,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Change-Comment-System.html" class="post-title-link" itemprop="url">更换评论系统</a>
+                <a href="/K-means 的初步了解.html" class="post-title-link" itemprop="url">K-means 的初步了解</a>
               
             
           </h2>
@@ -1103,7 +1122,7 @@
                 
               
 
-              <time title="Created: 2018-07-02 16:40:14" itemprop="dateCreated datePublished" datetime="2018-07-02T16:40:14Z">2018-07-02</time>
+              <time title="Created: 2017-08-05 20:28:19" itemprop="dateCreated datePublished" datetime="2017-08-05T20:28:19Z">2017-08-05</time>
             
 
             
@@ -1121,7 +1140,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/糟心/" itemprop="url" rel="index"><span itemprop="name">糟心</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/聚类分析/" itemprop="url" rel="index"><span itemprop="name">聚类分析</span></a></span>
 
                 
                 
@@ -1158,9 +1177,18 @@
       
         
           
-            <p>最近一直在忙着毕业的事情，没有打理博客。等到基本事情都做完回来看博客的时候发现，原来使用的 HyperComments 评论系统已经开始收费了，并且只有在订阅之后才可以进入管理页面。</p>
-<p>这样一来，原本的评论想要找回来就只能强制被收费了，那只好对 HyperComments 说再见了，重新投入 Disqus 的怀抱。</p>
-<p>然而 Disqus 在国内被屏蔽，这也是没办法的事情，所以……以后网站的评论就只能是随缘评论了……</p>
+            <p>K-means 算法属于基于划分的聚类方法，是一种最简单的无监督学习算法，也是十大经典数据挖掘算法之一。<br>K-means 算法通过迭代来实现，其基本思想为：每次确定 K 个中心点，将各节点归属到与之最近的中心点所代表的 cluster，然后确定新的中心点，并继续聚类，直到聚类结果不再变化停止迭代。</p>
+<p>K 值的选取：<br>算法中 K 值需要事先给定，但这个K值的选定是非常难以估计的。很多时候，事先并不知道给定的数据集应该分成多少个类别才最合适。这也是 K-means 算法的一个不足。</p>
+<p>初始中心点的选取：<br>初始聚类中心点唯一地决定了聚类结果，因此其选择对聚类结果有很大的影响，一旦初始值选择的不好，可能无法得到有效的聚类结果，这也是 K-means 算法的一个主要问题。</p>
+<p>K-means 算法并不能保证得到的解为全局最优解，通常得到的是一个局部最优解。</p>
+<p>K-means 算法确定的 K 个 cluster 达到平方误差最小。当聚类是密集的，且类与类之间区别明显时，效果比较好。对于处理大数据集，这个算法是高效和可扩展的，时间复杂度可达到最优。</p>
+<p>改进算法：</p>
+<ul>
+<li>K-means 要手工输入类数目，对初始值的设置很敏感，所以有了 K-means++、intelligent K-means、genetic K-means；</li>
+<li>K-means 对噪声和离群值非常敏感，所以有了 K-medoids 和 K-medians；</li>
+<li>K-means 只用于numerical类型数据，不适用于 categorical 类型数据，所以 K-modes；</li>
+<li>K-means 不能解决非凸（non-convex）数据，所以有了 kernel K-means。</li>
+</ul>
 
           
         
@@ -1206,7 +1234,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1250,7 +1278,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">85</span>
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1434,7 +1462,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">69</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">73</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
