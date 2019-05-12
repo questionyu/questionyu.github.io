@@ -1,12 +1,14 @@
 ---
-title: Python程序设计 第二周
+title: Python程序设计
 date: 2018-03-16 17:53:12
 categories:
   - Code
 tags:
   - Python
+  - Python程序设计
 ---
 
+## 第二周
 * 利用嵌套循环 ， 输出 2-100 之间的质数。
 * 有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
 * 输出 9*9 乘法口诀表。
@@ -51,4 +53,44 @@ for i in range(1, 10):
     for j in range(1, i + 1):
         print("%d*%d=%2d" % (i, j, i * j), end=" ")
     print()
+```
+
+## 第三周
+* 绘画如图所示分形树。
+
+![分形树](/uploads/2018/03/分形树.png)
+
+``` python
+# 绘画分形树。
+import turtle
+
+
+def draw_y(size, n):
+    for angle in [30, 120]:
+        turtle.left(angle)
+        if n < 2:
+            turtle.pencolor("green")
+        else:
+            turtle.pencolor("red")
+        turtle.fd(size)
+        if n != 0:
+            draw_y(size / 1.5, n - 1)
+            turtle.left(30)
+        else:
+            turtle.left(180)
+        turtle.penup()
+        turtle.fd(size)
+        turtle.pendown()
+
+
+turtle.setup(600, 600)
+turtle.penup()
+turtle.goto(0, -200)
+turtle.pensize(1)
+turtle.left(90)
+turtle.pencolor("red")
+turtle.pendown()
+level = 5
+turtle.fd(150)
+draw_y(100, level)
 ```
