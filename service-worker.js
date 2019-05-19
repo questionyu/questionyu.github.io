@@ -69,8 +69,8 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (event) {
     console.log('[Service Worker] Fetch', event.request.url);
-    var regex = /https\:\/\/real\-neo\.me\/[\s\S]*\.html/i;
-    if (event.request.url.match(regex)) {
+    var blog = /https\:\/\/real\-neo\.me[\s\S]*/i;
+    if (event.request.url.match(blog)) {
         // Network falling back to cache
         event.respondWith(async function () {
             try {
