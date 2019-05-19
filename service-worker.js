@@ -69,7 +69,29 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (event) {
     console.log('[Service Worker] Fetch', event.request.url);
+    var regex = /https\:\/\/real\-neo\.me\/[\s\S]*\.html/i;
     if (event.request.url.match(regex)) {
+        // Generic fallback + save cache
+        console.log('::::::::::::::::::1 - starting');
+        event.respondWith(async function () {
+            console.log('::::::::::::::::::1 - responding');
+            const cachedResponse = await caches.match(event.request);
+
+            if (cachedResponse) return cachedResponse;
+
+            try {
+                const cache = await caches.open('real-neo');
+                const networkResponsePromise = fetch(event.request);
+                const networkResponse = await networkResponsePromise;
+                await cache.put(event.request, networkResponse.clone());
+                console.log('::::::::::::::::::1 - network');
+                return networkResponsePromise;
+            } catch (e) {
+                console.log('::::::::::::::::::1 - Error, cache');
+                return caches.match('/images/default-avatar.png');
+            }
+        }());
+    } else {
         // Network falling back to cache
         console.log('::::::::::::::::::2 - starting');
         event.respondWith(async function () {
