@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="Lab 1新学期，新的语言学习开始了~还是老样子，写代码~1234567public class TestArgs &amp;#123;	public static void main (String[] args) &amp;#123;		System.out.println(&quot;Name			= &quot; + args[0] + &quot; &quot; + args[1]);		System.out.println(&quot;BUPT Em">
 <meta name="keywords" content="Java,EBU4201">

@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="一个问少写字的地方。">
 <meta property="og:type" content="website">
@@ -468,7 +481,7 @@
       </h3>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-08T16:35:30+01:00" content="2018-10-08">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-10-08T15:35:30Z" content="2018-10-08">
           10-08
         </time>
       </div>
@@ -572,7 +585,7 @@
       </h3>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-04-20T13:00:00+01:00" content="2017-04-20">
+        <time class="post-time" itemprop="dateCreated" datetime="2017-04-20T12:00:00Z" content="2017-04-20">
           04-20
         </time>
       </div>
@@ -676,7 +689,7 @@
       </h3>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2015-03-22T22:57:42+00:00" content="2015-03-22">
+        <time class="post-time" itemprop="dateCreated" datetime="2015-03-22T22:57:42Z" content="2015-03-22">
           03-22
         </time>
       </div>

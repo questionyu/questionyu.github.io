@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="这是什么             If you want to see English Version of this post, you can go here: Adjust the system partition &amp;amp; Merge partitions of Mi3TD-Support offical OTA            这是一篇可以指导你将你的小米 3 TD 调整系统分区">
 <meta name="keywords" content="小米,pisces,Android">

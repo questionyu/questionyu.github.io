@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="本文最后更新于 2019年3月8日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            介绍之前使用 Ubuntu 和 CentOS 的时候，它们都各自拥有便捷的包管理器 APT 和 YUM，使用它们安装卸载软件，自动解决依赖问题，非常方便。最近在换用 macOS 系统之后，却没有了类似的管理器，安装软件又回到了和 Windows 一样的体验。虽">
 <meta name="keywords" content="macOS,Homebrew">

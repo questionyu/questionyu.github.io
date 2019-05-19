@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="作为国院的一名学生，咱们有一些别人没有的福利：QM 给每位学生都发了一份 Office 365 订阅！有了这份订阅你就可以在你的 Windows 上或者 Mac 上安装最新的 Office 2016，或者 Office 2013 也可以~一起看看怎么获取这个福利吧~">
 <meta name="keywords" content="BUPT,QMUL,Office365">

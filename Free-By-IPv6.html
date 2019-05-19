@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            自从挖煤的校长来了之后，校园网就不再是免费使用了，变成了现在这个样子：每个月 20G 免费流量，超出需要付费。对于大部分人来说，寝室的 WiFi 好像突然就变得鸡肋了，连上了 WiFi 也不敢放肆了，真是让人憋屈。 在我搬回本部之前就已经在研究这个如何免流量">
 <meta name="keywords" content="免流,校园网,DNS64,IPv6,Shadowsocks,SSTap">

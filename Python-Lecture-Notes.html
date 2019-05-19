@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="第一周Python程序设计-第一周.pdf                         第二周Python程序设计-第二周.pdf                         第三周Python程序设计-第三周.pdf玫瑰花.py                         第四周Python程序设计-第四周.pdf">
 <meta name="keywords" content="Python">

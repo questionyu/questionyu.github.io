@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="小学期。。。给我最深刻的启发就是。。。这辈子打死我都不做程序员。。。太TM累了。。。  小学期的任务是这样的：  题目概述：某学校近年来招生规模不断扩大，每个院系的专业、班级、学生的数量急剧增加，在校学生管理的各种信息量也成倍增长。旧有的人工操作的学生信息管理工作，重复工作多，工作量大，效率低。因此，迫切需要电子化办公来提高管理工作的效率。请设计并实现一个学生选课管理系统或一个图书借阅系统来实现选">
 <meta name="keywords" content="小学期,C">

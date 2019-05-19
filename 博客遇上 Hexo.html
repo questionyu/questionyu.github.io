@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="我为什么又换博客框架了？我的小站 2015 年初上线，还有三个月就满两年了，从一开始的 WordPress 到 Typecho 再到 WordPress，我每一次更换都是代表着我对博客看法的变化。  最早用 WordPress 是因为它相对其他博客来说简单省心，而且插件多，可以满足我各种需要。 后来一个月不到就换了 Typecho，是因为，我发现 WordPress 的访问缓慢，对服务器配置要求较">
 <meta name="keywords" content="Hexo,Github,Cloudflare">

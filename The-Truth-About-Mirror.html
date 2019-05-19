@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="今天在 Google 上面仔细找了找 Gato Sabido 这个玩意儿，发现原来是巴西的一家做电子书的网站，不知道这个域名是被谁给攻击了，竟然解析到了我的 IP 上～ 我还以为是这个域名原有的人恶意镜像我的网站的，这下看来是背了黑客的锅了，这个域名也是受害者啊～">
 <meta name="keywords" content="域名">

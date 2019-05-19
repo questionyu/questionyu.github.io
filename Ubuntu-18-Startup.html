@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="本文最后更新于 2019年3月14日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            在 Ubuntu 16.04 版本中，配置开机启动项是一件很简单的事情，只需在 /etc/rc.local 中添加即可。 但在 Ubuntu 18.04 中，此方法失效。经搜索实践，总结了一下较为简单的设置开机启动项的方法。 首先运行1$ crontab -">
 <meta name="keywords" content="Ubuntu">

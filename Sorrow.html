@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="几年以前，我曾经嘲笑过某科技界大佬。当时他说：也许 90 后、95 后会慢慢不知道谷歌是什么网站。 那一年，这对于我来说简直就是世界上最好笑的笑话。谷歌，全世界最卓越的互联网公司，活在互联网的一代中国人，会不知道他们的网站？ 今天，我收回这句嘲笑。因为这件不可能的事，它慢慢变成了现实。 没有人再关注什么谷歌不谷歌。对他们来说，百度也蛮好用的，反正他们几乎没用过谷歌。没有谷歌又怎样？大家还是开心的刷">
 <meta name="keywords" content="Google,Facebook,Twitter">

@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="好久不在小站上写东西了，一个半月里经历了很多，却什么都不想写，到了双十一了，早早看好的东西却下架了，我买不了 T_T，所以双十一只做了这么一件事。。。">
 <meta name="keywords" content="双十一">

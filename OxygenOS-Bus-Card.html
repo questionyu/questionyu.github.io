@@ -102,6 +102,19 @@
 
 
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="本文最后更新于 2018年5月24日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            两个月前，我换了一加 5T，算是 48 年入国军了吧，不过等于 7 看样子会有刘海，无爱，放弃；而 5T 的 835 性能又很足够，造型也很讨我喜欢。 买来后果断刷了氧 OS 使用，确实没让我失望，内置 Google 框架，使用很流畅。前两天，因为想尝试着体">
 <meta name="keywords" content="一加,氧OS,公交卡">
