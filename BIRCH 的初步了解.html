@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="BIRCH 概述BIRCH 算法属于层次聚类算法的一种，全称是利用层次方法的平衡迭代规约和聚类 (Balanced Iterative Reducing and Clustering Using Hierarchies)。BIRCH 算法利用了一个树结构进行快速的聚类，这个数结构类似于平衡 B+ 树，一般将它称之为聚类特征树 (Clustering Feature Tree，简称 CF Tree)">
 <meta name="keywords" content="聚类算法,BIRCH">

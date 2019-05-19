@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="Week01-02123456789101112131415161718192021222324252627282930313233343536373839404142434445464748/* * HelloWorld.java * A traditional Hello World program! */// In Java, all programs reside in a class.">
 <meta name="keywords" content="Java,COM6516">

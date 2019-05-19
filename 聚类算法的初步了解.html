@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="聚类算法主要是用在聚类分析中的算法，而聚类分析（群集分析）是对于统计数据分析的一门技术把相似的对象通过静态分类的方法分成不同的组别或者更多的子集，这样让在同一个子集中的成员对象都有相似的一些属性，常见的包括在坐标系中更加短的空间距离等。 移动对象常访问位置点的挖掘（聚类算法）：  基于划分的算法的输入是包含n个对象的数据库和簇的数目 k；输出是 k 个簇，使平方误差准则最小。优点：简单，易于理解和">
 <meta name="keywords" content="聚类算法,K-means">

@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="4 月 30 日，国际评测机构 AV-Comparatives（简称 AV-C）等发布声明，称 360、百度、腾讯等中国厂商使用特殊版本参加测试，剥夺了 360 在 2015 年最新测试的奖项。对此，360 方面在微博发表公开声明，对评测机构的突然发难表示震惊，并表示在测试中一直保持公开、透明的态度，对参测版本一事并无隐瞒，希望评测机构对此事进行调查，如不能还其清白，将不排除不再参加任何评测的可能">
 <meta name="keywords" content="360,AV-C,杀毒">

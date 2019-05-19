@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="生活的地方也许往往存在着我们认知以外的人和事，有时候会突然发现我们再熟悉不过的城市就好像一片黑森林。  匆忙之中要吃完饭赶回学校上课，去了麦当劳准备随便垫吧点东西。旁边是大学，对面是中学，饭点的时候这个地方向来人很多。拿到吃的之后找座位，靠窗的地方都没有了，只好找到一个坐在四人桌的单身妹子坐她对面拼桌吃。右边也是一个四人桌，只坐了一个老爷爷，带着老花镜，桌子上放了好几本书和笔记本，他在看书整理笔记">
 <meta name="keywords" content="谁叫特斯拉">

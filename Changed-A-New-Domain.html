@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="在老高的博客上面逛，看到老高推荐大家去 namesilo 注册域名，还非常便宜，苦于一直 tk 域名百度不收录的我，按捺不住于是就买了一个 com 域名，一年 50 块，还可以，不过我的博客要一直坚持写下去才可以！">
 <meta name="keywords" content="域名">

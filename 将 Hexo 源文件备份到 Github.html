@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="首次备份在 Hexo 根目录下，初始化 git 仓库1$ git init 创建并切换到分支 “hexo”1$ git checkout -b hexo 添加 README.md 文件，可忽略1$ git add README.md 添加文件列表1$ git add -A 添加提交说明1$ git commit -m &quot;First commit&quot; 设置远程仓库映射1$ git remote add">
 <meta name="keywords" content="Hexo,Github">

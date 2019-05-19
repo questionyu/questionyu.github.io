@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="本文最后更新于 2019年3月7日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            在安装了 Android Studio 之后，相关的 adb fastboot 等工具应该都应经下载在电脑里了。但是 AS 并没有把相关的目录加入 PATH，导致在终端里不可以方便的直接使用，需要加上很长的一串路径才可可以。这个文章记录下解决的办法。 编辑 B">
 <meta name="keywords" content="macOS,Android">

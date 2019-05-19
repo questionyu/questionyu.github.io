@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="嗨，我是问少，至今还是一枚大学僧已经毕业了。我的这个小站始建于 2015 年的 2 月，那个时候我还是大一，刚刚开始接触各种科学上网的姿势，也学习到了一些 Linux 的基本操作，有了个 VPS 之后就开始研究了各种乱七八糟的东西。从此接触到了个人博客~一开始是用的 WordPress，后来发现这货和 Typecho 比起来大了不止一点，Typecho 又轻又快，一知道这个立刻换了博客程序为 Ty">
 <meta property="og:type" content="website">

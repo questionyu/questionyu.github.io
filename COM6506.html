@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="Week 02123456789101112131415161718192021222324252627282930public class Person &amp;#123;	String name;	double weight;	double height;	public Person(String name, double weight, double height) &amp;#123;		this.na">
 <meta name="keywords" content="Java,COM6506">

@@ -69,16 +69,22 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (event) {
     console.log('[Service Worker] Fetch', event.request.url);
-    // Network falling back to cache
-    event.respondWith(async function () {
-        try {
-            const cache = await caches.open('real-neo');
-            const networkResponsePromise = fetch(event.request);
-            const networkResponse = await networkResponsePromise;
-            await cache.put(event.request, networkResponse.clone());
-            return networkResponsePromise;
-        } catch (e) {
-            return caches.match(event.request);
-        }
-    }());
+    if (event.request.url.match(regex)) {
+        // Network falling back to cache
+        console.log('::::::::::::::::::2 - starting');
+        event.respondWith(async function () {
+            console.log('::::::::::::::::::2 - responding');
+            try {
+                const cache = await caches.open('real-neo');
+                const networkResponsePromise = fetch(event.request);
+                const networkResponse = await networkResponsePromise;
+                await cache.put(event.request, networkResponse.clone());
+                console.log('::::::::::::::::::2 - network');
+                return networkResponsePromise;
+            } catch (e) {
+                console.log('::::::::::::::::::2 - Error, cache');
+                return caches.match(event.request);
+            }
+        }());
+    }
 });

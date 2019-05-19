@@ -102,7 +102,19 @@
 
 
 
->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 
   <meta name="description" content="移动对象轨迹是由大量的时空数据组成的一系列数据，具有实时性、海量性、不确定性等特点，如何通过对实时的时空轨迹数据进行分析进而挖掘出用户需要的轨迹行为模式是基于位置服务的一大研究热点。 数据挖掘 (Data Mining) 近来一直备受关注，相关研究也逐渐深入，加之技术日趋成熟，已逐渐转变成用户移动数据挖掘的一种重要工具。由时间序列引出的序列模式挖掘 (Sequence Pattern Mining">
 <meta name="keywords" content="序列模式挖掘">
