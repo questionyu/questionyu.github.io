@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="二进制数中 1 的个数这个问题可以说是很常见的基础问题了。 最简单最慢的方法就是转换成字符串查 1 的数量。 比较快的方法是使用位运算。 举例来说，整数 35，用二进制表示就是 0000 0000 0010 0011，二进制数中有 3 个 1。计算这个数字中的 1 的个数，使用与运算便可以快速完成。">
 <meta name="keywords" content="Python,算法">

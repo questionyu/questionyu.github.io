@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="本文最后更新于 2019年3月5日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            有时因为开发的需求，需要为本地的网页服务器设置 https 访问。在这里记录一下在 macOS 系统下快速创建自签名证书并设置可信的方法。 Xcode Command Line Tools基本所有在 macOS 中开发的人应该都已经安装过了命令行工具，在终端中">
 <meta name="keywords" content="证书,macOS">

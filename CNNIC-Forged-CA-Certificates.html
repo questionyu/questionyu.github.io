@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="根据 谷歌在线安全博客 报道和 Mozilla 安全博客 报道，谷歌发现 CNNIC 颁发了多个针对谷歌域名的伪造 CA 假证书。这个名为 MCS 集团的中级证书颁发机构发行了多个谷歌域名的假证书，而 MCS 集团的中级证书则来自中国的 CNNIC。 该证书冒充成受信任的谷歌的域名，被用于部署到网络防火墙中，用于劫持所有处于该防火墙后的HTTPS网络通信，而绕过浏览器警告。 谷歌联系了 CNNIC">
 <meta name="keywords" content="CNNIC,证书,Google">

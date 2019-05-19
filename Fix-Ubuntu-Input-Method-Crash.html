@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="最近在使用 Ubuntu 18.04 的过程中，遇到了一个拼音输入法总是在选字的时候崩溃的问题。 崩溃表现crashed with SIGABRT in __assert_fail_base() 具体表现为：在打字时，无法使用数字键选择字词，鼠标点选也无效，只能按空格打出第一个字词。当按数字键选择字词时，输入法会崩溃，并输出字母和数字，例如我想打出“谷歌”，“谷歌”在候选列表第二个位置，按下 2，">
 <meta name="keywords" content="Ubuntu,ibus">

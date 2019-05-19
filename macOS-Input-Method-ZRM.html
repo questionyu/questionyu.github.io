@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="用了 macOS 一段时间了，一直使用的是搜狗输入法，因为系统自带的双拼输入法不支持自然码。 不过最近在网上看相关的双拼练习时，发现原来用过的双拼练习的作者 @BlueSky 给出了提示，macOS 其实内置隐藏了双拼的自然码方案。 只需在终端内输入以下命令即可：1$ defaults write com.apple.inputmethod.CoreChineseEngineFramework s">
 <meta name="keywords" content="macOS,双拼,自然码">

@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="第二周 利用嵌套循环 ， 输出 2-100 之间的质数。 有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？ 输出 9*9 乘法口诀表。  1234567# 输出2-100之间的素数for i in range(2, 101):    for j in range(2, i):        if not (i % j):         # 如果 i 整除 j（i">
 <meta name="keywords" content="Python,Python程序设计">

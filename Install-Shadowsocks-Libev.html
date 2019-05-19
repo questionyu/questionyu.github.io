@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="本文最后更新于 2018年3月16日 可能会因为没有更新而失效。如已失效或需要修正，请留言！            Shadowsocks 目前是众多梯子中非常出色的一款，本文记录一下 Shadowsocks-Libev 版在 Linux 系统下的安装步骤。 Shadowsocks 可以指：一种基于 Socks5 代理方式的加密传输协议，也可以指实现这个协议的各种开发包。">
 <meta name="keywords" content="Shadowsocks,Linux">

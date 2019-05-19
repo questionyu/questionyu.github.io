@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="AprioriAll 算法属于 Apriori 类算法，其基本思想为首先遍历序列数据库生成候选序列并利用 Apriori 性质进行剪枝得到频繁序列。每次遍历都是通过连接上次得到的频繁序列生成新的长度加1的候选序列，然后扫描每个候选序列验证其是否为频繁序列。 GSP（generalized sequential pattern）算法是 AprioriAll 算法的扩展算法，其算法的执行过程和 Ap">
 <meta name="keywords" content="序列模式挖掘,AprioriAll,GSP,FreeSpan,PrefixSpan">

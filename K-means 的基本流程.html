@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="K-means 算法的基本流程如下：  随机取 K 个种子点。 然后对所有点求到这K个种子点的距离，假如点 Pi 离种子点 Si 最近，那么 Pi 属于 Si 点群 接下来，移动种子点到属于他的“点群”的中心。 然后重复第2）和第3）步，直到种子点没有移动。  其中求点群中心的算法，可以有更多的更灵活的公式：  Minkowski Distance 公式，λ 可以随意取值，可以是负数，也可以是正数">
 <meta name="keywords" content="聚类算法,K-means">

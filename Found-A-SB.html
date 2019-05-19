@@ -102,19 +102,7 @@
 
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-</script>
+>
 
   <meta name="description" content="前一段时间在 Google 上面搜索我的网站，发现竟然有好多“问少的小站”的结果，刚刚准备高兴，一看却不是自己的域名，竟然是被镜像了！这 TM 就非常尴尬了~">
 <meta name="keywords" content="镜像">
