@@ -33,7 +33,8 @@ const filesToCache = [
     '/lib/fancybox/source/jquery.fancybox.css',
     '/css/main.css?v=7.1.0',
     '/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0',
-    '/favicon.ico'
+    '/favicon.ico',
+    '/offline.html'
 ];
 
 /**
@@ -69,9 +70,24 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (event) {
     console.log('[Service Worker] Fetch', event.request.url);
+    var blogDetail = /https\:\/\/real\-neo\.me\/[\s\S]*\.html/i;
     var blog = /https\:\/\/real\-neo\.me[\s\S]*/i;
-    if (event.request.url.match(blog)) {
-        // Network falling back to cache
+    if (event.request.url.match(blogDetail)) {
+        event.respondWith(async function () {
+            const cachedResponse = await caches.match(event.request);
+            if (cachedResponse) return cachedResponse;
+
+            try {
+                const cache = await caches.open('ins-dynamic');
+                const networkResponsePromise = fetch(event.request);
+                const networkResponse = await networkResponsePromise;
+                await cache.put(event.request, networkResponse.clone());
+                return networkResponsePromise;
+            } catch (e) {
+                return caches.match('/offline.html');
+            }
+        }());
+    } else if (event.request.url.match(blog)) {
         event.respondWith(async function () {
             try {
                 const cache = await caches.open('real-neo');
@@ -80,7 +96,9 @@ self.addEventListener('fetch', function (event) {
                 await cache.put(event.request, networkResponse.clone());
                 return networkResponsePromise;
             } catch (e) {
-                return caches.match(event.request);
+                const cachedResponse = await caches.match(event.request);
+                if (cachedResponse) return cachedResponse;
+                return caches.match('/offline.html');
             }
         }());
     }
